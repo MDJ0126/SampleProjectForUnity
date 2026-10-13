@@ -1152,7 +1152,7 @@ MonoBehaviour:
   rightArmIK: {fileID: 7286166936920125076}
   leftArmIK: {fileID: 4072250435960919598}
   rightHandAim: {fileID: 7232887492123961680}
-  isGunAimDebugEnabled: 1
+  isGunAimDebugEnabled: 0
   _gunAimDebugLine: {fileID: 6683939675574970349}
 --- !u!114 &3883205718249109943
 MonoBehaviour:

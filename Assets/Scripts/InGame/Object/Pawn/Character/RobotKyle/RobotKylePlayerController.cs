@@ -13,6 +13,13 @@ namespace Game
         {
             base.Possess(pawn);
             _owner = possessTarget as RobotKyle;
+            _owner.isGunAimDebugEnabled = true;
+        }
+
+        public override void Unpossess()
+        {
+            base.Unpossess();
+            _owner.isGunAimDebugEnabled = false;
         }
 
         /// <summary>
