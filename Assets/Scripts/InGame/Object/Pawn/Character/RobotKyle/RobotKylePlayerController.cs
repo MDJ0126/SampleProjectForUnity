@@ -115,10 +115,10 @@ namespace Game
             if (possessTarget == null || aimTarget == null) return;
 
             // 캐릭터 전방과 에임 방향의 내적을 0~1로 변환해 Aim Rig 가중치로 사용한다.
-            Vector3 direction = (aimTarget.target.position - possessTarget.Transform.position).normalized;
-            float dot = Vector3.Dot(possessTarget.Transform.forward, direction);
-            float value01 = Mathf.InverseLerp(-1f, 1f, dot);
-            aimTarget.AimRig.weight = value01;
+            //Vector3 direction = (aimTarget.target.position - possessTarget.Transform.position).normalized;
+            //float dot = Vector3.Dot(possessTarget.Transform.forward, direction);
+            //float value01 = Mathf.InverseLerp(-1f, 1f, dot);
+            //aimTarget.AimRig.weight = value01;
 
             // 화면 중앙 Ray가 맞은 지점을 사용하고, 없으면 최대 조준 거리를 사용한다.
             Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f));

@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Game
 {
     /// <summary>
@@ -5,6 +7,10 @@ namespace Game
     /// </summary>
     public abstract class Gun : Weapon
     {
+        [SerializeField] private Transform _rightGripTarget;
+        [SerializeField] private Transform _leftGripTarget;
 
+        public Transform RightGripTarget => _rightGripTarget;
+        public Transform LeftGripTarget => _leftGripTarget;
     }
 }

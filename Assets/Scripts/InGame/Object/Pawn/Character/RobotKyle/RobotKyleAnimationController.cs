@@ -24,6 +24,12 @@ namespace Game
         /// <param name="isMelee">근접 애니메이션 사용 여부</param>
         public void SetWeaponAnimation(bool isMelee)
         {
+            // 부모 Pawn의 Awake가 먼저 호출되어도 초기 무기 설정을 적용한다.
+            if (boneAnimator == null)
+            {
+                boneAnimator = GetComponent<Animator>();
+                _upperBodyLayerIndex = boneAnimator.GetLayerIndex("UpperBody Layer");
+            }
             if (isMelee)
             {
                 boneAnimator.SetBool(AnimHash.IsMelee, true);

@@ -12,7 +12,6 @@ namespace Game
 
         public AimTarget aimTarget;
         public MultiAimConstraint headAim;
-        public MultiAimConstraint spineAim;
 
         #endregion
 

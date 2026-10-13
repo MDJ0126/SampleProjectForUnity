@@ -57,6 +57,7 @@ namespace Game
                 }
             }
             Initalize();
+            OnEquippedWeaponChanged();
         }
 
         protected override void Start()
@@ -97,26 +98,40 @@ namespace Game
         /// </summary>
         public void Equip(Equipment equipment)
         {
-            if (equipmentList.Contains(equipment)) return;
+            if (equipment == null)
+            {
+                return;
+            }
+            if (equipmentList == null)
+            {
+                equipmentList = new List<Equipment>();
+            }
+            if (equipmentList.Contains(equipment))
+            {
+                return;
+            }
+
+            equipment.SetOwner(this);
 
             switch (equipment)
             {
                 case Weapon:
+                {
+                    if (EquippedWeapon)
                     {
-                        if (EquippedWeapon)
-                        {
-                            Unequip(EquippedWeapon);
-                        }
+                        Unequip(EquippedWeapon);
+                    }
 
-                        EquippedWeapon = equipment as Weapon;
-                        equipmentList.Add(equipment);
-                    }
+                    EquippedWeapon = equipment as Weapon;
+                    equipmentList.Add(equipment);
+                    OnEquippedWeaponChanged();
                     break;
+                }
                 default:
-                    {
-                        equipmentList.Add(equipment);
-                    }
+                {
+                    equipmentList.Add(equipment);
                     break;
+                }
             }
         }
 
@@ -126,7 +141,23 @@ namespace Game
         /// <param name="equipment"></param>
         public void Unequip(Equipment equipment)
         {
-            equipmentList.Remove(equipment);
+            if (equipment == null || equipmentList == null || !equipmentList.Remove(equipment))
+            {
+                return;
+            }
+            equipment.SetOwner(null);
+            if (EquippedWeapon == equipment)
+            {
+                EquippedWeapon = null;
+                OnEquippedWeaponChanged();
+            }
+        }
+
+        /// <summary>
+        /// 초기 장착과 무기 교체 및 해제 후 파생 폰의 연결을 갱신한다.
+        /// </summary>
+        protected virtual void OnEquippedWeaponChanged()
+        {
         }
 
         /// <summary>
