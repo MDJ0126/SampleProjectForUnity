@@ -3,6 +3,8 @@
 - 사용자 지시를 우선하고 기존 변경을 보존한다. 관련 [문서](docs/documentation/00-start.md)만 읽는다.
 - 기본 작성: Class(12), Struct(13), Enum(18), Function(03), 네이밍(02), 주석(17). 기능 작성: Buff(14), Skill(15), HUD(16). 파일은 docs/documentation에 있다.
 - 이벤트(19)는 해당 기능 수정 전에 참고한다.
+- Unity 기본 라이프사이클 함수(Awake, OnEnable, Start, Update, LateUpdate, OnDisable, OnDestroy 등)를 함수 영역의 위쪽에 배치하고, OnEquippedWeaponChanged 같은 사용자 정의 함수와 콜백은 그 아래에 작성한다.
+- 작업 중 일시적으로 만든 생성·설정·검증 스크립트와 도구는 사용 및 검증이 끝나면 삭제한다. Unity 에셋의 .meta와 임시로 만든 빈 폴더도 함께 정리하되, 기존 파일과 유지가 필요한 결과물은 보존한다.
 - 보통 길이의 호출은 한 줄. summary는 3줄. 주석은 '~한다.' 톤으로 계약과 이유를 설명한다.
 - if·else는 여러 줄 블록으로 작성하며 항상 중괄호를 사용한다. 한 줄로 작성하는 경우에도 중괄호를 생략하지 않는다.
 - switch문은 한 줄 작성을 금지하며 각 case·default 본문에도 반드시 중괄호를 사용한다. 중괄호는 다음 줄에 두고 레이블, 본문, break·return을 각각 별도 줄로 작성한다.

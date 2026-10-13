@@ -3,6 +3,7 @@ using UnityEngine.Animations.Rigging;
 
 namespace Game
 {
+    [DefaultExecutionOrder(100)]
     public class RobotKyle : Character
     {
         #region Inspector
@@ -13,6 +14,8 @@ namespace Game
         public TwoBoneIKConstraint rightArmIK;
         public TwoBoneIKConstraint leftArmIK;
         public MultiAimConstraint rightHandAim;
+        public bool isGunAimDebugEnabled;
+        [SerializeField] private LineRenderer _gunAimDebugLine;
 
         #endregion
 
@@ -31,6 +34,43 @@ namespace Game
         {
             base.Start();
             SkillManager.AddSkill(new RoarSkill());
+        }
+
+        protected override void LateUpdate()
+        {
+            base.LateUpdate();
+            UpdateGunAimDebugLine();
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            if (_gunAimDebugLine != null)
+            {
+                _gunAimDebugLine.enabled = false;
+            }
+        }
+
+        /// <summary>
+        /// 애니메이션과 조준 갱신 후 현재 총구와 조준점의 월드 좌표를 표시한다.
+        /// </summary>
+        private void UpdateGunAimDebugLine()
+        {
+            if (_gunAimDebugLine == null)
+            {
+                return;
+            }
+            Gun gun = EquippedWeapon as Gun;
+            bool isVisible = isGunAimDebugEnabled && gun != null && gun.Muzzle != null && gun.gameObject.activeInHierarchy && aimTarget != null && aimTarget.target != null;
+            _gunAimDebugLine.enabled = isVisible;
+            if (!isVisible)
+            {
+                return;
+            }
+            _gunAimDebugLine.useWorldSpace = true;
+            _gunAimDebugLine.positionCount = 2;
+            _gunAimDebugLine.SetPosition(0, gun.Muzzle.position);
+            _gunAimDebugLine.SetPosition(1, aimTarget.target.position);
         }
 
         /// <summary>
