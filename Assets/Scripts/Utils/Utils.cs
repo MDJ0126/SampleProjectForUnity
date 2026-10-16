@@ -6,6 +6,16 @@ using UnityEngine;
 
 public static class Utils
 {
+    private static DistributedToggle _defaultToggle;
+
+    /// <summary>
+    /// 호출자별로 보관할 균등 인덱스 추첨기를 생성한다.
+    /// </summary>
+    public static ShuffleBag CreateShuffleBag()
+    {
+        return new ShuffleBag();
+    }
+
     /// <summary>
     /// 오브젝트를 비추고 있는 카메라 가져오기
     /// </summary>
@@ -31,13 +41,31 @@ public static class Utils
     }
 
     /// <summary>
-    /// 확률 입력하면 true/false 반환
+    /// 공유 판정 이력에 확률을 누적해 성공 여부를 반환한다.
     /// </summary>
     /// <param name="percentNormalize">0~1</param>
     /// <returns>true or false</returns>
     public static bool GetToggleRandom(float percentNormalize)
     {
-        return UnityEngine.Random.Range(0, 1f) < percentNormalize;
+        if (_defaultToggle == null)
+        {
+            _defaultToggle = new DistributedToggle();
+        }
+
+        return _defaultToggle.Next(percentNormalize);
+    }
+
+    /// <summary>
+    /// 호출자가 보관하는 독립 판정 이력에 확률을 누적해 성공 여부를 반환한다.
+    /// </summary>
+    public static bool GetToggleRandom(float percentNormalize, ref DistributedToggle state)
+    {
+        if (state == null)
+        {
+            state = new DistributedToggle();
+        }
+
+        return state.Next(percentNormalize);
     }
 
     /// <summary>
