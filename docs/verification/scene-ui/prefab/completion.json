@@ -1,0 +1,9 @@
+{
+  "completedAt": "2026-11-01T17:51:17.3881310+09:00",
+  "start": "2026-11-01T17:17:57.1129701+09:00",
+  "elapsedSeconds": 2000.0,
+  "publishedCommit": "f21fd10b099d4e8ad00a60345d9c802f2ec69e61",
+  "actionRun": 41290444564,
+  "conclusion": "success",
+  "temporaryWorktreeRemoved": true
+}

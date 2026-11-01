@@ -1,0 +1,178 @@
+{
+  "at": "2026-11-01T08:44:42.727Z",
+  "checks": [
+    {
+      "path": "Assets/Scripts/Management/GameMode.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/GameMode.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneCatalog.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneCatalog.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneContent.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneContent.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneControlManager.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneControlManager.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneDefinition.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneDefinition.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneUIInitializer.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneUIInitializer.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/LoadingUIView.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/LoadingUIView.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UICatalog.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UICatalog.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIDefinition.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIDefinition.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIEnums.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIEnums.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIManager.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIManager.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIView.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIView.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/ExamplePopupView.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/ExamplePopupView.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/ExampleSceneContent.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/ExampleSceneContent.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/ExampleScreenView.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/ExampleScreenView.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/SampleSceneGameMode.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/SampleSceneGameMode.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/SceneUIEntry.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/SceneUIEntry.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/SceneUIVerification.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/SceneUIVerification.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Editor/SceneUIExampleBuilder.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Editor/SceneUIDirectPlayVerification.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scenes/ExampleA.unity",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scenes/ExampleB.unity",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/SceneUIInitializer.prefab",
+      "equal": true
+    }
+  ],
+  "bootstrapSceneAbsent": true,
+  "bootstrapSourceAbsent": true,
+  "bootstrapBuildEntryAbsent": true,
+  "initializerRegistered": true,
+  "entriesSharePrefab": true
+}

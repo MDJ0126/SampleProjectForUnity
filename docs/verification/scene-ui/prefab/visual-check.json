@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-11-01T17:43:55.8031756+09:00",
+  "method": "실제 플레이어 ScreenCapture 원본 5장 직접 열람",
+  "images": [
+    {
+      "name": "destination-scene.png",
+      "bytes": 104157,
+      "width": 1280,
+      "height": 720,
+      "edited": false,
+      "readable": true
+    },
+    {
+      "name": "initial-scene.png",
+      "bytes": 89425,
+      "width": 1280,
+      "height": 720,
+      "edited": false,
+      "readable": true
+    },
+    {
+      "name": "loading.png",
+      "bytes": 34359,
+      "width": 1280,
+      "height": 720,
+      "edited": false,
+      "readable": true
+    },
+    {
+      "name": "popup.png",
+      "bytes": 81523,
+      "width": 1280,
+      "height": 720,
+      "edited": false,
+      "readable": true
+    },
+    {
+      "name": "recovery.png",
+      "bytes": 86274,
+      "width": 1280,
+      "height": 720,
+      "edited": false,
+      "readable": true
+    }
+  ],
+  "observations": "A/B 상태·전환 버튼·모달·로딩 10%·실패 후 이전 씬 복구 표시 확인. 원본 무편집, 모든 이미지 200KB 미만."
+}

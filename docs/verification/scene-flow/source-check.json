@@ -1,0 +1,295 @@
+{
+  "at": "2026-11-01T09:38:40.070Z",
+  "files": 72,
+  "allEqual": true,
+  "checks": [
+    {
+      "path": "Assets/Scripts/Management/GameMode.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/GameMode.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneCatalog.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneCatalog.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneContent.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneContent.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneControlManager.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneControlManager.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneDefinition.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneDefinition.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneEntry.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneEntry.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneFlowContent.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneFlowContent.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneUIInitializer.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneUIInitializer.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/FollowHUD.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/FollowHUD.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/FollowPawnInfo.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/FollowPawnInfo.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/FollowSpeechBubble.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/FollowSpeechBubble.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/HUDManager.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/HUDManager.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/WidgetAnchor.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/WidgetAnchor.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/LoadingUIView.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/LoadingUIView.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/PopupUIView.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/PopupUIView.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/SceneFlowView.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/SceneFlowView.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UICatalog.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UICatalog.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIDefinition.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIDefinition.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIEnums.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIEnums.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIManager.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIManager.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIView.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/UI/UIView.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/SampleSceneGameMode.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/SampleSceneGameMode.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/SceneFlowVerification.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/SceneFlowVerification.cs.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Editor/SceneFlowBuild.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Editor/SceneFlowEditorVerification.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scenes/Splash.unity",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scenes/Playground.unity",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scenes/CharacterStage.unity",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Datas/SceneCatalog.asset",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Datas/UICatalog.asset",
+      "equal": true
+    },
+    {
+      "path": "Assets/ArtResources/Character/Animation/CharacterStageIdle.controller",
+      "equal": true
+    },
+    {
+      "path": "ProjectSettings/EditorBuildSettings.asset",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/CharacterStageScreen.prefab",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/CharacterStageScreen.prefab.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/Loading.prefab",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/Loading.prefab.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/PlaygroundScreen.prefab",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/PlaygroundScreen.prefab.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/Popup.prefab",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/Popup.prefab.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/SceneUIInitializer.prefab",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/SceneUIInitializer.prefab.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/SplashScreen.prefab",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/SplashScreen.prefab.meta",
+      "equal": true
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/Character/RobotKyle.prefab",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/Common/PlayerCameraController.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/RobotKyle/RobotKylePlayerController.cs",
+      "equal": true
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Movement.cs",
+      "equal": true
+    }
+  ]
+}

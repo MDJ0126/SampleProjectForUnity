@@ -1,0 +1,6 @@
+{
+  "at": "2026-11-01T18:41:46.1282886+09:00",
+  "authoredCodeDocsCheckPassed": true,
+  "unityEmptyValueWhitespaceInOriginal": 63,
+  "unitySerializedWhitespace": "기존 Unity 씬도 빈 값 뒤 공백을 사용하는 직렬화 형식이다. 검증한 에셋 바이트 일치를 보존하며 코드·문서의 공백 검사를 별도로 수행한다."
+}

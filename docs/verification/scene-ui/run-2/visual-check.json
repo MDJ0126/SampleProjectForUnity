@@ -1,0 +1,6 @@
+{
+  "reason": "Hidden ordinary-mode capture also produced the same black image. Functional checks passed separately; visible graphics execution and end-of-frame capture are pending.",
+  "runtimeChecks": 52,
+  "passed": false,
+  "checkedAt": "2026-11-01T15:52:58.0572021+09:00"
+}

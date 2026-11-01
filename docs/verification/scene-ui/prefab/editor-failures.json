@@ -1,0 +1,127 @@
+{
+  "runs": [
+    {
+      "run": "editor-run-2",
+      "aggregate": {
+        "passed": false,
+        "editorErrors": 4,
+        "scenesVerified": 2,
+        "completedAt": "2026-11-01T17:40:36.2977520+09:00"
+      },
+      "scenes": [
+        {
+          "initialScene": "ExampleA",
+          "passed": false,
+          "checks": 59,
+          "managerSnapshots": [
+            "initial native scene: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "repeat 1: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "repeat 2: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "repeat 3: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "repeat 4: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "repeat 5: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "repeat 6: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1"
+          ],
+          "error": "System.TimeoutException: Escape input closes modal"
+        },
+        {
+          "initialScene": "ExampleB",
+          "passed": false,
+          "checks": 59,
+          "managerSnapshots": [
+            "initial native scene: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "repeat 1: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "repeat 2: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "repeat 3: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "repeat 4: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "repeat 5: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "repeat 6: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1"
+          ],
+          "error": "System.TimeoutException: Escape input closes modal"
+        }
+      ]
+    },
+    {
+      "run": "editor-run-3",
+      "aggregate": {
+        "passed": false,
+        "editorErrors": 2,
+        "scenesVerified": 2,
+        "completedAt": "2026-11-01T17:44:05.0541836+09:00"
+      },
+      "scenes": [
+        {
+          "initialScene": "ExampleA",
+          "passed": true,
+          "checks": 63,
+          "managerSnapshots": [
+            "initial native scene: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "repeat 1: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "repeat 2: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "repeat 3: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "repeat 4: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "repeat 5: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "repeat 6: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "final scene: roots=1, controls=1, ui=1, created=1"
+          ],
+          "error": null
+        },
+        {
+          "initialScene": "ExampleB",
+          "passed": false,
+          "checks": 59,
+          "managerSnapshots": [
+            "initial native scene: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "repeat 1: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "repeat 2: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "repeat 3: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "repeat 4: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1",
+            "repeat 5: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleA: roots=1, controls=1, ui=1, created=1",
+            "repeat 6: roots=1, controls=1, ui=1, created=1",
+            "sceneLoaded ExampleB: roots=1, controls=1, ui=1, created=1"
+          ],
+          "error": "System.TimeoutException: Escape input closes modal"
+        }
+      ]
+    }
+  ]
+}

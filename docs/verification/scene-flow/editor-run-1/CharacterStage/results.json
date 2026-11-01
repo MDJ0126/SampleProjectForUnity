@@ -1,0 +1,35 @@
+{
+    "startedAt": "2026-11-01T18:30:04.0786516+09:00",
+    "completedAt": "2026-11-01T18:30:04.2031304+09:00",
+    "initialScene": "CharacterStage",
+    "editorDirectPlay": true,
+    "passed": false,
+    "checks": [
+        "Direct Play keeps the originally opened scene",
+        "Single active gameplay scene: CharacterStage",
+        "Manager adopts the screen already authored in scene: CharacterStage",
+        "Screen and loading lifetime stable: CharacterStage",
+        "Single scene-owned AudioListener: CharacterStage",
+        "Single persistent manager identities: CharacterStage",
+        "Initialization reuses existing prefab instance",
+        "Single active gameplay scene: CharacterStage",
+        "Manager adopts the screen already authored in scene: CharacterStage",
+        "Screen and loading lifetime stable: CharacterStage",
+        "Single scene-owned AudioListener: CharacterStage",
+        "Single persistent manager identities: CharacterStage",
+        "Character faces the preview camera",
+        "Stage uses an isolated humanoid idle Animator",
+        "Actual Robot Kyle renderers exist in the stage",
+        "Character is framed between the authored UI side panels",
+        "Preview scene keeps gameplay controller out and pointer available",
+        "Persistent Inspector button event: ReturnButton"
+    ],
+    "managerSnapshots": [
+        "CharacterStage: roots=1, controls=1, ui=1, events=1, created=1",
+        "CharacterStage: roots=1, controls=1, ui=1, events=1, created=1"
+    ],
+    "errors": [
+        "System.InvalidOperationException: EventSystem raycast reaches authored button: ReturnButton\r\n  at Game.SceneFlowVerification.Require (System.Boolean condition, System.String message) [0x0001b] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:337 \r\n  at Game.SceneFlowVerification.ClickButton (UnityEngine.UI.Button button) [0x000aa] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:280 \r\n  at Game.SceneFlowVerification.Click (System.String name) [0x0003c] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:262 \r\n  at Game.SceneFlowVerification.RunAsync () [0x00396] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:112 \r\n  at Game.SceneFlowVerification.Start () [0x000fc] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:61 ",
+        "[SceneFlow QA] System.InvalidOperationException: EventSystem raycast reaches authored button: ReturnButton\r\n  at Game.SceneFlowVerification.Require (System.Boolean condition, System.String message) [0x0001b] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:337 \r\n  at Game.SceneFlowVerification.ClickButton (UnityEngine.UI.Button button) [0x000aa] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:280 \r\n  at Game.SceneFlowVerification.Click (System.String name) [0x0003c] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:262 \r\n  at Game.SceneFlowVerification.RunAsync () [0x00396] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:112 \r\n  at Game.SceneFlowVerification.Start () [0x000fc] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:61 "
+    ]
+}

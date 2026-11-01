@@ -7,9 +7,12 @@
 | 카메라·조준 | PlayerCameraController, SpringArm, AimTarget |
 | 스킬·버프·능력치 | SkillManager, BuffManager, StatusInfo |
 | HUD | HUDManager, FollowHUD, FollowPawnInfo |
+| 씬 전환·UI 관리 | SceneControlManager, UIManager, SceneContent, UIView |
 | 공통 도구 | ObjectPool, Singleton, YieldInstructionCache |
 
 소스는 [Assets/Scripts](../../Assets/Scripts)에 있습니다.
+
+씬·UI 카탈로그와 실행 예제는 [씬 전환과 UI 관리](26-developed-scene-ui.md)에서 확인합니다.
 
 ## 현재 주의점
 

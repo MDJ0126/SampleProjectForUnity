@@ -1,0 +1,7 @@
+{
+  "log": "scene-ui-prefab-build-editor.log",
+  "phase": "CreateExamples",
+  "passed": false,
+  "error": "MissingReferenceException: Game.UICatalog was destroyed before EditorUtility.SetDirty after opening both example scenes",
+  "at": "2026-11-01T17:33:53.0795889+09:00"
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "path": "Assets/Scenes/Playground.unity",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/Scripts/UI/HUD/HUDManager.cs",
+    "unchanged": true
+  },
+  {
+    "path": "Packages/manifest.json",
+    "unchanged": true
+  },
+  {
+    "path": "Assets/AddressableAssetsData/AssetGroups/Prefabs.asset",
+    "unchanged": true
+  }
+]

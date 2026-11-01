@@ -1,0 +1,219 @@
+[
+  {
+    "hashBefore": "B5357B8D992B6DF2540EFB9E746545131AE026EC6246867DB105E889AB8F538A",
+    "guidBefore": "ebc5b2f89c7821b4ea4e10537d6f3d1a",
+    "guidAfter": "ebc5b2f89c7821b4ea4e10537d6f3d1a",
+    "to": "Assets/Scenes/SceneUIBootstrap.unity",
+    "from": "Assets/Examples/SceneUI/Scenes/SceneUIBootstrap.unity"
+  },
+  {
+    "hashBefore": "842D20E454B1B38A6F4E665A28419708F33BA5E287D53CC79AB6C4CCD9A82778",
+    "guidBefore": "af2f22dd5351c4248ac2748b3b6e956a",
+    "guidAfter": "af2f22dd5351c4248ac2748b3b6e956a",
+    "to": "Assets/Scenes/ExampleA.unity",
+    "from": "Assets/Examples/SceneUI/Scenes/ExampleA.unity"
+  },
+  {
+    "hashBefore": "A0E4395BFF499B9FA6552698D739F921BEE0DC969E709C4E6130CECAB321D6CB",
+    "guidBefore": "4a63eaaf238f6fb49975f9aba3ee1442",
+    "guidAfter": "4a63eaaf238f6fb49975f9aba3ee1442",
+    "to": "Assets/Scenes/ExampleB.unity",
+    "from": "Assets/Examples/SceneUI/Scenes/ExampleB.unity"
+  },
+  {
+    "hashBefore": "318B864D884C8E06A317CF0960E3F5A85CEA11D2C657D51B225264A55DBAF4BD",
+    "guidBefore": "ae59a4b6b22976343809dc02a651a3dc",
+    "guidAfter": "ae59a4b6b22976343809dc02a651a3dc",
+    "to": "Assets/AddressablesResources/Prefabs/UI/Screen.prefab",
+    "from": "Assets/Examples/SceneUI/UI/Screen.prefab"
+  },
+  {
+    "hashBefore": "0489C8D3FF3F0336A30EF5A4BF64737AACB19FF3158359F602B8C945CB77AE52",
+    "guidBefore": "47a8ce4d3bb279440bf916ea4cd2b0cc",
+    "guidAfter": "47a8ce4d3bb279440bf916ea4cd2b0cc",
+    "to": "Assets/AddressablesResources/Prefabs/UI/Popup.prefab",
+    "from": "Assets/Examples/SceneUI/UI/Popup.prefab"
+  },
+  {
+    "hashBefore": "AD0A3499A147983C6D0580CC85E934623D2F8A18C4FA41B26FA2DE17B0AF1D91",
+    "guidBefore": "bf8eb4e5062968c42ab79a8135a4ed9a",
+    "guidAfter": "bf8eb4e5062968c42ab79a8135a4ed9a",
+    "to": "Assets/AddressablesResources/Prefabs/UI/Loading.prefab",
+    "from": "Assets/Examples/SceneUI/UI/Loading.prefab"
+  },
+  {
+    "hashBefore": "F28D01A6E13FE6AB71F318087F886CF6C702BD6E7B1106566BE97A3CA6CCFE10",
+    "guidBefore": "b1f7cb0c212a86248b32633ec00d709b",
+    "guidAfter": "b1f7cb0c212a86248b32633ec00d709b",
+    "to": "Assets/AddressablesResources/Datas/SceneCatalog.asset",
+    "from": "Assets/Examples/SceneUI/Data/SceneCatalog.asset"
+  },
+  {
+    "hashBefore": "BD5FDB48D5230C3D1E78ED5509DF8D6B4FF5883F9A46CC15B52DF9F0AF3FF792",
+    "guidBefore": "270f4237db6389e439fe6f76ebdab81d",
+    "guidAfter": "270f4237db6389e439fe6f76ebdab81d",
+    "to": "Assets/AddressablesResources/Datas/UICatalog.asset",
+    "from": "Assets/Examples/SceneUI/Data/UICatalog.asset"
+  },
+  {
+    "hashBefore": "7A3D4503B73142D6411738DC89F838340473DF88C49BFF34CC0CD92591A87E99",
+    "guidBefore": "4121b553ffae4bf48a68005128ab91fd",
+    "guidAfter": "4121b553ffae4bf48a68005128ab91fd",
+    "to": "Assets/ArtResources/Material/SceneUIExampleA.mat",
+    "from": "Assets/Examples/SceneUI/Materials/ExampleA.mat"
+  },
+  {
+    "hashBefore": "64CC201FCDB958890ADEE263C6361F346E78755387EF7035A01EEE9236E3F50C",
+    "guidBefore": "7acce3c48d2e4be4f907d00ba551bcd5",
+    "guidAfter": "7acce3c48d2e4be4f907d00ba551bcd5",
+    "to": "Assets/ArtResources/Material/SceneUIExampleB.mat",
+    "from": "Assets/Examples/SceneUI/Materials/ExampleB.mat"
+  },
+  {
+    "hashBefore": "695645D90EE324E14BDEAA02522CF00065E4495AC350F3779D28BBA2E57B94AF",
+    "guidBefore": "255a2b96609dee14f96cf5ba377901ff",
+    "guidAfter": "255a2b96609dee14f96cf5ba377901ff",
+    "to": "Assets/Scripts/Management/SceneCatalog.cs",
+    "from": "Assets/Scripts/Management/SceneControl/SceneCatalog.cs"
+  },
+  {
+    "hashBefore": "D9F855246123D469C0E291111B39AF2D99EC0F91A2B777FDF41A40168C0C500A",
+    "guidBefore": "d7b22fb7495c4c34a9aa2ac48cb7ab5d",
+    "guidAfter": "d7b22fb7495c4c34a9aa2ac48cb7ab5d",
+    "to": "Assets/Scripts/Management/SceneContent.cs",
+    "from": "Assets/Scripts/Management/SceneControl/SceneContent.cs"
+  },
+  {
+    "hashBefore": "155A1422A634AEA014B6175128A1F26AE4445084CBDD43D33C09246A92728254",
+    "guidBefore": "332b99e9ec3b89a409b2bba4990f5732",
+    "guidAfter": "332b99e9ec3b89a409b2bba4990f5732",
+    "to": "Assets/Scripts/Management/SceneControlManager.cs",
+    "from": "Assets/Scripts/Management/SceneControl/SceneControlManager.cs"
+  },
+  {
+    "hashBefore": "AAE8F049BF866066DFBC8E2F4F50D31144B1AF5B6370DC6033627217ED159365",
+    "guidBefore": "3e5aaf5da2944f9468b4c703e9fbd1e9",
+    "guidAfter": "3e5aaf5da2944f9468b4c703e9fbd1e9",
+    "to": "Assets/Scripts/Management/SceneDefinition.cs",
+    "from": "Assets/Scripts/Management/SceneControl/SceneDefinition.cs"
+  },
+  {
+    "hashBefore": "D88CA4295B178B1A76E9B7E6EDA94056D71D7216AEBDC1F9F44226E33D41DD08",
+    "guidBefore": "2a328a26a7a7e414d9e8beeba605f786",
+    "guidAfter": "2a328a26a7a7e414d9e8beeba605f786",
+    "to": "Assets/Scripts/UI/LoadingUIView.cs",
+    "from": "Assets/Scripts/UI/Management/LoadingUIView.cs"
+  },
+  {
+    "hashBefore": "ADA6B8A49D8A048D150CA58CA21CBFE5A6256830658A0CE06F92EF30998DDB65",
+    "guidBefore": "c42550e0487bd6943bb6faf9c534d8a4",
+    "guidAfter": "c42550e0487bd6943bb6faf9c534d8a4",
+    "to": "Assets/Scripts/UI/UICatalog.cs",
+    "from": "Assets/Scripts/UI/Management/UICatalog.cs"
+  },
+  {
+    "hashBefore": "A4CE394F1447120970635C9685227B46A5E420812736D8033FDFF413A82EC42C",
+    "guidBefore": "b67e8f18ccb919447821bc71f46884d0",
+    "guidAfter": "b67e8f18ccb919447821bc71f46884d0",
+    "to": "Assets/Scripts/UI/UIDefinition.cs",
+    "from": "Assets/Scripts/UI/Management/UIDefinition.cs"
+  },
+  {
+    "hashBefore": "7B96F52405BE16D1389DF0441340649D53A243D555450037C40EB46A77FF122C",
+    "guidBefore": "c4bfd3d85f6a2f2428575f289a5f0f9f",
+    "guidAfter": "c4bfd3d85f6a2f2428575f289a5f0f9f",
+    "to": "Assets/Scripts/UI/UIEnums.cs",
+    "from": "Assets/Scripts/UI/Management/UIEnums.cs"
+  },
+  {
+    "hashBefore": "E3D9520377B7F7CD4D0F4BB172CBFB9C65EB0A8AD2AFD9741BF732DCA6DF45AA",
+    "guidBefore": "52ce4ecc13afb2c4a86ce2c2ebcd127c",
+    "guidAfter": "52ce4ecc13afb2c4a86ce2c2ebcd127c",
+    "to": "Assets/Scripts/UI/UIManager.cs",
+    "from": "Assets/Scripts/UI/Management/UIManager.cs"
+  },
+  {
+    "hashBefore": "BEF6CF45F9954EE64DAE9E41B67A9C0BA2E0AF2C93B291A9C25F18900DCD199F",
+    "guidBefore": "f321176bc5cd68c46ae30e547a3cfd96",
+    "guidAfter": "f321176bc5cd68c46ae30e547a3cfd96",
+    "to": "Assets/Scripts/UI/UIView.cs",
+    "from": "Assets/Scripts/UI/Management/UIView.cs"
+  },
+  {
+    "hashBefore": "2B2A22180981416562A012713578152F3899793C3CBEE1231A0DCC52D29FF0C8",
+    "guidBefore": "e8c0d1811b864b14282bd341afffd6e5",
+    "guidAfter": "e8c0d1811b864b14282bd341afffd6e5",
+    "to": "Assets/Scripts/SampleScene/ExamplePopupView.cs",
+    "from": "Assets/Scripts/Examples/SceneUI/ExamplePopupView.cs"
+  },
+  {
+    "hashBefore": "B67B5F77887F9F001E0F0F0108DC4E206A1ABE77EA9F3A6E8F1D8B773FCFF66F",
+    "guidBefore": "6db5dbf5d0bb1064980d6b2b6adc3fcc",
+    "guidAfter": "6db5dbf5d0bb1064980d6b2b6adc3fcc",
+    "to": "Assets/Scripts/SampleScene/ExampleSceneContent.cs",
+    "from": "Assets/Scripts/Examples/SceneUI/ExampleSceneContent.cs"
+  },
+  {
+    "hashBefore": "57690ED22FDB62B07566BB0C4A904C14DC9BD80735D3534C1DE1BAC1B24576FC",
+    "guidBefore": "eee591e0d148b4148805d450e1d3a2ed",
+    "guidAfter": "eee591e0d148b4148805d450e1d3a2ed",
+    "to": "Assets/Scripts/SampleScene/ExampleScreenView.cs",
+    "from": "Assets/Scripts/Examples/SceneUI/ExampleScreenView.cs"
+  },
+  {
+    "hashBefore": "A4E654E2C169EC4351B4E6BE87171B37FF6E91DF466BCE8AE7B28BB3EF42311C",
+    "guidBefore": "393beb412fe61b94d8f5d776755bccb4",
+    "guidAfter": "393beb412fe61b94d8f5d776755bccb4",
+    "to": "Assets/Scripts/Management/SceneUIBootstrap.cs",
+    "from": "Assets/Scripts/Examples/SceneUI/SceneUIBootstrap.cs"
+  },
+  {
+    "hashBefore": "56AE807DCE5552F1443C3A3FEF0D55D68D14C261C0BFFB6203A7327B2ED4E580",
+    "guidBefore": "06d088c0b612aef469f5979f41e5f316",
+    "guidAfter": "06d088c0b612aef469f5979f41e5f316",
+    "to": "Assets/Scripts/SampleScene/SceneUIVerification.cs",
+    "from": "Assets/Scripts/Examples/SceneUI/SceneUIVerification.cs"
+  },
+  {
+    "hashBefore": "E53E2600228377E0BB212F68CE1C8D8BFDD941C710F1FFFA44ACCF0AA1346AF5",
+    "guidBefore": "db69ed9199478204088ee2ae188257b9",
+    "guidAfter": "db69ed9199478204088ee2ae188257b9",
+    "to": "Assets/AddressableAssetsData/AssetGroups/Scenes.asset",
+    "from": "Assets/AddressableAssetsData/AssetGroups/SceneUI-Scenes.asset"
+  },
+  {
+    "hashBefore": "09509A1F4454810DB56C0DA015F18EFC0A515473203A5EA8B9841CF4A130925B",
+    "guidBefore": "3b8da9b5cfb9f9b4a86065ee2212c5e4",
+    "guidAfter": "3b8da9b5cfb9f9b4a86065ee2212c5e4",
+    "to": "Assets/AddressableAssetsData/AssetGroups/Schemas/Scenes_BundledAssetGroupSchema.asset",
+    "from": "Assets/AddressableAssetsData/AssetGroups/Schemas/SceneUI-Scenes_BundledAssetGroupSchema.asset"
+  },
+  {
+    "hashBefore": "BAB72F04F44C4F6F398AF5426C2C263776452A5FCAFD5936057CD7C9231BA6F5",
+    "guidBefore": "c0dab9d4ba826e84b81c4e82e7f7b0b7",
+    "guidAfter": "c0dab9d4ba826e84b81c4e82e7f7b0b7",
+    "to": "Assets/AddressableAssetsData/AssetGroups/Schemas/Scenes_ContentUpdateGroupSchema.asset",
+    "from": "Assets/AddressableAssetsData/AssetGroups/Schemas/SceneUI-Scenes_ContentUpdateGroupSchema.asset"
+  },
+  {
+    "hashBefore": "138DB7F628E0E7CEAA632B8885D7890F7B269B09A4D833D50353098B52A3ACF2",
+    "guidBefore": "4af3580d4f3e1b942ba66e6416e91931",
+    "guidAfter": "4af3580d4f3e1b942ba66e6416e91931",
+    "to": "Assets/AddressableAssetsData/AssetGroups/UI.asset",
+    "from": "Assets/AddressableAssetsData/AssetGroups/SceneUI-UI.asset"
+  },
+  {
+    "hashBefore": "3CEE5A36D926F20EEEC2A9B84E3D36D0ED612EA1E0A50A472E94521143FCB212",
+    "guidBefore": "047b7ed1ac385c147ae7e96832656bb6",
+    "guidAfter": "047b7ed1ac385c147ae7e96832656bb6",
+    "to": "Assets/AddressableAssetsData/AssetGroups/Schemas/UI_BundledAssetGroupSchema.asset",
+    "from": "Assets/AddressableAssetsData/AssetGroups/Schemas/SceneUI-UI_BundledAssetGroupSchema.asset"
+  },
+  {
+    "hashBefore": "B170BD4856590FB687D8E1682273761D7EB122FFDFE8FC99988F6FD0F6B5B087",
+    "guidBefore": "e3093bcf7e96c784d92ac5c881314690",
+    "guidAfter": "e3093bcf7e96c784d92ac5c881314690",
+    "to": "Assets/AddressableAssetsData/AssetGroups/Schemas/UI_ContentUpdateGroupSchema.asset",
+    "from": "Assets/AddressableAssetsData/AssetGroups/Schemas/SceneUI-UI_ContentUpdateGroupSchema.asset"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "reason": "Batch-mode captures were entirely black; all five PNGs had the same SHA-256. Runtime checks passed but visual QA failed.",
+  "sha256": "5CAAF573FFC294827DF39B5DE5BF9F433AC2D1F443C29FF696D19FD12D36C47B",
+  "checkedAt": "2026-11-01T15:48:46.6615594+09:00",
+  "passed": false
+}

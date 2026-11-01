@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UI
+  m_EditorClassIdentifier: 
+  m_GroupName: UI
+  m_GUID: 4c7c68566cfc39d469d6e8cbbb130d12
+  m_SerializeEntries:
+  - m_GUID: cd20a7d1fccd4f4655798be0a2908857
+    m_Address: Assets/AddressablesResources/Prefabs/UI/SplashScreen.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a70beac6da4ad9064d4c09fde42313e5
+    m_Address: Assets/AddressablesResources/Prefabs/UI/PlaygroundScreen.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc1628a0233a0c7620c6db047612c9dd
+    m_Address: Assets/AddressablesResources/Prefabs/UI/CharacterStageScreen.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47a8ce4d3bb279440bf916ea4cd2b0cc
+    m_Address: Assets/AddressablesResources/Prefabs/UI/Popup.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf8eb4e5062968c42ab79a8135a4ed9a
+    m_Address: Assets/AddressablesResources/Prefabs/UI/Loading.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e21ff13c31e12bf4080ed77ee7ad6f6b
+    m_Address: Assets/AddressablesResources/Prefabs/UI/SceneUIInitializer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 280ba4f61f1825b4c961a1a680e0c9a9, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 047b7ed1ac385c147ae7e96832656bb6, type: 2}
+    - {fileID: 11400000, guid: e3093bcf7e96c784d92ac5c881314690, type: 2}

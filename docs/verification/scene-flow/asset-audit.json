@@ -1,0 +1,84 @@
+{
+  "at": "2026-11-01T09:22:33.618Z",
+  "checks": [
+    {
+      "path": "Assets/Scenes/Splash.unity",
+      "objects": 16,
+      "uniqueIds": true,
+      "buttons": 0,
+      "persistentButtonEvents": 0
+    },
+    {
+      "path": "Assets/Scenes/Playground.unity",
+      "objects": 154,
+      "uniqueIds": true,
+      "buttons": 0,
+      "persistentButtonEvents": 0
+    },
+    {
+      "path": "Assets/Scenes/CharacterStage.unity",
+      "objects": 28,
+      "uniqueIds": true,
+      "buttons": 0,
+      "persistentButtonEvents": 0
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/SplashScreen.prefab",
+      "objects": 39,
+      "uniqueIds": true,
+      "buttons": 1,
+      "persistentButtonEvents": 1
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/PlaygroundScreen.prefab",
+      "objects": 53,
+      "uniqueIds": true,
+      "buttons": 3,
+      "persistentButtonEvents": 3
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/CharacterStageScreen.prefab",
+      "objects": 86,
+      "uniqueIds": true,
+      "buttons": 4,
+      "persistentButtonEvents": 4
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/Popup.prefab",
+      "objects": 26,
+      "uniqueIds": true,
+      "buttons": 1,
+      "persistentButtonEvents": 1
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/Loading.prefab",
+      "objects": 22,
+      "uniqueIds": true,
+      "buttons": 0,
+      "persistentButtonEvents": 0
+    },
+    {
+      "path": "Assets/AddressablesResources/Prefabs/UI/SceneUIInitializer.prefab",
+      "objects": 21,
+      "uniqueIds": true,
+      "buttons": 0,
+      "persistentButtonEvents": 0
+    }
+  ],
+  "playground": {
+    "originalObjects": 151,
+    "removedObjects": [
+      "228610192",
+      "228610193",
+      "228610194",
+      "228610195"
+    ],
+    "modifiedOriginalObjects": [
+      "9223372036854775807"
+    ],
+    "expectedRemovalOnlyEventSystem": true,
+    "onlyRootsModified": true
+  },
+  "codeUIBuilderAbsent": true,
+  "previousExampleScenesAbsent": true
+}

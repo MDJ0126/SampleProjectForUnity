@@ -1,0 +1,10 @@
+{
+  "startedAt": "2026-11-01T17:57:36.9891177+09:00",
+  "completedAt": "2026-11-01T18:48:54.5538394+09:00",
+  "elapsedSeconds": 3078.0,
+  "proposal": "25~40분",
+  "publishedCommit": "717a422f4f2251ac7acd6093328149ff5ef95abe",
+  "actionRun": 41294577233,
+  "conclusion": "success",
+  "reportWorktreeRemoved": true
+}

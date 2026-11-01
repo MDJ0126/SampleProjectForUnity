@@ -79,6 +79,8 @@ flowchart TB
 
 ## 4. 개발된 기능 상세보기
 
+- **Addressables 씬 전환·UI 관리:** `SceneControlManager`의 전환·복구와 `UIManager`의 UI 수명 관리를 제공합니다. Splash → Playground ↔ CharacterStage 흐름과 각 씬 직접 Play를 지원합니다. 기본 UI는 씬에 배치된 편집 가능한 프리팹이며, 로딩·팝업 사용법은 [사용 문서](docs/documentation/26-developed-scene-ui.md)를 참고합니다.
+
 ### 캐릭터 · 플레이어 제어
 
 - **캐릭터 · 빙의**: 컴포넌트 구성, 기본 캐릭터 빙의 및 입력 연결\

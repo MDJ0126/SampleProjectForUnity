@@ -1,0 +1,47 @@
+{
+  "images": [
+    {
+      "name": "loading.png",
+      "bytes": 34359,
+      "width": 1280,
+      "height": 720,
+      "sha256": "83C3CEB12852DC5AB280DB312A56366B0F33807707A56658B7B139F21BE882FA",
+      "edited": false
+    },
+    {
+      "name": "popup.png",
+      "bytes": 81443,
+      "width": 1280,
+      "height": 720,
+      "sha256": "9F01202DDBD46281231A5D1840C81FE92D0006459ABDC9598D9A5DC5BAB70767",
+      "edited": false
+    },
+    {
+      "name": "recovery.png",
+      "bytes": 86291,
+      "width": 1280,
+      "height": 720,
+      "sha256": "3CDEE7AA2E29EAACB71397DD87DDC91E69CAEC2D03D5574B3A45FA7E4F04A940",
+      "edited": false
+    },
+    {
+      "name": "scene-a.png",
+      "bytes": 89562,
+      "width": 1280,
+      "height": 720,
+      "sha256": "3DC7D87F51BD077D9132BBBECEC7AB12205A819BC60CBD62B8EC6025493470D0",
+      "edited": false
+    },
+    {
+      "name": "scene-b.png",
+      "bytes": 104317,
+      "width": 1280,
+      "height": 720,
+      "sha256": "2C817A821DAFE3BFE3424BF40C53ABF95C96B59171B30F007307E528D8BB5AF8",
+      "edited": false
+    }
+  ],
+  "checkedAt": "2026-11-01T16:21:29.2891218+09:00",
+  "passed": true,
+  "observations": "이동 후 실제 A/B·팝업·로딩·실패 복구 렌더 프레임을 직접 검토했다. 상태 표시·글자·버튼이 정상이다. 원본 PNG 그대로이며 200KB 미만이다."
+}

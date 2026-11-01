@@ -1,0 +1,98 @@
+[
+  {
+    "path": "Assets\\Examples\\SceneUI\\Data.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Materials.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Scenes.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\UI.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Data\\SceneCatalog.asset",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Data\\SceneCatalog.asset.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Data\\UICatalog.asset",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Data\\UICatalog.asset.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Materials\\ExampleA.mat",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Materials\\ExampleA.mat.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Materials\\ExampleB.mat",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Materials\\ExampleB.mat.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Scenes\\ExampleA.unity",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Scenes\\ExampleA.unity.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Scenes\\ExampleB.unity",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Scenes\\ExampleB.unity.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Scenes\\SceneUIBootstrap.unity",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\Scenes\\SceneUIBootstrap.unity.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\UI\\Loading.prefab",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\UI\\Loading.prefab.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\UI\\Popup.prefab",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\UI\\Popup.prefab.meta",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\UI\\Screen.prefab",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Examples\\SceneUI\\UI\\Screen.prefab.meta",
+    "matches": true
+  }
+]

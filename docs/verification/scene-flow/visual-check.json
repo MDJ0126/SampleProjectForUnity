@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-11-01T18:37:16.1436344+09:00",
+  "method": "실제 플레이어 ScreenCapture 원본 7장 직접 열람",
+  "images": [
+    {
+      "name": "character-stage.png",
+      "bytes": 165735,
+      "width": 1280,
+      "height": 720,
+      "edited": false,
+      "readable": true
+    },
+    {
+      "name": "costume.png",
+      "bytes": 163782,
+      "width": 1280,
+      "height": 720,
+      "edited": false,
+      "readable": true
+    },
+    {
+      "name": "loading.png",
+      "bytes": 34359,
+      "width": 1280,
+      "height": 720,
+      "edited": false,
+      "readable": true
+    },
+    {
+      "name": "playground.png",
+      "bytes": 715865,
+      "width": 1280,
+      "height": 720,
+      "edited": false,
+      "readable": true
+    },
+    {
+      "name": "popup.png",
+      "bytes": 419770,
+      "width": 1280,
+      "height": 720,
+      "edited": false,
+      "readable": true
+    },
+    {
+      "name": "recovery.png",
+      "bytes": 398913,
+      "width": 1280,
+      "height": 720,
+      "edited": false,
+      "readable": true
+    },
+    {
+      "name": "splash.png",
+      "bytes": 51039,
+      "width": 1280,
+      "height": 720,
+      "edited": false,
+      "readable": true
+    }
+  ],
+  "observations": "Splash·기존 Playground·로딩·팝업·정면 전신 캐릭터·장비/코스튬 패널·실패 복구 표시 확인. 3장의 환경 화면은 세부 정보 보존을 위해 200KB를 초과한 원본 PNG를 유지. 불필요한 바탕화면·창 여백·개인 정보가 없는 게임 렌더 원본."
+}

@@ -1,0 +1,34 @@
+{
+  "deployment": "success",
+  "status": "completed",
+  "reportHTTP": 200,
+  "title": true,
+  "images": [
+    {
+      "name": "scene-a.png",
+      "matches": true,
+      "bytes": 89562
+    },
+    {
+      "name": "scene-b.png",
+      "matches": true,
+      "bytes": 104317
+    },
+    {
+      "name": "popup.png",
+      "matches": true,
+      "bytes": 81443
+    },
+    {
+      "name": "loading.png",
+      "matches": true,
+      "bytes": 34359
+    },
+    {
+      "name": "recovery.png",
+      "matches": true,
+      "bytes": 86291
+    }
+  ],
+  "verifiedAt": "2026-11-01T16:26:46.9486010+09:00"
+}

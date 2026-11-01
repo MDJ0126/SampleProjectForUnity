@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 255a2b96609dee14f96cf5ba377901ff, type: 3}
+  m_Name: SceneCatalog
+  m_EditorClassIdentifier: 
+  entries:
+  - id: Splash
+    scene:
+      m_AssetGUID: 58b73893784468392ad9d6f3a3a72e9e
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    screenId: SplashScreen
+  - id: Playground
+    scene:
+      m_AssetGUID: 78419477b890fa24788d5de386e1d603
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    screenId: PlaygroundScreen
+  - id: CharacterStage
+    scene:
+      m_AssetGUID: 6dc22b16e17c1bb7a3500054b3a48fa1
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_SubObjectGUID: 
+      m_EditorAssetChanged: 0
+    screenId: CharacterStageScreen

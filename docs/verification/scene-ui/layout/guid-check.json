@@ -1,0 +1,219 @@
+[
+  {
+    "from": "Assets/Examples/SceneUI/Scenes/SceneUIBootstrap.unity",
+    "to": "Assets/Scenes/SceneUIBootstrap.unity",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Examples/SceneUI/Scenes/ExampleA.unity",
+    "to": "Assets/Scenes/ExampleA.unity",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Examples/SceneUI/Scenes/ExampleB.unity",
+    "to": "Assets/Scenes/ExampleB.unity",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Examples/SceneUI/UI/Screen.prefab",
+    "to": "Assets/AddressablesResources/Prefabs/UI/Screen.prefab",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Examples/SceneUI/UI/Popup.prefab",
+    "to": "Assets/AddressablesResources/Prefabs/UI/Popup.prefab",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Examples/SceneUI/UI/Loading.prefab",
+    "to": "Assets/AddressablesResources/Prefabs/UI/Loading.prefab",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Examples/SceneUI/Data/SceneCatalog.asset",
+    "to": "Assets/AddressablesResources/Datas/SceneCatalog.asset",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Examples/SceneUI/Data/UICatalog.asset",
+    "to": "Assets/AddressablesResources/Datas/UICatalog.asset",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Examples/SceneUI/Materials/ExampleA.mat",
+    "to": "Assets/ArtResources/Material/SceneUIExampleA.mat",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Examples/SceneUI/Materials/ExampleB.mat",
+    "to": "Assets/ArtResources/Material/SceneUIExampleB.mat",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/Management/SceneControl/SceneCatalog.cs",
+    "to": "Assets/Scripts/Management/SceneCatalog.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/Management/SceneControl/SceneContent.cs",
+    "to": "Assets/Scripts/Management/SceneContent.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/Management/SceneControl/SceneControlManager.cs",
+    "to": "Assets/Scripts/Management/SceneControlManager.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/Management/SceneControl/SceneDefinition.cs",
+    "to": "Assets/Scripts/Management/SceneDefinition.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/UI/Management/LoadingUIView.cs",
+    "to": "Assets/Scripts/UI/LoadingUIView.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/UI/Management/UICatalog.cs",
+    "to": "Assets/Scripts/UI/UICatalog.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/UI/Management/UIDefinition.cs",
+    "to": "Assets/Scripts/UI/UIDefinition.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/UI/Management/UIEnums.cs",
+    "to": "Assets/Scripts/UI/UIEnums.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/UI/Management/UIManager.cs",
+    "to": "Assets/Scripts/UI/UIManager.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/UI/Management/UIView.cs",
+    "to": "Assets/Scripts/UI/UIView.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/Examples/SceneUI/ExamplePopupView.cs",
+    "to": "Assets/Scripts/SampleScene/ExamplePopupView.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/Examples/SceneUI/ExampleSceneContent.cs",
+    "to": "Assets/Scripts/SampleScene/ExampleSceneContent.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/Examples/SceneUI/ExampleScreenView.cs",
+    "to": "Assets/Scripts/SampleScene/ExampleScreenView.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/Examples/SceneUI/SceneUIBootstrap.cs",
+    "to": "Assets/Scripts/Management/SceneUIBootstrap.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/Scripts/Examples/SceneUI/SceneUIVerification.cs",
+    "to": "Assets/Scripts/SampleScene/SceneUIVerification.cs",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/AddressableAssetsData/AssetGroups/SceneUI-Scenes.asset",
+    "to": "Assets/AddressableAssetsData/AssetGroups/Scenes.asset",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/AddressableAssetsData/AssetGroups/Schemas/SceneUI-Scenes_BundledAssetGroupSchema.asset",
+    "to": "Assets/AddressableAssetsData/AssetGroups/Schemas/Scenes_BundledAssetGroupSchema.asset",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/AddressableAssetsData/AssetGroups/Schemas/SceneUI-Scenes_ContentUpdateGroupSchema.asset",
+    "to": "Assets/AddressableAssetsData/AssetGroups/Schemas/Scenes_ContentUpdateGroupSchema.asset",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/AddressableAssetsData/AssetGroups/SceneUI-UI.asset",
+    "to": "Assets/AddressableAssetsData/AssetGroups/UI.asset",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/AddressableAssetsData/AssetGroups/Schemas/SceneUI-UI_BundledAssetGroupSchema.asset",
+    "to": "Assets/AddressableAssetsData/AssetGroups/Schemas/UI_BundledAssetGroupSchema.asset",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  },
+  {
+    "from": "Assets/AddressableAssetsData/AssetGroups/Schemas/SceneUI-UI_ContentUpdateGroupSchema.asset",
+    "to": "Assets/AddressableAssetsData/AssetGroups/Schemas/UI_ContentUpdateGroupSchema.asset",
+    "guidPreserved": true,
+    "oldRemoved": true,
+    "exists": true
+  }
+]

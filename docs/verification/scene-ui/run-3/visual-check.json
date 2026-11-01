@@ -1,0 +1,5 @@
+{
+  "checkedAt": "2026-11-01T15:54:06.0920788+09:00",
+  "passed": true,
+  "verified": "Actual rendered A/B, loading, modal, recovery. All readable at 1280x720. Status text is one frame stale in B and recovery captures; final capture will wait another UI update."
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "run": "editor-run-4/ExampleA",
+    "pass": true,
+    "checks": 63,
+    "managerSnapshots": 18,
+    "allSingleton": true,
+    "errors": 0
+  },
+  {
+    "run": "editor-run-4/ExampleB",
+    "pass": true,
+    "checks": 63,
+    "managerSnapshots": 18,
+    "allSingleton": true,
+    "errors": 0
+  },
+  {
+    "run": "player-run-1/ExampleA",
+    "pass": true,
+    "checks": 68,
+    "managerSnapshots": 18,
+    "allSingleton": true,
+    "errors": 0
+  }
+]

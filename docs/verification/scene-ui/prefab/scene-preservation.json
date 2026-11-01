@@ -1,0 +1,26 @@
+[
+  {
+    "scene": "ExampleA",
+    "originalObjects": 66,
+    "missingOriginalObjects": [],
+    "changedExistingBlocks": [
+      {
+        "id": "9223372036854775807",
+        "type": "1660057539"
+      }
+    ],
+    "addedObjects": 3
+  },
+  {
+    "scene": "ExampleB",
+    "originalObjects": 66,
+    "missingOriginalObjects": [],
+    "changedExistingBlocks": [
+      {
+        "id": "9223372036854775807",
+        "type": "1660057539"
+      }
+    ],
+    "addedObjects": 3
+  }
+]

@@ -1,0 +1,106 @@
+{
+  "at": "2026-11-01T08:48:23.303Z",
+  "report": "https://mdj0126.github.io/codex-config/projects/sampleprojectforunity/reports/2026-11-01-result-20261101084552999-v1.0.0.html",
+  "status": 200,
+  "bodyVerified": true,
+  "assets": [
+    {
+      "name": "build-1-failure.json",
+      "status": 200,
+      "bytes": 275,
+      "exactHash": false,
+      "equal": true
+    },
+    {
+      "name": "destination-scene.png",
+      "status": 200,
+      "bytes": 104157,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "editor-ExampleA.json",
+      "status": 200,
+      "bytes": 4974,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "editor-ExampleB.json",
+      "status": 200,
+      "bytes": 4974,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "editor-failures.json",
+      "status": 200,
+      "bytes": 6156,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "editor-results.json",
+      "status": 200,
+      "bytes": 126,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "initial-scene.png",
+      "status": 200,
+      "bytes": 89425,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "loading.png",
+      "status": 200,
+      "bytes": 34359,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "player-results.json",
+      "status": 200,
+      "bytes": 5210,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "popup.png",
+      "status": 200,
+      "bytes": 81523,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "recovery.png",
+      "status": 200,
+      "bytes": 86274,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "scene-preservation.json",
+      "status": 200,
+      "bytes": 476,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "source-check.json",
+      "status": 200,
+      "bytes": 4144,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "visual-check.json",
+      "status": 200,
+      "bytes": 1085,
+      "exactHash": false,
+      "equal": true
+    }
+  ]
+}

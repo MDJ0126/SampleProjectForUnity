@@ -1,0 +1,46 @@
+[
+  {
+    "asset": "SceneCatalog.asset",
+    "script": "SceneCatalog.cs.meta"
+  },
+  {
+    "asset": "UICatalog.asset",
+    "script": "UICatalog.cs.meta"
+  },
+  {
+    "asset": "ExampleA.unity",
+    "script": "ExampleSceneContent.cs.meta"
+  },
+  {
+    "asset": "ExampleB.unity",
+    "script": "ExampleSceneContent.cs.meta"
+  },
+  {
+    "asset": "SceneUIBootstrap.unity",
+    "script": "SceneUIVerification.cs.meta"
+  },
+  {
+    "asset": "SceneUIBootstrap.unity",
+    "script": "SceneUIBootstrap.cs.meta"
+  },
+  {
+    "asset": "SceneUIBootstrap.unity",
+    "script": "SceneControlManager.cs.meta"
+  },
+  {
+    "asset": "SceneUIBootstrap.unity",
+    "script": "UIManager.cs.meta"
+  },
+  {
+    "asset": "Loading.prefab",
+    "script": "LoadingUIView.cs.meta"
+  },
+  {
+    "asset": "Popup.prefab",
+    "script": "ExamplePopupView.cs.meta"
+  },
+  {
+    "asset": "Screen.prefab",
+    "script": "ExampleScreenView.cs.meta"
+  }
+]

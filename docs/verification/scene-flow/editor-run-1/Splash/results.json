@@ -1,0 +1,40 @@
+{
+    "startedAt": "2026-11-01T18:29:40.4312428+09:00",
+    "completedAt": "2026-11-01T18:29:43.9288782+09:00",
+    "initialScene": "Splash",
+    "editorDirectPlay": true,
+    "passed": false,
+    "checks": [
+        "Direct Play keeps the originally opened scene",
+        "Single active gameplay scene: Splash",
+        "Manager adopts the screen already authored in scene: Splash",
+        "Screen and loading lifetime stable: Splash",
+        "Single scene-owned AudioListener: Splash",
+        "Single persistent manager identities: Splash",
+        "Initialization reuses existing prefab instance",
+        "Single persistent manager identities: sceneLoaded Playground",
+        "Splash is released after automatic entry",
+        "Single active gameplay scene: Playground",
+        "Manager adopts the screen already authored in scene: Playground",
+        "Screen and loading lifetime stable: Playground",
+        "Single scene-owned AudioListener: Playground",
+        "Single persistent manager identities: Playground",
+        "Existing character retained with clickable menu input",
+        "Persistent Inspector button event: MenuPopupButton",
+        "EventSystem raycast reaches authored button: MenuPopupButton",
+        "Modal owns gameplay input blocking",
+        "Persistent Inspector button event: CLOSE",
+        "EventSystem raycast reaches authored button: CLOSE",
+        "Persistent Inspector button event: ResumeButton",
+        "EventSystem raycast reaches authored button: ResumeButton"
+    ],
+    "managerSnapshots": [
+        "Splash: roots=1, controls=1, ui=1, events=1, created=1",
+        "sceneLoaded Playground: roots=1, controls=1, ui=1, events=1, created=1",
+        "Playground: roots=1, controls=1, ui=1, events=1, created=1"
+    ],
+    "errors": [
+        "System.InvalidOperationException: Gameplay captures pointer for the existing camera controller\r\n  at Game.SceneFlowVerification.Require (System.Boolean condition, System.String message) [0x0001b] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:337 \r\n  at Game.SceneFlowVerification.RunAsync () [0x00756] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:129 \r\n  at Game.SceneFlowVerification.Start () [0x000fc] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:61 ",
+        "[SceneFlow QA] System.InvalidOperationException: Gameplay captures pointer for the existing camera controller\r\n  at Game.SceneFlowVerification.Require (System.Boolean condition, System.String message) [0x0001b] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:337 \r\n  at Game.SceneFlowVerification.RunAsync () [0x00756] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:129 \r\n  at Game.SceneFlowVerification.Start () [0x000fc] in C:\\Projects\\SampleProjectForUnity\\.utmp\\SceneFlowValidation\\Assets\\Scripts\\SampleScene\\SceneFlowVerification.cs:61 "
+    ]
+}

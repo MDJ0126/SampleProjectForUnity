@@ -1,0 +1,47 @@
+{
+  "images": [
+    {
+      "name": "loading.png",
+      "bytes": 34359,
+      "width": 1280,
+      "height": 720,
+      "sha256": "83C3CEB12852DC5AB280DB312A56366B0F33807707A56658B7B139F21BE882FA",
+      "edited": false
+    },
+    {
+      "name": "popup.png",
+      "bytes": 81401,
+      "width": 1280,
+      "height": 720,
+      "sha256": "3E30F592B04CB6619A9E0B9A824CFB3A54C8FF87B5836230BEC8E6676578747B",
+      "edited": false
+    },
+    {
+      "name": "recovery.png",
+      "bytes": 86383,
+      "width": 1280,
+      "height": 720,
+      "sha256": "A54B3D2594F19E6DAEBA67E1AE412FE1576D6E3A20A114F800EDBAAC9B4F0B06",
+      "edited": false
+    },
+    {
+      "name": "scene-a.png",
+      "bytes": 89438,
+      "width": 1280,
+      "height": 720,
+      "sha256": "6520F343E00029104753A869C2E4ECE0EF68DDA31CCD92E5F547EA77441F0FAF",
+      "edited": false
+    },
+    {
+      "name": "scene-b.png",
+      "bytes": 104187,
+      "width": 1280,
+      "height": 720,
+      "sha256": "4ED80261CF7B2124787E9CDD49D3B0D8B0BDAC3A3B88084BC8685BC7519BCD8C",
+      "edited": false
+    }
+  ],
+  "reviewedAt": "2026-11-01T15:56:06.9668070+09:00",
+  "passed": true,
+  "observations": "All five actual rendered frames inspected. A/B status UI count is 1; recovery count is 2. Text, controls and loading bar are readable. Raw PNGs retained without editing; every image is below 200KB."
+}

@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-01T09:32:03.184Z",
+  "changes": [
+    {
+      "prefab": "PlaygroundScreen",
+      "object": "GameplayMenu",
+      "before": "RectTransform:\n  m_ObjectHideFlags: 0\n  m_CorrespondingSourceObject: {fileID: 0}\n  m_PrefabInstance: {fileID: 0}\n  m_PrefabAsset: {fileID: 0}\n  m_GameObject: {fileID: 1120}\n  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}\n  m_LocalPosition: {x: 0, y: 0, z: 0}\n  m_LocalScale: {x: 1, y: 1, z: 1}\n  m_ConstrainProportionsScale: 0\n  m_Children:\n  - {fileID: 1131}\n  - {fileID: 1141}\n  - {fileID: 1151}\n  - {fileID: 1171}\n  - {fileID: 1191}\n  m_Father: {fileID: 1001}\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\n  m_AnchorMin: {x: 0, y: 1}\n  m_AnchorMax: {x: 0, y: 1}\n  m_AnchoredPosition: {x: 918, y: -110}\n  m_SizeDelta: {x: 320, y: 358}\n  m_Pivot: {x: 0, y: 1}\n"
+    },
+    {
+      "prefab": "CharacterStageScreen",
+      "object": "ReturnButton",
+      "before": "RectTransform:\n  m_ObjectHideFlags: 0\n  m_CorrespondingSourceObject: {fileID: 0}\n  m_PrefabInstance: {fileID: 0}\n  m_PrefabAsset: {fileID: 0}\n  m_GameObject: {fileID: 1120}\n  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}\n  m_LocalPosition: {x: 0, y: 0, z: 0}\n  m_LocalScale: {x: 1, y: 1, z: 1}\n  m_ConstrainProportionsScale: 0\n  m_Children:\n  - {fileID: 1131}\n  m_Father: {fileID: 1001}\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\n  m_AnchorMin: {x: 0, y: 1}\n  m_AnchorMax: {x: 0, y: 1}\n  m_AnchoredPosition: {x: 1010, y: -32}\n  m_SizeDelta: {x: 228, y: 48}\n  m_Pivot: {x: 0, y: 1}\n"
+    },
+    {
+      "prefab": "CharacterStageScreen",
+      "object": "PreviewLabel",
+      "before": "RectTransform:\n  m_ObjectHideFlags: 0\n  m_CorrespondingSourceObject: {fileID: 0}\n  m_PrefabInstance: {fileID: 0}\n  m_PrefabAsset: {fileID: 0}\n  m_GameObject: {fileID: 1240}\n  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}\n  m_LocalPosition: {x: 0, y: 0, z: 0}\n  m_LocalScale: {x: 1, y: 1, z: 1}\n  m_ConstrainProportionsScale: 0\n  m_Children: []\n  m_Father: {fileID: 1001}\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\n  m_AnchorMin: {x: 0, y: 1}\n  m_AnchorMax: {x: 0, y: 1}\n  m_AnchoredPosition: {x: 1004, y: -176}\n  m_SizeDelta: {x: 238, y: 34}\n  m_Pivot: {x: 0, y: 1}\n"
+    },
+    {
+      "prefab": "CharacterStageScreen",
+      "object": "PreviewNotes",
+      "before": "RectTransform:\n  m_ObjectHideFlags: 0\n  m_CorrespondingSourceObject: {fileID: 0}\n  m_PrefabInstance: {fileID: 0}\n  m_PrefabAsset: {fileID: 0}\n  m_GameObject: {fileID: 1250}\n  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}\n  m_LocalPosition: {x: 0, y: 0, z: 0}\n  m_LocalScale: {x: 1, y: 1, z: 1}\n  m_ConstrainProportionsScale: 0\n  m_Children: []\n  m_Father: {fileID: 1001}\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\n  m_AnchorMin: {x: 0, y: 1}\n  m_AnchorMax: {x: 0, y: 1}\n  m_AnchoredPosition: {x: 1004, y: -230}\n  m_SizeDelta: {x: 238, y: 220}\n  m_Pivot: {x: 0, y: 1}\n"
+    },
+    {
+      "prefab": "CharacterStageScreen",
+      "object": "InfoButton",
+      "before": "RectTransform:\n  m_ObjectHideFlags: 0\n  m_CorrespondingSourceObject: {fileID: 0}\n  m_PrefabInstance: {fileID: 0}\n  m_PrefabAsset: {fileID: 0}\n  m_GameObject: {fileID: 1260}\n  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}\n  m_LocalPosition: {x: 0, y: 0, z: 0}\n  m_LocalScale: {x: 1, y: 1, z: 1}\n  m_ConstrainProportionsScale: 0\n  m_Children:\n  - {fileID: 1271}\n  m_Father: {fileID: 1001}\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\n  m_AnchorMin: {x: 0, y: 1}\n  m_AnchorMax: {x: 0, y: 1}\n  m_AnchoredPosition: {x: 1004, y: -500}\n  m_SizeDelta: {x: 232, y: 48}\n  m_Pivot: {x: 0, y: 1}\n"
+    }
+  ]
+}

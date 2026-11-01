@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-01T18:48:49.8861233+09:00",
+  "manual": "https://mdj0126.github.io/codex-config/projects/sampleprojectforunity/reports/2026-11-01-manual-scene-ui-implementation-20261101-20261101094547268-v1.0.12.html",
+  "status": 200,
+  "manualState": "complete",
+  "completedTasks": 13,
+  "finalQA": true,
+  "assets": [
+    {
+      "name": "publication-check.json",
+      "status": 200
+    },
+    {
+      "name": "format-check.json",
+      "status": 200
+    }
+  ],
+  "commit": "717a422f4f2251ac7acd6093328149ff5ef95abe",
+  "actionRun": 41294577233,
+  "actionConclusion": "success"
+}

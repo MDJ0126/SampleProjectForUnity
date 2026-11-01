@@ -104,7 +104,7 @@ const buildHash = createHash('sha256').update(JSON.stringify(chapters.map(c => [
 const groups = [
   ['프로젝트 구조', ['00', '01', '09']],
   ['다이어그램', ['21', '07', '22', '20']],
-  ['개발된 기능', ['08', '23', '24', '25']],
+  ['개발된 기능', ['08', '23', '24', '26', '25']],
   ['작성 요령', ['12', '13', '18', '03', '02', '17', '19', '14', '15', '16', '04', '05', '06', '10', '11']],
 ];
 const categoryLabel = title => `${groups.findIndex(([name]) => name === title) + 1}. ${title}`;

@@ -1,0 +1,98 @@
+[
+  {
+    "path": "Assets\\Scripts\\Management\\SceneControl\\SceneCatalog.cs",
+    "original": "695645D90EE324E14BDEAA02522CF00065E4495AC350F3779D28BBA2E57B94AF",
+    "verifiedCopy": "695645D90EE324E14BDEAA02522CF00065E4495AC350F3779D28BBA2E57B94AF",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\Management\\SceneControl\\SceneContent.cs",
+    "original": "D9F855246123D469C0E291111B39AF2D99EC0F91A2B777FDF41A40168C0C500A",
+    "verifiedCopy": "D9F855246123D469C0E291111B39AF2D99EC0F91A2B777FDF41A40168C0C500A",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\Management\\SceneControl\\SceneControlManager.cs",
+    "original": "155A1422A634AEA014B6175128A1F26AE4445084CBDD43D33C09246A92728254",
+    "verifiedCopy": "155A1422A634AEA014B6175128A1F26AE4445084CBDD43D33C09246A92728254",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\Management\\SceneControl\\SceneDefinition.cs",
+    "original": "AAE8F049BF866066DFBC8E2F4F50D31144B1AF5B6370DC6033627217ED159365",
+    "verifiedCopy": "AAE8F049BF866066DFBC8E2F4F50D31144B1AF5B6370DC6033627217ED159365",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\UI\\Management\\LoadingUIView.cs",
+    "original": "D88CA4295B178B1A76E9B7E6EDA94056D71D7216AEBDC1F9F44226E33D41DD08",
+    "verifiedCopy": "D88CA4295B178B1A76E9B7E6EDA94056D71D7216AEBDC1F9F44226E33D41DD08",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\UI\\Management\\UICatalog.cs",
+    "original": "ADA6B8A49D8A048D150CA58CA21CBFE5A6256830658A0CE06F92EF30998DDB65",
+    "verifiedCopy": "ADA6B8A49D8A048D150CA58CA21CBFE5A6256830658A0CE06F92EF30998DDB65",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\UI\\Management\\UIDefinition.cs",
+    "original": "A4CE394F1447120970635C9685227B46A5E420812736D8033FDFF413A82EC42C",
+    "verifiedCopy": "A4CE394F1447120970635C9685227B46A5E420812736D8033FDFF413A82EC42C",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\UI\\Management\\UIEnums.cs",
+    "original": "7B96F52405BE16D1389DF0441340649D53A243D555450037C40EB46A77FF122C",
+    "verifiedCopy": "7B96F52405BE16D1389DF0441340649D53A243D555450037C40EB46A77FF122C",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\UI\\Management\\UIManager.cs",
+    "original": "E3D9520377B7F7CD4D0F4BB172CBFB9C65EB0A8AD2AFD9741BF732DCA6DF45AA",
+    "verifiedCopy": "E3D9520377B7F7CD4D0F4BB172CBFB9C65EB0A8AD2AFD9741BF732DCA6DF45AA",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\UI\\Management\\UIView.cs",
+    "original": "BEF6CF45F9954EE64DAE9E41B67A9C0BA2E0AF2C93B291A9C25F18900DCD199F",
+    "verifiedCopy": "BEF6CF45F9954EE64DAE9E41B67A9C0BA2E0AF2C93B291A9C25F18900DCD199F",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\Examples\\SceneUI\\ExamplePopupView.cs",
+    "original": "2B2A22180981416562A012713578152F3899793C3CBEE1231A0DCC52D29FF0C8",
+    "verifiedCopy": "2B2A22180981416562A012713578152F3899793C3CBEE1231A0DCC52D29FF0C8",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\Examples\\SceneUI\\ExampleSceneContent.cs",
+    "original": "B67B5F77887F9F001E0F0F0108DC4E206A1ABE77EA9F3A6E8F1D8B773FCFF66F",
+    "verifiedCopy": "B67B5F77887F9F001E0F0F0108DC4E206A1ABE77EA9F3A6E8F1D8B773FCFF66F",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\Examples\\SceneUI\\ExampleScreenView.cs",
+    "original": "57690ED22FDB62B07566BB0C4A904C14DC9BD80735D3534C1DE1BAC1B24576FC",
+    "verifiedCopy": "57690ED22FDB62B07566BB0C4A904C14DC9BD80735D3534C1DE1BAC1B24576FC",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\Examples\\SceneUI\\SceneUIBootstrap.cs",
+    "original": "A4E654E2C169EC4351B4E6BE87171B37FF6E91DF466BCE8AE7B28BB3EF42311C",
+    "verifiedCopy": "A4E654E2C169EC4351B4E6BE87171B37FF6E91DF466BCE8AE7B28BB3EF42311C",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\Examples\\SceneUI\\SceneUIVerification.cs",
+    "original": "56AE807DCE5552F1443C3A3FEF0D55D68D14C261C0BFFB6203A7327B2ED4E580",
+    "verifiedCopy": "56AE807DCE5552F1443C3A3FEF0D55D68D14C261C0BFFB6203A7327B2ED4E580",
+    "matches": true
+  },
+  {
+    "path": "Assets\\Scripts\\Editor\\SceneUIExampleBuilder.cs",
+    "original": "1DA428BE113B045D8D4D734CFD5DD7707A15CB29341FE1E81AF4CEF7356BED99",
+    "verifiedCopy": "1DA428BE113B045D8D4D734CFD5DD7707A15CB29341FE1E81AF4CEF7356BED99",
+    "matches": true
+  }
+]

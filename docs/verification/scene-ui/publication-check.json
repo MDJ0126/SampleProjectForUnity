@@ -1,0 +1,40 @@
+{
+  "verifiedAt": "2026-11-01T16:00:21+09:00",
+  "commit": "3a73ec02eb943ba131758be2da7ab33c05e0a3bb",
+  "deployment": "success",
+  "reportHTTP": 200,
+  "reportTitleMatched": true,
+  "runtimeChecks": 57,
+  "images": [
+    {
+      "file": "scene-a.png",
+      "bytes": 89438,
+      "sha256": "6520f343e00029104753a869c2e4ece0ef68dda31ccd92e5f547ea77441f0faf",
+      "matches": true
+    },
+    {
+      "file": "scene-b.png",
+      "bytes": 104187,
+      "sha256": "4ed80261cf7b2124787e9cdd49d3b0d8b0bdac3a3b88084bc8685bc7519bcd8c",
+      "matches": true
+    },
+    {
+      "file": "popup.png",
+      "bytes": 81401,
+      "sha256": "3e30f592b04cb6619a9e0b9a824cfb3a54c8ff87b5836230bec8e6676578747b",
+      "matches": true
+    },
+    {
+      "file": "loading.png",
+      "bytes": 34359,
+      "sha256": "83c3ceb12852dc5ab280db312a56366b0f33807707a56658b7b139f21be882fa",
+      "matches": true
+    },
+    {
+      "file": "recovery.png",
+      "bytes": 86383,
+      "sha256": "a54b3d2594f19e6daeba67e1ae412fe1576d6e3a20a114f800edbaac9b4f0b06",
+      "matches": true
+    }
+  ]
+}

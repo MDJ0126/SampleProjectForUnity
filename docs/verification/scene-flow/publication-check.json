@@ -1,0 +1,141 @@
+{
+  "at": "2026-11-01T09:44:35.353Z",
+  "report": "https://mdj0126.github.io/codex-config/projects/sampleprojectforunity/reports/2026-11-01-result-20261101094002511-v1.0.0.html",
+  "reportStatus": 200,
+  "bodyVerified": true,
+  "assets": [
+    {
+      "name": "asset-audit.json",
+      "status": 200,
+      "bytes": 2055,
+      "exactHash": false,
+      "equal": true
+    },
+    {
+      "name": "character-stage.png",
+      "status": 200,
+      "bytes": 165735,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "cleanup.json",
+      "status": 200,
+      "bytes": 329,
+      "exactHash": false,
+      "equal": true
+    },
+    {
+      "name": "costume.png",
+      "status": 200,
+      "bytes": 163782,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "editor-CharacterStage.json",
+      "status": 200,
+      "bytes": 9949,
+      "exactHash": false,
+      "equal": true
+    },
+    {
+      "name": "editor-Playground.json",
+      "status": 200,
+      "bytes": 8844,
+      "exactHash": false,
+      "equal": true
+    },
+    {
+      "name": "editor-results.json",
+      "status": 200,
+      "bytes": 126,
+      "exactHash": false,
+      "equal": true
+    },
+    {
+      "name": "editor-Splash.json",
+      "status": 200,
+      "bytes": 9022,
+      "exactHash": false,
+      "equal": true
+    },
+    {
+      "name": "failures.json",
+      "status": 200,
+      "bytes": 5764,
+      "exactHash": false,
+      "equal": true
+    },
+    {
+      "name": "instructions.json",
+      "status": 200,
+      "bytes": 748,
+      "exactHash": false,
+      "equal": true
+    },
+    {
+      "name": "loading.png",
+      "status": 200,
+      "bytes": 34359,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "player-results.json",
+      "status": 200,
+      "bytes": 9441,
+      "exactHash": false,
+      "equal": true
+    },
+    {
+      "name": "playground.png",
+      "status": 200,
+      "bytes": 715865,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "popup.png",
+      "status": 200,
+      "bytes": 419770,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "recovery.png",
+      "status": 200,
+      "bytes": 398913,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "responsive-layout.json",
+      "status": 200,
+      "bytes": 3612,
+      "exactHash": false,
+      "equal": true
+    },
+    {
+      "name": "source-check.json",
+      "status": 200,
+      "bytes": 7041,
+      "exactHash": false,
+      "equal": true
+    },
+    {
+      "name": "splash.png",
+      "status": 200,
+      "bytes": 51039,
+      "exactHash": true,
+      "equal": true
+    },
+    {
+      "name": "visual-check.json",
+      "status": 200,
+      "bytes": 1551,
+      "exactHash": false,
+      "equal": true
+    }
+  ]
+}
