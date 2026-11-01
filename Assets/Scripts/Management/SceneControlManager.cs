@@ -112,6 +112,7 @@ namespace Game
                 {
                     uiManager.Close(loadingUIId);
                     uiManager.SetTransitionBlocking(false);
+                    uiManager.Find(catalog.Find(CurrentSceneId)?.screenId)?.RefreshLayout();
                 }
             }
         }
@@ -251,6 +252,7 @@ namespace Game
                 {
                     uiManager.Close(loadingUIId);
                     uiManager.SetTransitionBlocking(false);
+                    uiManager.Find(catalog.Find(CurrentSceneId)?.screenId)?.RefreshLayout();
                 }
             }
         }

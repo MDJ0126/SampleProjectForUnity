@@ -1,0 +1,10 @@
+{
+  "projectSettingsUnchanged": true,
+  "at": "2026-11-02T03:21:40.9038696+09:00",
+  "buildStart": "Splash unchanged",
+  "addressablesChanges": [
+    "Assets/AddressableAssetsData/AssetGroups/Prefabs.asset: PlayerLoadout entry added, 5 lines"
+  ],
+  "packagesUnchanged": true,
+  "sceneLocations": "Existing Assets/Scenes reused; Splash/Playground/CharacterStage preserved"
+}

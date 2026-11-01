@@ -1,6 +1,7 @@
 # 프로젝트 작업 지침
 
 - 사용자 지시를 우선하고 기존 변경을 보존한다. 관련 [문서](docs/documentation/00-start.md)만 읽는다.
+- 이 프로젝트의 커밋 메시지는 가능한 한 한글로 작성한다. 코드 식별자·제품명 등 필요한 고유 명칭은 원문을 유지한다.
 - 기본 작성: Class(12), Struct(13), Enum(18), Function(03), 네이밍(02), 주석(17). 기능 작성: Buff(14), Skill(15), HUD(16). 파일은 docs/documentation에 있다.
 - 이벤트(19)는 해당 기능 수정 전에 참고한다.
 - Unity 기본 라이프사이클 함수(Awake, OnEnable, Start, Update, LateUpdate, OnDisable, OnDestroy 등)를 함수 영역의 위쪽에 배치하고, OnEquippedWeaponChanged 같은 사용자 정의 함수와 콜백은 그 아래에 작성한다.

@@ -1,0 +1,36 @@
+{
+    "startedAt": "2026-11-02T02:28:40.9397987+09:00",
+    "completedAt": "2026-11-02T02:28:47.3524703+09:00",
+    "passed": false,
+    "checks": [
+        "Menu pauses both fighters",
+        "Two authored weapons per fighter",
+        "Native Behavior runtime graph and baked NavMesh loaded",
+        "AI does not replace player camera/input ownership",
+        "Menu blocks attacks",
+        "Select owned sword",
+        "Sheath moves sword to authored back socket and blocks attack",
+        "Draw restores hand socket",
+        "Thirty swaps preserve inventory without duplicates",
+        "Invalid selection and foreign ownership rejected",
+        "Select owned rifle",
+        "Rifle attack accepted",
+        "Actual muzzle ray damages enemy and spends exactly one round",
+        "Cooldown rejects duplicate attack",
+        "Reload accepts once",
+        "Timed reload conserves ammunition",
+        "Solid obstacle blocks real rifle damage",
+        "Friendly body blocks shot without friendly damage",
+        "Reload after blocked shots",
+        "Swapping cancels reload",
+        "Health clamps overheal",
+        "Negative damage does not heal",
+        "Death releases possession and blocks attack",
+        "Dead target rejects repeat damage",
+        "Restart restores health and player possession"
+    ],
+    "errors": [
+        "UnityEngine.MissingComponentException: There is no 'Collider' attached to the \"Behavior Opponent\" game object, but a script is trying to access it.\nYou probably need to add a Collider to the game object \"Behavior Opponent\". Or your script needs to check if the component is attached before using it.\r\n  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <cacc1b48a79f4e06850e7b9af174af54>:0 \r\n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <cacc1b48a79f4e06850e7b9af174af54>:0 \r\n  at UnityEngine.Collider.get_enabled () [0x00006] in <724f96867c7b4f0282484e396d0b5370>:0 \r\n  at Game.CombatVerification.Run () [0x00d78] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:156 \r\n  at Game.CombatVerification.Start () [0x00061] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:53 ",
+        "[Combat QA] UnityEngine.MissingComponentException: There is no 'Collider' attached to the \"Behavior Opponent\" game object, but a script is trying to access it.\nYou probably need to add a Collider to the game object \"Behavior Opponent\". Or your script needs to check if the component is attached before using it.\r\n  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000cd] in <cacc1b48a79f4e06850e7b9af174af54>:0 \r\n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x00010] in <cacc1b48a79f4e06850e7b9af174af54>:0 \r\n  at UnityEngine.Collider.get_enabled () [0x00006] in <724f96867c7b4f0282484e396d0b5370>:0 \r\n  at Game.CombatVerification.Run () [0x00d78] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:156 \r\n  at Game.CombatVerification.Start () [0x00061] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:53 "
+    ]
+}

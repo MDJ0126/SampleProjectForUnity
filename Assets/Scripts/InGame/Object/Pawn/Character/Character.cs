@@ -15,20 +15,22 @@ namespace Game
 
         #endregion
 
-        public override string Name => nameof(Character);
         public CharacterAnimationController CharacterAnimationController { get; private set; }
         public Vector3 AimTargetDefault { get; private set; }
 
         protected override void Awake()
         {
             base.Awake();
-            AimTargetDefault = aimTarget.target.localPosition;
-            CharacterAnimationController = GetComponent<CharacterAnimationController>();
+            AimTargetDefault = aimTarget != null && aimTarget.target != null ? aimTarget.target.localPosition : Vector3.zero;
+            CharacterAnimationController = GetComponentInChildren<CharacterAnimationController>();
         }
 
         public void ResetAimTargetPosition()
         {
-            aimTarget.target.localPosition = AimTargetDefault;
+            if (aimTarget != null && aimTarget.target != null)
+            {
+                aimTarget.target.localPosition = AimTargetDefault;
+            }
         }
 
         /// <summary>

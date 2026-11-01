@@ -1,0 +1,25 @@
+{
+  "at": "2026-11-01T18:51:24.796Z",
+  "report": "https://mdj0126.github.io/codex-config/projects/sampleprojectforunity/reports/2026-11-01-result-20261101184318119-v1.0.0.html",
+  "status": 200,
+  "images": [
+    {
+      "name": "duel.png",
+      "status": 200,
+      "bytes": 828799,
+      "sha256": "ea602664accabca3ebb166a7e348d2bf5deb6989cb5325e7666cb27428568fe9"
+    },
+    {
+      "name": "stage.png",
+      "status": 200,
+      "bytes": 160985,
+      "sha256": "4efe9a9fcca586782652039c7f28af43eda6c8fb45785101c3f40fb17c55ba9b"
+    },
+    {
+      "name": "menu.png",
+      "status": 200,
+      "bytes": 727234,
+      "sha256": "b015d8605a70e164dfbed46075526842d6623f1588f7b11edd21eb112d5b5182"
+    }
+  ]
+}

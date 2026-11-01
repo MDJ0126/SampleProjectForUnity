@@ -1,0 +1,11 @@
+{
+  "error": "PERMISSION_DENIED from native Affinity SDK; document=null; completed=[]; no export/native source file generated",
+  "at": "2026-11-02T03:14:09.0572315+09:00",
+  "doctorPassed": true,
+  "affinityVersion": "3.3.1.4940",
+  "statusPassed": true,
+  "beforeDocuments": 2,
+  "afterDocuments": 2,
+  "exportPassed": false,
+  "review": "execute_script schema exposes only script; no per-call file permission argument; no other image editor used. Preserve original Unity PNG screenshots for readable evidence."
+}

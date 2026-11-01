@@ -22,7 +22,7 @@
 
 씬 Hierarchy의 화면 프리팹을 펼쳐 문구·배치·색상과 Button.onClick을 수정합니다. 공통 디자인 변경은 Prefab Mode에서 편집합니다. UI 생성 메뉴나 런타임 레이아웃 생성 코드는 사용하지 않습니다.
 
-Playground는 메뉴가 열린 상태로 진입합니다. RESUME PLAY로 기존 캐릭터 제어를 시작하고 Tab으로 메뉴를 다시 엽니다. CHARACTER STAGE로 이동하며 BACK TO PLAYGROUND로 복귀합니다. 스테이지의 EQUIPMENT/COSTUME 버튼은 이미 배치한 두 패널을 전환합니다. 실제 장비·코스튬 데이터 적용은 후속 기능입니다.
+Playground는 메뉴가 열린 상태로 진입합니다. RESUME PLAY로 기존 캐릭터 제어를 시작하고 Tab으로 메뉴를 다시 엽니다. CHARACTER STAGE로 이동하며 BACK TO PLAYGROUND로 복귀합니다. 스테이지의 EQUIPMENT/COSTUME 버튼은 이미 배치한 두 패널을 전환합니다. 장비 패널의 SWORD/RIFLE 선택은 실제 장비 미리보기와 Playground 장착에 반영합니다. 코스튬은 배치 패널 미리보기입니다. [공통 전투와 AI](27-developed-combat.md)를 참고합니다.
 
 ## 씬과 화면의 소유권
 

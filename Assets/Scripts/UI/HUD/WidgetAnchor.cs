@@ -1,9 +1,5 @@
 using UnityEngine;
 
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
-
 namespace Game
 {
     public class WidgetAnchor : MonoBehaviour
@@ -29,19 +25,5 @@ namespace Game
             return anchor.Transform;
         }
 
-#if UNITY_EDITOR
-        /// <summary>
-        /// 씬 뷰에서 HUD 앵커의 오브젝트 이름 표시
-        /// </summary>
-        private void OnDrawGizmos()
-        {
-            var style = new GUIStyle(GUI.skin.label)
-            {
-                alignment = TextAnchor.MiddleCenter
-            };
-
-            Handles.Label(transform.position, gameObject.name, style);
-        }
-#endif
-    }
+}
 }

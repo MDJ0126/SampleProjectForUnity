@@ -175,3 +175,50 @@ public class HitBoxEditor : Editor
         EditorGUI.EndProperty();
     }
 }
+/// <summary>
+/// 저장하지 않는 디버그 객체를 에디터의 Play 종료와 재로드에서 정리한다.
+/// </summary>
+[InitializeOnLoad]
+internal static class PhysicsQueryDebugLifecycle
+{
+    static PhysicsQueryDebugLifecycle()
+    {
+        EditorApplication.playModeStateChanged += OnPlayModeChanged;
+        AssemblyReloadEvents.beforeAssemblyReload += Cleanup;
+        EditorApplication.delayCall += CleanupAfterReload;
+    }
+
+    private static void OnPlayModeChanged(PlayModeStateChange state)
+    {
+        if (state == PlayModeStateChange.ExitingPlayMode || state == PlayModeStateChange.EnteredEditMode)
+        {
+            Cleanup();
+        }
+    }
+
+    private static void CleanupAfterReload()
+    {
+        if (!EditorApplication.isPlayingOrWillChangePlaymode)
+        {
+            Cleanup();
+        }
+    }
+
+    /// <summary>
+    /// 재로드 전에 생성한 임시 렌더러와 메시를 함께 제거한다.
+    /// </summary>
+    private static void Cleanup()
+    {
+        foreach (PhysicsQueryDebugRenderer renderer in Resources.FindObjectsOfTypeAll<PhysicsQueryDebugRenderer>())
+        {
+            if (renderer == null || EditorUtility.IsPersistent(renderer))
+            {
+                continue;
+            }
+            renderer.DisposeResources(true);
+            Object.DestroyImmediate(renderer.gameObject);
+        }
+        SceneView.RepaintAll();
+        EditorApplication.QueuePlayerLoopUpdate();
+    }
+}

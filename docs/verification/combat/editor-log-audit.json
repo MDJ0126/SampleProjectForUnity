@@ -1,0 +1,39 @@
+{
+  "finalPassed": true,
+  "runs": [
+    {
+      "log": "combat-final-build-editor-3.log",
+      "exceptions": 2,
+      "messages": [
+        "NullReferenceException: Object reference not set to an instance of an object",
+        "NullReferenceException: Object reference not set to an instance of an object"
+      ]
+    },
+    {
+      "log": "combat-final-verify.log",
+      "exceptions": 0,
+      "messages": []
+    },
+    {
+      "log": "combat-physics-final.log",
+      "exceptions": 0,
+      "messages": []
+    },
+    {
+      "log": "combat-ui-final-build.log",
+      "exceptions": 0,
+      "messages": []
+    },
+    {
+      "log": "combat-final-player.log",
+      "exceptions": 0,
+      "messages": []
+    },
+    {
+      "log": "combat-final-scene-player.log",
+      "exceptions": 0,
+      "messages": []
+    }
+  ],
+  "at": "2026-11-02T03:36:59.3961568+09:00"
+}

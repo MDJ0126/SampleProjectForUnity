@@ -200,6 +200,15 @@ namespace Game
         }
 
         /// <summary>
+        /// 장비 이전 시 판정 소유권과 이전 프레임의 스윕을 초기화한다.
+        /// </summary>
+        public void SetOwner(Pawn owner)
+        {
+            Owner = owner;
+            ResetAttackSweep();
+        }
+
+        /// <summary>
         /// 공격 시작이나 순간이동 후 이전 이동 구간과 접촉 이력을 초기화한다.
         /// </summary>
         public void ResetAttackSweep()

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Game.Editor")]
 
 /// <summary>
 /// 물리 조회의 디버그 선을 수명 동안 유지하고 게임 카메라에 메시로 표시한다.
@@ -14,49 +15,37 @@ internal sealed class PhysicsQueryDebugRenderer : MonoBehaviour
     private LineBatch _depthTest;
     private LineBatch _overlayMarkers;
     private LineBatch _depthMarkers;
-
-#if UNITY_EDITOR
     /// <summary>
-    /// 저장하지 않는 디버그 객체가 플레이 종료와 스크립트 재로드를 넘어 남지 않도록 정리 이벤트를 연결한다.
+    /// 만료된 선을 제거하고 이번 프레임의 선 메시를 갱신한다.
     /// </summary>
-    [UnityEditor.InitializeOnLoadMethod]
-    private static void InitializeEditorCleanup()
+    private void LateUpdate()
     {
-        UnityEditor.EditorApplication.playModeStateChanged -= OnPlayModeStateChanged;
-        UnityEditor.EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
-        UnityEditor.AssemblyReloadEvents.beforeAssemblyReload -= DestroyEditorDebugObjects;
-        UnityEditor.AssemblyReloadEvents.beforeAssemblyReload += DestroyEditorDebugObjects;
-        UnityEditor.EditorApplication.delayCall -= CleanupAfterReload;
-        UnityEditor.EditorApplication.delayCall += CleanupAfterReload;
+        _overlay?.UpdateMesh();
+        _depthTest?.UpdateMesh();
+        _overlayMarkers?.UpdateMesh();
+        _depthMarkers?.UpdateMesh();
     }
-
-    private static void OnPlayModeStateChanged(UnityEditor.PlayModeStateChange state)
-    {
-        if (state == UnityEditor.PlayModeStateChange.ExitingPlayMode || state == UnityEditor.PlayModeStateChange.EnteredEditMode)
-            DestroyEditorDebugObjects();
-    }
-
-    private static void CleanupAfterReload()
-    {
-        if (!UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode) DestroyEditorDebugObjects();
-    }
-
     /// <summary>
-    /// 재로드로 관리 참조가 사라진 기존 디버그 객체까지 찾아 즉시 제거한다.
+    /// 갱신이 중단되어도 마지막 프레임의 선 메시가 계속 표시되지 않도록 비운다.
     /// </summary>
-    private static void DestroyEditorDebugObjects()
+    private void OnDisable()
     {
-        foreach (PhysicsQueryDebugRenderer instance in Resources.FindObjectsOfTypeAll<PhysicsQueryDebugRenderer>())
+        _overlay?.Clear();
+        _depthTest?.Clear();
+        _overlayMarkers?.Clear();
+        _depthMarkers?.Clear();
+    }
+    /// <summary>
+    /// 플레이 종료 시 생성한 메시와 머티리얼을 정리한다.
+    /// </summary>
+    private void OnDestroy()
+    {
+        DisposeResources(false);
+        if (_instance == this)
         {
-            if (instance == null || UnityEditor.EditorUtility.IsPersistent(instance)) continue;
-            instance.DisposeResources(true);
-            DestroyImmediate(instance.gameObject);
+            _instance = null;
         }
-        _instance = null;
-        UnityEditor.SceneView.RepaintAll();
-        UnityEditor.EditorApplication.QueuePlayerLoopUpdate();
     }
-#endif
 
     /// <summary>
     /// 플레이 중 선분을 등록하고 필요한 렌더링 자원을 최초 호출에 생성한다.
@@ -70,7 +59,6 @@ internal sealed class PhysicsQueryDebugRenderer : MonoBehaviour
         LineBatch batch = depthTest ? _instance._depthTest : _instance._overlay;
         batch.Add(start, end, color, duration);
     }
-
     /// <summary>
     /// 감지 지점을 면이 채워진 정육면체 메시로 표시한다.
     /// </summary>
@@ -106,7 +94,6 @@ internal sealed class PhysicsQueryDebugRenderer : MonoBehaviour
         0, 4, 5, 0, 5, 1,
         2, 3, 7, 2, 7, 6,
     };
-
     /// <summary>
     /// 비트로 지정한 축별 부호로 정육면체의 월드 꼭짓점을 계산한다.
     /// </summary>
@@ -114,7 +101,6 @@ internal sealed class PhysicsQueryDebugRenderer : MonoBehaviour
     {
         return center + new Vector3((index & 1) == 0 ? -halfSize : halfSize, (index & 2) == 0 ? -halfSize : halfSize, (index & 4) == 0 ? -halfSize : halfSize);
     }
-
     /// <summary>
     /// 플레이 중 공통 렌더링 자원을 준비한다.
     /// </summary>
@@ -143,42 +129,10 @@ internal sealed class PhysicsQueryDebugRenderer : MonoBehaviour
 
         return true;
     }
-
-    /// <summary>
-    /// 만료된 선을 제거하고 이번 프레임의 선 메시를 갱신한다.
-    /// </summary>
-    private void LateUpdate()
-    {
-        _overlay?.UpdateMesh();
-        _depthTest?.UpdateMesh();
-        _overlayMarkers?.UpdateMesh();
-        _depthMarkers?.UpdateMesh();
-    }
-
-    /// <summary>
-    /// 갱신이 중단되어도 마지막 프레임의 선 메시가 계속 표시되지 않도록 비운다.
-    /// </summary>
-    private void OnDisable()
-    {
-        _overlay?.Clear();
-        _depthTest?.Clear();
-        _overlayMarkers?.Clear();
-        _depthMarkers?.Clear();
-    }
-
-    /// <summary>
-    /// 플레이 종료 시 생성한 메시와 머티리얼을 정리한다.
-    /// </summary>
-    private void OnDestroy()
-    {
-        DisposeResources(false);
-        if (_instance == this) _instance = null;
-    }
-
     /// <summary>
     /// 소유한 자원을 해제하고 재로드 이전 메시와 머티리얼도 자식 렌더러 참조로 정리한다.
     /// </summary>
-    private void DisposeResources(bool isImmediate)
+    internal void DisposeResources(bool isImmediate)
     {
         _overlay?.Dispose(isImmediate);
         _depthTest?.Dispose(isImmediate);
@@ -209,7 +163,6 @@ internal sealed class PhysicsQueryDebugRenderer : MonoBehaviour
         if (isImmediate || !Application.isPlaying) DestroyImmediate(resource);
         else Destroy(resource);
     }
-
     /// <summary>
     /// 선분의 월드 좌표, 색상과 최초 표시 프레임 및 만료 시간을 보관한다.
     /// </summary>
@@ -223,7 +176,6 @@ internal sealed class PhysicsQueryDebugRenderer : MonoBehaviour
         public bool isTimed;
         public int firstRenderedFrame;
     }
-
     /// <summary>
     /// 같은 깊이 검사 옵션의 선들을 재사용 메시 하나로 묶어 렌더링한다.
     /// </summary>
@@ -258,7 +210,6 @@ internal sealed class PhysicsQueryDebugRenderer : MonoBehaviour
             _renderer.allowOcclusionWhenDynamic = false;
             _renderer.enabled = false;
         }
-
         /// <summary>
         /// 표시 중 설정 변경의 영향을 받지 않도록 선과 수명을 값으로 저장한다.
         /// </summary>
@@ -275,7 +226,6 @@ internal sealed class PhysicsQueryDebugRenderer : MonoBehaviour
                 firstRenderedFrame = -1,
             });
         }
-
         /// <summary>
         /// 첫 표시를 보장하고 만료된 선을 제외하여 정점과 인덱스를 갱신한다.
         /// </summary>
@@ -320,7 +270,6 @@ internal sealed class PhysicsQueryDebugRenderer : MonoBehaviour
             _mesh.SetIndices(_indices, _topology, 0);
             _mesh.RecalculateBounds();
         }
-
         /// <summary>
         /// 생성한 네이티브 렌더링 자원을 해제한다.
         /// </summary>
@@ -330,7 +279,6 @@ internal sealed class PhysicsQueryDebugRenderer : MonoBehaviour
             DestroyResource(_mesh, isImmediate);
             DestroyResource(_material, isImmediate);
         }
-
         /// <summary>
         /// 보관 중인 선을 제거하고 렌더러와 메시를 즉시 비운다.
         /// </summary>

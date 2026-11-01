@@ -7,7 +7,10 @@ namespace Game
         /// </summary>
         public override void Execute()
         {
-            owner.StatusInfo.hp += 10;
+            if (owner != null && !owner.IsDead)
+            {
+                owner.StatusInfo.AddHp(10);
+            }
         }
     }
 }

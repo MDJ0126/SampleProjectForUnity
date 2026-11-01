@@ -1,58 +1,59 @@
+using System;
+
 namespace Game
 {
+    /// <summary>
+    /// 체력을 유효 범위로 제한하고 실제 변경만 알린다.
+    /// </summary>
     public class StatusInfo
     {
-        public delegate void OnChanegdData(StatusInfo statusInfo);
-        private event OnChanegdData _onChangedHp;
-        public event OnChanegdData OnChangedHp
-        {
-            add
-            {
-                _onChangedHp -= value;
-                _onChangedHp += value;
-            }
-            remove
-            {
-                _onChangedHp -= value;
-            }
-        }
-
+        public event Action<StatusInfo> OnChangedHp;
         public Status baseStatus;
-        public int hp = 0;
-        public float HpRatio => (float)hp / baseStatus.maxHp;
+        public int hp { get; private set; }
+        public int MaxHp => Math.Max(0, baseStatus.maxHp);
+        public float HpRatio => MaxHp > 0 ? (float)hp / MaxHp : 0f;
         public bool IsDead => hp <= 0;
 
         /// <summary>
-        /// 현재 체력을 기본 스테이터스의 최대 체력으로 초기화
+        /// 기본 최대 체력으로 초기화하고 화면 갱신을 알린다.
         /// </summary>
         public void Initialize()
         {
-            hp = baseStatus.maxHp;
+            hp = MaxHp;
+            OnChangedHp?.Invoke(this);
         }
 
         /// <summary>
-        /// 체력 변경 이벤트 호출 (현재 구현에서는 hp 필드를 직접 대입하지 않음)
+        /// 현재 체력을 0과 최대 체력 사이로 제한한다.
         /// </summary>
-        public void SetHp(int hp)
+        public void SetHp(int value)
         {
-            this.hp = hp;
-            _onChangedHp?.Invoke(this);
+            value = Math.Clamp(value, 0, MaxHp);
+            if (hp == value)
+            {
+                return;
+            }
+            hp = value;
+            OnChangedHp?.Invoke(this);
         }
 
         /// <summary>
-        /// 현재 체력에 지정 값을 더한 결과로 SetHp 호출
+        /// 정수 덧셈이 넘치지 않도록 체력 증감을 적용한다.
         /// </summary>
-        public void AddHp(int addHp)
+        public void AddHp(int amount)
         {
-            SetHp(hp + addHp);
+            SetHp((int)Math.Clamp((long)hp + amount, 0L, MaxHp));
         }
 
         /// <summary>
-        /// 현재 체력에 전달받은 damage를 더한 결과로 SetHp 호출
+        /// 양수 피해만 적용하여 음수 피해로 회복되지 않게 한다.
         /// </summary>
         public void Damaged(int damage)
         {
-            SetHp(hp - damage);
+            if (damage > 0)
+            {
+                AddHp(-damage);
+            }
         }
     }
 }

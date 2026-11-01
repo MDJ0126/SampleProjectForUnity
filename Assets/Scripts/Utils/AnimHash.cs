@@ -2,6 +2,7 @@ using UnityEngine;
 
 public static class AnimHash
 {
+    public static int IsDead = Animator.StringToHash("IsDead");
     public static int PosX = Animator.StringToHash("PosX");
     public static int PosY = Animator.StringToHash("PosY");
     public static int Speed = Animator.StringToHash("Speed");

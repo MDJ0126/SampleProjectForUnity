@@ -1,0 +1,24 @@
+{
+  "name": "Game.Verification.Editor",
+  "overrideReferences": false,
+  "autoReferenced": true,
+  "includePlatforms": [
+    "Editor"
+  ],
+  "rootNamespace": "Game",
+  "noEngineReferences": false,
+  "references": [
+    "Game.Runtime",
+    "Game.Behavior",
+    "Game.Samples.Runtime",
+    "Game.Verification",
+    "Game.Editor",
+    "Unity.Behavior",
+    "Unity.AI.Navigation",
+    "Unity.Addressables",
+    "Unity.Addressables.Editor",
+    "UnityEngine.UI",
+    "Unity.InputSystem",
+    "Game.Samples.Editor"
+  ]
+}

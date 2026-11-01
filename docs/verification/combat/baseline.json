@@ -1,0 +1,488 @@
+{
+  "startedAt": "2026-11-02T01:46:15.5198351+09:00",
+  "deadline": "2026-11-02T11:46:15.5198351+09:00",
+  "goalStartedAt": "2026-11-02T01:46:55.7049834+09:00",
+  "initialEstimate": "60~100분",
+  "budget": "사용자 지정10시간",
+  "baselineHead": "a526d924a4918b07799e3011b470e48e4b6abb82",
+  "scripts": 95,
+  "runtimeScripts": 87,
+  "lines": 8117,
+  "entries": [
+    {
+      "path": "Assets/Scripts/Common/Cheat.cs",
+      "lines": 6,
+      "sha256": "f53e88d183098490adf8e463f8994a5b9416cc9c2b3ae5ddee31c9b9ce79a134"
+    },
+    {
+      "path": "Assets/Scripts/Common/Editor/SpringArmEditor.cs",
+      "lines": 76,
+      "sha256": "05264ac6d3224688e7c1110578c6385cc31b4260b00ef86a68a46d6bef4d5728"
+    },
+    {
+      "path": "Assets/Scripts/Common/EditorPossessInput.cs",
+      "lines": 55,
+      "sha256": "6656509c3d9707a10ad0639599ef21be5b2ef224b8fc3e21bcc11242d4b39537"
+    },
+    {
+      "path": "Assets/Scripts/Common/GroundTiling.cs",
+      "lines": 31,
+      "sha256": "d458a4e48fb7a52b0b63ba37994d7e794e093b0d0935cdb266a15c1803beaeb2"
+    },
+    {
+      "path": "Assets/Scripts/Common/PlayerCameraController.cs",
+      "lines": 260,
+      "sha256": "c46538aa30bca7e543b6e756537d5e8fe8ea12a2c7de288341c430a482a18b46"
+    },
+    {
+      "path": "Assets/Scripts/Common/SpringArm.cs",
+      "lines": 125,
+      "sha256": "daf157d2fd3ad17c52f81c3572f9ceac8e512a3ed4a52baef1c8e7813527ea67"
+    },
+    {
+      "path": "Assets/Scripts/Editor/DocumentationMenu.cs",
+      "lines": 91,
+      "sha256": "92a95b44eb429dccb76ed45cf0c649516c0c7aa1487b060ac2cccb0711023a8c"
+    },
+    {
+      "path": "Assets/Scripts/Editor/HitBoxEditor.cs",
+      "lines": 177,
+      "sha256": "2db320215058f9bb1fc890d394ced576270e5e5c130a64807a48c210294be6ea"
+    },
+    {
+      "path": "Assets/Scripts/Editor/SceneFlowBuild.cs",
+      "lines": 85,
+      "sha256": "72c8dadfffabbab105ba67c85fff76b8103c0212fdbbfef1404b8eb43788039e"
+    },
+    {
+      "path": "Assets/Scripts/Editor/SceneFlowEditorVerification.cs",
+      "lines": 168,
+      "sha256": "114ddbfb1f47f4e662f288629e150312847d7f2b07f7c1481642ceba6e089909"
+    },
+    {
+      "path": "Assets/Scripts/Editor/TransformInspector.cs",
+      "lines": 199,
+      "sha256": "2dc6927e56c5f41002a4368c3c37ddc9bf63c10faffa6686eb7dc5cc6d5d8ae5"
+    },
+    {
+      "path": "Assets/Scripts/Editor/UICreationShortcuts.cs",
+      "lines": 28,
+      "sha256": "6a1d68a12bc0cbc9180ecc6c7c0149b9e41190d5e3b97b2939cf577d5cfa90ba"
+    },
+    {
+      "path": "Assets/Scripts/Editor/WeaponRibbonVerification.cs",
+      "lines": 170,
+      "sha256": "f5c09d86056f9d723a87aca5b6659169932b7f37f93ab3174b9e034e6756055f"
+    },
+    {
+      "path": "Assets/Scripts/Etc/DisplayNameAttribute.cs",
+      "lines": 54,
+      "sha256": "baa7ceb036f14a657d20a60d1312c475f5fd4215755b0e0dbb09389d1d6453fe"
+    },
+    {
+      "path": "Assets/Scripts/Etc/ReadOnlyAttribute.cs",
+      "lines": 50,
+      "sha256": "77d3ecb01c42ce52ce2cf49c78553c0b8be934fb6a145e0a48bb03a58de03b34"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Buff/Buff.cs",
+      "lines": 49,
+      "sha256": "4f249b8c236f0ac4b2e277908315fdce0ca3a9959684a87c84b0a444cb317eed"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Buff/BuffManager.cs",
+      "lines": 49,
+      "sha256": "bb89fbde4eb9f377b6039797a3f68e1687103e73a43aeec3abe20fae5b518a41"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Buff/HealBuff.cs",
+      "lines": 15,
+      "sha256": "5a55bde470cbe71091ff8adb76184b06e7ec1ada65a6aceff9759f3b0c356cbe"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Common/HitBox.cs",
+      "lines": 474,
+      "sha256": "8ce7d767dda6ee5456e1c187b93424843b65ee4b79e00068cb40c76840b76ccd"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Common/Socket.cs",
+      "lines": 17,
+      "sha256": "ea4dede8666d201613223f325637ec791f590f808654066a02226691be5d5b4b"
+    },
+    {
+      "path": "Assets/Scripts/InGame/DamageInfo.cs",
+      "lines": 4,
+      "sha256": "460e2df7b20865472626ec9388ed38357acdc29383a8971d8c702d138372c07d"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Equipment/Armor.cs",
+      "lines": 7,
+      "sha256": "ddfa55e6b1cf33416de64723c9b672375d92d49503de5f7dc0370415934c6d0c"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Equipment/Equipment.cs",
+      "lines": 27,
+      "sha256": "814f984f8f332ad80575eb17d56f89f69743acc9f53ce24f2050208f6b5bbf79"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Equipment/EquipmentInfo.cs",
+      "lines": 10,
+      "sha256": "102b4457ba1067488909826bb484338c4578ba32a2685e9dee1b79a25758e1e4"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Equipment/Gun.cs",
+      "lines": 19,
+      "sha256": "96824b6dc3d697d3be4ee372f3a95c527ac65e710ebd07f9bf8389c07adca4b2"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Equipment/MeleeWeapon.cs",
+      "lines": 86,
+      "sha256": "453d37a050f6290270406a4e43b5fa45554767aefdeb2a5586a6ce57012e74fb"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Equipment/TestAK74.cs",
+      "lines": 9,
+      "sha256": "c69a8c4fab977739eb225109b573289c2e5602270c825450eb74e96d284b18d5"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Equipment/TestSword.cs",
+      "lines": 7,
+      "sha256": "8fe7e860a3416b90200beab31b5f25ca1e36a3001f671a0ddc9f31b980327927"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Equipment/Weapon.cs",
+      "lines": 20,
+      "sha256": "bcac19cdd9c64bf26f3a8a1c69d206c67b9ade9bf3aaa1fdfd0744bcd65590a3"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Equipment/WeaponRibbon.cs",
+      "lines": 253,
+      "sha256": "00d626410b05994574b15c085f571994318d538aecccaf88030bca021728ad37"
+    },
+    {
+      "path": "Assets/Scripts/InGame/GameUtils.cs",
+      "lines": 22,
+      "sha256": "1388366893c61692f4add2e0183d1e5f225eda36e1a4a4569e2e1b83a2cd7729"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Actor.cs",
+      "lines": 36,
+      "sha256": "3094557a1a8ab1343821bbd1e62aac73db71291ccf843d9bbab5484a71602d96"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/AIController.cs",
+      "lines": 33,
+      "sha256": "02ee94dd223180e5d78660aa0a8351259a55353fefdc64782f69e976d52b4fab"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/AimTarget.cs",
+      "lines": 13,
+      "sha256": "34a371511337f6c803a8d4e918c99e827b83b233b3eb47ec1ec7ea7526c8e92c"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/AnimationStateBehaviour/PawnStateBehaviour.cs",
+      "lines": 31,
+      "sha256": "d1c9d6d21d81cf4ab3e6f7082b6f48a8cebe38dc76185fdcc5105f08df482bc7"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/Character.cs",
+      "lines": 53,
+      "sha256": "7eef6c9a7942d13d7ef2477a15f5b5214cf022d58277cf494b7c4ef1e099d130"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAnimationController.cs",
+      "lines": 59,
+      "sha256": "601eed3a575cb076221d6424d6287cd0f4cdac6cc85a04cce911ea9aa83deb93"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterAnimationController.FootIK.cs",
+      "lines": 166,
+      "sha256": "a4a681fe482945197fc887aac53be0a3ee0247dc9def511181e55dd9efc620bc"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/CharacterMovement.cs",
+      "lines": 9,
+      "sha256": "837b1a6c27b322a74516cd51fadb536670bce705f46aa085809592456a711814"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/Characters/RobotKyle.cs",
+      "lines": 140,
+      "sha256": "8fe7c8f09b53830114da5b21f70ce1bdcf67413773217a8cd9289cb60f34674d"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/RobotKyle/RobotKyleAnimationController.cs",
+      "lines": 104,
+      "sha256": "7048f3c9dc4dce7eda6cd8398b0633b4f14656bfd75b907bb9eea87af5475cdb"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Character/RobotKyle/RobotKylePlayerController.cs",
+      "lines": 142,
+      "sha256": "4adb942a203c11931f48eae162943575c1b7fefab4bf6259b96e7e930b75573b"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Movement.cs",
+      "lines": 267,
+      "sha256": "d7cc1d01476e3c609e6235d1d68f0434a6e2b4b411f26719407a6abdb0c0047d"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/Pawn.cs",
+      "lines": 198,
+      "sha256": "fe39cb917be572b8237d17e21566311d0bf31ef79780f3aa039c97cb92cf72f7"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/PawnAnimationController.cs",
+      "lines": 20,
+      "sha256": "ea613a50836f18f1f83ad01833c759d5f1d1c9ae01dd8de01f55c6c8e2e36389"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/Pawn/PawnMovement.cs",
+      "lines": 9,
+      "sha256": "6bb9ae51aa14c2cf552788a91769345a5cfdddf3c72162d922cddab4d21f627d"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PawnController.cs",
+      "lines": 106,
+      "sha256": "bd10fd5f4ea063536e4e65d083bfb9068f2877e9afc4552782fe9134b1c2421f"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Object/PlayerController.cs",
+      "lines": 22,
+      "sha256": "dbd0836b62e282d476735026dec4ec9ecba9bed806b5b95cfd2a51c8dad6ee32"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Skill/BuffSkill.cs",
+      "lines": 6,
+      "sha256": "77998a58df4d28e8c999e7709d36920b7f1c27a52696834724420261333c90b0"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Skill/HealSkill.cs",
+      "lines": 14,
+      "sha256": "57cf08e7fab6a2e23fae3304339c27d9c81ebfd412d115dab432dc61cdd6ba63"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Skill/RoarSkill.cs",
+      "lines": 29,
+      "sha256": "43a3bd9151d72fa74c5cd3ef82a52a72371dedd98a0eb1d90f991bf45bebe136"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Skill/Skill.cs",
+      "lines": 29,
+      "sha256": "fceccead9bae894a89f9269622fd714077ef3d6c1cc7aa28bfb84a7cd26135f3"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Skill/SkillManager.cs",
+      "lines": 80,
+      "sha256": "f4e7db00964abdbedd07c9d3a75a1a04363a239a65b64ab2b304bf080c9f0e23"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Skill/SkillObject.cs",
+      "lines": 7,
+      "sha256": "15e84e1b8a8d7ff3aae241e16aeb8ece118a30d909808608b5f62da71875a091"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Status/Status.cs",
+      "lines": 35,
+      "sha256": "e956085ce9184e381fe348179c4799775f935628130c12ae4043060a2fb68177"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Status/StatusInfo.cs",
+      "lines": 59,
+      "sha256": "12ee0f26f798ffeb3b26951f55dd03606299b3def34c4614420866c7ab8ba28a"
+    },
+    {
+      "path": "Assets/Scripts/InGame/Status/StatusTable.cs",
+      "lines": 33,
+      "sha256": "52f254725c6b5d3f92e19214f5ae196832662531d4442159719e0dc8ccf08a7e"
+    },
+    {
+      "path": "Assets/Scripts/Management/GameMode.cs",
+      "lines": 33,
+      "sha256": "c3f9ff89782d7ff7cf4cee1e4935fc36ab35d3f3eff3fe105e6406d23cfa19a2"
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneCatalog.cs",
+      "lines": 38,
+      "sha256": "695645d90ee324e14bdeaa02522cf00065e4495ac350f3779d28bba2e57b94af"
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneContent.cs",
+      "lines": 39,
+      "sha256": "d56ba24ff8a18b13f3031792555a96e769219f19c22d7c4a31fac630714ce463"
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneControlManager.cs",
+      "lines": 333,
+      "sha256": "e8927bdba5ece6fba03dbcb371918ff533949b1119b016927586530c47fbe592"
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneDefinition.cs",
+      "lines": 17,
+      "sha256": "aae8f049bf866066dfbc8e2f4f50d31144b1af5b6370dc6033627217ed159365"
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneEntry.cs",
+      "lines": 39,
+      "sha256": "c7ff205e28bd89d6761af2c91869c55e7c9defde9660bc37285938f83b7ac556"
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneFlowContent.cs",
+      "lines": 187,
+      "sha256": "f230bc0ba6ff570739ad20e25ba5a54e60e885839d0918964a89524b693a0894"
+    },
+    {
+      "path": "Assets/Scripts/Management/SceneUIInitializer.cs",
+      "lines": 136,
+      "sha256": "5035ea4be2919ba51e2fb37bec4b2821f95aff3167803597712ffa62bc8d2e6a"
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/SampleSceneGameMode.cs",
+      "lines": 18,
+      "sha256": "418120e60c0776dbad2f0a1d8640627c6e7791b3b8baee283fb1efd14736befe"
+    },
+    {
+      "path": "Assets/Scripts/SampleScene/SceneFlowVerification.cs",
+      "lines": 403,
+      "sha256": "ad3eab73bb0bb21188a948457cdde435f2ea5e5b5e39841af01d8d911e1c45db"
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/FollowHUD.cs",
+      "lines": 132,
+      "sha256": "320390ef973f13db4ed3b9515f4050fba8d6a021ede0ff5df022042282cd1725"
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/FollowPawnInfo.cs",
+      "lines": 88,
+      "sha256": "ed391614f7703f317eb953a3f48592fd7c3ebcf1d0d572322167af49e523c4a3"
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/FollowSpeechBubble.cs",
+      "lines": 22,
+      "sha256": "7dea7c02d39e116170d2f0a272b52198d3dd77c4f0ece28fe0b47e99c2c2fe9d"
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/HUDManager.cs",
+      "lines": 54,
+      "sha256": "23c2b0842ae65115340b3293eb123e7f0ffdc8c3ebe1502ab1f537ae88407aef"
+    },
+    {
+      "path": "Assets/Scripts/UI/HUD/WidgetAnchor.cs",
+      "lines": 48,
+      "sha256": "e0fb2cf92f089a5cf86416b25a2b81448d8034e747d9f4be6e5ced9b459db68a"
+    },
+    {
+      "path": "Assets/Scripts/UI/LoadingUIView.cs",
+      "lines": 24,
+      "sha256": "d88ca4295b178b1a76e9b7e6eda94056d71d7216aebdc1f9f44226e33d41dd08"
+    },
+    {
+      "path": "Assets/Scripts/UI/PopupUIView.cs",
+      "lines": 26,
+      "sha256": "c5467ed223d3bc739a6fc0949a14c9e7bb047006d2a6ed5b3a34d76e5e2cba83"
+    },
+    {
+      "path": "Assets/Scripts/UI/SceneFlowView.cs",
+      "lines": 106,
+      "sha256": "b09f66804465c5cec45c4881c1abc4910dff3194696481de02643a2f31b7f387"
+    },
+    {
+      "path": "Assets/Scripts/UI/UICatalog.cs",
+      "lines": 38,
+      "sha256": "ada6b8a49d8a048d150ca58ca21cbfe5a6256830658a0ce06f92ef30998ddb65"
+    },
+    {
+      "path": "Assets/Scripts/UI/UIDefinition.cs",
+      "lines": 20,
+      "sha256": "a4ce394f1447120970635c9685227b46a5e420812736d8033fdff413a82ec42c"
+    },
+    {
+      "path": "Assets/Scripts/UI/UIEnums.cs",
+      "lines": 24,
+      "sha256": "7b96f52405be16d1389df0441340649d53a243d555450037c40eb46a77ff122c"
+    },
+    {
+      "path": "Assets/Scripts/UI/UIManager.cs",
+      "lines": 402,
+      "sha256": "e45f0477d21cafc711fbcec77716d230c27e599d073a2b042566f2fa257fea35"
+    },
+    {
+      "path": "Assets/Scripts/UI/UIView.cs",
+      "lines": 72,
+      "sha256": "d91fd5e4064f5607357c0a630afebba2d0be08e42f806f5ad775bf5c84ac61fb"
+    },
+    {
+      "path": "Assets/Scripts/Utils/AnimHash.cs",
+      "lines": 15,
+      "sha256": "28d3dc00c4e548220caca5fd89eb083a0f3a39ee334870934179d3008e056e9c"
+    },
+    {
+      "path": "Assets/Scripts/Utils/Enumeration.cs",
+      "lines": 22,
+      "sha256": "b2e07debec880020466f7478e10304511ac4e9bd4ffc06102648b855b3f6fe05"
+    },
+    {
+      "path": "Assets/Scripts/Utils/GameConfig.cs",
+      "lines": 7,
+      "sha256": "4e3b340525c565a096ffd37f3510b65b5073175078c26842c738eee9d1d7f275"
+    },
+    {
+      "path": "Assets/Scripts/Utils/ObjectPool.cs",
+      "lines": 110,
+      "sha256": "faa8be51c31ca38800afdaeff8bb73e5293170e79ca1a4e5383e2e3c5e3ba5d6"
+    },
+    {
+      "path": "Assets/Scripts/Utils/PhysicsQueryDebugRenderer.cs",
+      "lines": 345,
+      "sha256": "b24f5886cff365d3e52602004ada6276095ecbac46c5da48ca87108b67deedab"
+    },
+    {
+      "path": "Assets/Scripts/Utils/PhysicsQueryHelper.cs",
+      "lines": 362,
+      "sha256": "71c2b9999eec805c304bea7732f83a92dd19e3b169201e2742af188794df8ee8"
+    },
+    {
+      "path": "Assets/Scripts/Utils/RandomDistribution/DistributedToggle.cs",
+      "lines": 30,
+      "sha256": "37686d4051ad11188565c915035964c64b94317491302a28370c56c9bfc973fa"
+    },
+    {
+      "path": "Assets/Scripts/Utils/RandomDistribution/ShuffleBag.cs",
+      "lines": 58,
+      "sha256": "fac2fd81475fc5e1abcb8173285593f97e909f23e49ad49fac39816e4ebe8360"
+    },
+    {
+      "path": "Assets/Scripts/Utils/Singleton.cs",
+      "lines": 36,
+      "sha256": "8c850e1e8e0d75e00d0d67a3ee5d9a5e2355e833b0b9e40ecf2b2d684665be46"
+    },
+    {
+      "path": "Assets/Scripts/Utils/SingletonBehaviour.cs",
+      "lines": 29,
+      "sha256": "535241d8a109a910125f4d89dfc9b2c4bb55c4176d41cfaa1b92850ad2b7cbfd"
+    },
+    {
+      "path": "Assets/Scripts/Utils/SingletonScriptableObject.cs",
+      "lines": 102,
+      "sha256": "69c9ed503d425a4fc5763827f23eaa6e6a2bf6a7ccce435f5b77815c26b37935"
+    },
+    {
+      "path": "Assets/Scripts/Utils/StencilOutline.cs",
+      "lines": 99,
+      "sha256": "a5e395803816ab56e70473c2705808a18884ba9c65299b89d7347ad0dcb10663"
+    },
+    {
+      "path": "Assets/Scripts/Utils/StencilOutlineRendererFeature.cs",
+      "lines": 122,
+      "sha256": "6d898896dee2270788eb020498431f9296de3fbf48ff8f5ee077060b3fae7d1d"
+    },
+    {
+      "path": "Assets/Scripts/Utils/Utils.cs",
+      "lines": 116,
+      "sha256": "19564887579d7e17125223149e15fb6b3dbf88166def569c6449f86d36d70aa5"
+    },
+    {
+      "path": "Assets/Scripts/Utils/YieldInstructionCache.cs",
+      "lines": 22,
+      "sha256": "dac8f21439b922ae40172cd9e9b46ebdc1145266c826af72dac7f497cb389543"
+    }
+  ]
+}

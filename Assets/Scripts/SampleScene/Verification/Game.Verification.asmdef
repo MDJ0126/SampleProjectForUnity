@@ -1,0 +1,18 @@
+{
+  "name": "Game.Verification",
+  "overrideReferences": false,
+  "autoReferenced": true,
+  "includePlatforms": [],
+  "rootNamespace": "Game",
+  "noEngineReferences": false,
+  "references": [
+    "Game.Runtime",
+    "Game.Behavior",
+    "Game.Samples.Runtime",
+    "Unity.Behavior",
+    "Unity.InputSystem",
+    "UnityEngine.UI",
+    "Unity.Addressables",
+    "Unity.Behavior.SerializableGUID"
+  ]
+}

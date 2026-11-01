@@ -23,6 +23,8 @@ namespace Game
         protected Rigidbody rigidbodyComp;
         protected CapsuleCollider capsule;
         private LayerMask groundLayer;
+        private Pawn _pawn;
+        public Vector3 FacingDirection { get; set; }
 
         public Vector3 MoveInput { get; set; } = Vector3.zero;
         public Vector3 HorizontalVelocity { get; set; } = Vector3.zero;
@@ -32,7 +34,7 @@ namespace Game
             {
                 Vector3 horizontalVelocity = HorizontalVelocity;
                 horizontalVelocity.y = 0f;
-                return horizontalVelocity.magnitude / maxSpeed;
+                return maxSpeed > 0f ? horizontalVelocity.magnitude / maxSpeed : 0f;
             }
         }
 
@@ -51,6 +53,7 @@ namespace Game
             rigidbodyComp = GetComponentInChildren<Rigidbody>();
             capsule = GetComponentInChildren<CapsuleCollider>();
             groundLayer = LayerMask.GetMask("Ground");
+            _pawn = GetComponent<Pawn>();
         }
 
         /// <summary>
@@ -60,6 +63,11 @@ namespace Game
         {
             CheckGround();
             CheckJumpState();
+            if (!isMoveEnable || (_pawn != null && !_pawn.CanMove) || rigidbodyComp.isKinematic)
+            {
+                StopMove();
+                return;
+            }
             CheckCanMove();
             UpdateMovement();
             UpdateRotation();
@@ -153,7 +161,14 @@ namespace Game
 
         public void StopMove()
         {
-            rigidbodyComp.linearVelocity = Vector3.zero;
+            MoveInput = Vector3.zero;
+            HorizontalVelocity = Vector3.zero;
+            FacingDirection = Vector3.zero;
+            IsSprint = false;
+            if (rigidbodyComp != null && !rigidbodyComp.isKinematic)
+            {
+                rigidbodyComp.linearVelocity = Vector3.zero;
+            }
         }
 
         /// <summary>
@@ -161,7 +176,10 @@ namespace Game
         /// </summary>
         private void UpdateMovement()
         {
-            if (!isMoveEnable || !IsGrounded || IsJumping || !IsCanMove) return;
+            if (!isMoveEnable || !IsGrounded || IsJumping || !IsCanMove)
+            {
+                return;
+            }
 
             Vector3 inputDir = MoveInput.normalized;
             Vector3 moveDir = inputDir;
@@ -213,7 +231,10 @@ namespace Game
         /// </summary>
         private void UpdateRotation()
         {
-            if (!IsCanMove || MoveInput.sqrMagnitude == 0f) return;
+            if (!IsCanMove)
+            {
+                return;
+            }
 
             // 물리 충돌로 생긴 회전 제거
             Vector3 angularVelocity = rigidbodyComp.angularVelocity;
@@ -229,12 +250,15 @@ namespace Game
             else
             {
                 // 걸을 때는 카메라가 바라보는 수평 방향을 유지한다.
-                direction = Camera.main.transform.forward;
+                direction = FacingDirection.sqrMagnitude > 0.001f ? FacingDirection : MoveInput;
             }
             // Yaw 축만 사용하기
             direction.y = 0f;
 
-            if (direction.sqrMagnitude < 0.001f) return;
+            if (direction.sqrMagnitude < 0.001f)
+            {
+                return;
+            }
 
             Quaternion targetRotation = Quaternion.LookRotation(direction.normalized, Vector3.up);
             Quaternion nextRotation = Quaternion.RotateTowards(rigidbodyComp.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
@@ -246,7 +270,10 @@ namespace Game
         /// </summary>
         public void Jump()
         {
-            if (!IsGrounded && !IsCanJump) return;
+            if (!isMoveEnable || (_pawn != null && !_pawn.CanMove) || (!IsGrounded && !IsCanJump))
+            {
+                return;
+            }
 
             // 기존 수평 속도를 유지하면서 수직 속도만 점프 값으로 교체한다.
             Vector3 velocity = rigidbodyComp.linearVelocity;

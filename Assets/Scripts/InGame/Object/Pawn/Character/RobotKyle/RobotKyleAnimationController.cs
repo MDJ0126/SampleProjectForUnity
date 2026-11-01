@@ -1,103 +1,128 @@
-#pragma warning disable IDE0051 // Unity Animation Event에서 호출한다.
-
+#pragma warning disable IDE0051
 using UnityEngine;
 
 namespace Game
 {
+    /// <summary>
+    /// 공통 Pawn 전투 상태를 Robot Kyle의 애니메이션 이벤트에 연결한다.
+    /// </summary>
     public class RobotKyleAnimationController : CharacterAnimationController
     {
-        private RobotKyle _roboyKlye;
-        private int _upperBodyLayerIndex;
-
-        public bool IsAttacking { get; private set; } = false;
+        private RobotKyle _owner;
+        private int _upperBodyLayer;
+        public float drawDuration = 1f;
+        public float sheathDuration = 1f;
+        public bool IsAttacking => _owner != null && _owner.IsAttacking;
 
         protected override void Awake()
         {
             base.Awake();
-            _roboyKlye = GetComponentInParent<RobotKyle>();
-            _upperBodyLayerIndex = boneAnimator.GetLayerIndex("UpperBody Layer");
+            _owner = GetComponentInParent<RobotKyle>();
+            _upperBodyLayer = boneAnimator.GetLayerIndex("UpperBody Layer");
         }
 
         /// <summary>
-        /// 무기 애니메이션 세팅
+        /// 근접과 총기 자세를 선택하고 초기 Awake 순서도 허용한다.
         /// </summary>
-        /// <param name="isMelee">근접 애니메이션 사용 여부</param>
         public void SetWeaponAnimation(bool isMelee)
         {
-            // 부모 Pawn의 Awake가 먼저 호출되어도 초기 무기 설정을 적용한다.
             if (boneAnimator == null)
             {
                 boneAnimator = GetComponent<Animator>();
-                _upperBodyLayerIndex = boneAnimator.GetLayerIndex("UpperBody Layer");
+                _upperBodyLayer = boneAnimator.GetLayerIndex("UpperBody Layer");
             }
-            if (isMelee)
+            boneAnimator.SetBool(AnimHash.IsMelee, isMelee);
+            if (_upperBodyLayer >= 0)
             {
-                boneAnimator.SetBool(AnimHash.IsMelee, true);
-                boneAnimator.SetLayerWeight(_upperBodyLayerIndex, 0f);
-            }
-            else
-            {
-                boneAnimator.SetBool(AnimHash.IsMelee, false);
-                boneAnimator.SetLayerWeight(_upperBodyLayerIndex, 1f);
+                boneAnimator.SetLayerWeight(_upperBodyLayer, isMelee ? 0f : 1f);
             }
         }
 
         /// <summary>
-        /// 공격을 시작하고 근접 공격일 때만 이동을 제한한다.
+        /// 기존 호출도 공통 Pawn 공격 조건을 통과하도록 연결한다.
         /// </summary>
         public void StartAttack()
         {
-            if (IsAttacking)
-            {
-                return;
-            }
+            Vector3 point = _owner.aimTarget != null && _owner.aimTarget.target != null ? _owner.aimTarget.target.position : _owner.AimPoint + _owner.transform.forward * 80f;
+            _owner.TryAttack(point);
+        }
 
-            IsAttacking = true;
-            if (boneAnimator.GetBool(AnimHash.IsMelee))
-            {
-                _roboyKlye.Movement.isMoveEnable = false;
-
-                if (_roboyKlye.Movement.IsGrounded)
-                {
-                    _roboyKlye.Movement.StopMove();
-                }
-            }
-
+        /// <summary>
+        /// 이미 승인된 공격의 시각 동작만 시작한다.
+        /// </summary>
+        public override void PlayAttack()
+        {
             boneAnimator.SetTrigger(AnimHash.Attack);
         }
 
         /// <summary>
-        /// 공격 애니메이션 종료 이벤트
+        /// 생존 중 피격 동작만 시작한다.
+        /// </summary>
+        public override void PlayHit()
+        {
+            boneAnimator.ResetTrigger(AnimHash.Attack);
+            boneAnimator.SetTrigger(AnimHash.Hit);
+        }
+
+        /// <summary>
+        /// 사망 시 상체 조준을 해제하고 사망 상태를 재생한다.
+        /// </summary>
+        public override void PlayDeath()
+        {
+            if (_owner.gunRigBuilder != null)
+            {
+                _owner.gunRigBuilder.enabled = false;
+            }
+            if (_upperBodyLayer >= 0)
+            {
+                boneAnimator.SetLayerWeight(_upperBodyLayer, 0f);
+            }
+            boneAnimator.SetBool(AnimHash.IsDead, true);
+        }
+
+        /// <summary>
+        /// 검의 기존 등 수납·뽑기 클립을 재생하고 실제 클립 길이를 사용한다.
+        /// </summary>
+        public override float PlayWeaponDraw(bool drawn)
+        {
+            if (!(_owner.EquippedWeapon is MeleeWeapon))
+            {
+                return 0f;
+            }
+            boneAnimator.ResetTrigger(AnimHash.Attack);
+            boneAnimator.ResetTrigger(AnimHash.Hit);
+            boneAnimator.CrossFadeInFixedTime(drawn ? "Draw" : "Sheathe", 0.08f, 0);
+            return drawn ? drawDuration : sheathDuration;
+        }
+
+        /// <summary>
+        /// 실제 공격이 끝나면 타이머와 동일한 판정 해제를 사용한다.
         /// </summary>
         private void OnAttackAnimationEnd()
         {
-            IsAttacking = false;
-            _roboyKlye.Movement.isMoveEnable = true;
+            _owner.CancelAttack(false);
         }
 
         /// <summary>
-        /// 데미지 체크 시작
+        /// 근접 판정만 열어 총기의 중복 애니메이션 발사를 방지한다.
         /// </summary>
         private void OnStartDamageCheck()
         {
-            _roboyKlye.EquippedWeapon?.StartAttack();
+            if (_owner.IsAttacking && _owner.EquippedWeapon is MeleeWeapon melee)
+            {
+                melee.StartAttack();
+            }
         }
 
         /// <summary>
-        /// 데미지 체크 종료
+        /// 근접 애니메이션의 피해 구간만 닫는다.
         /// </summary>
         private void OnEndDamageCheck()
         {
-            _roboyKlye.EquippedWeapon?.EndAttack();
-        }
-
-        /// <summary>
-        /// 피격 받음
-        /// </summary>
-        public void OnHitted()
-        {
-            _roboyKlye.EquippedWeapon?.EndAttack();
-            boneAnimator.SetTrigger(AnimHash.Hit);
+            if (_owner.EquippedWeapon is MeleeWeapon melee)
+            {
+                melee.EndAttack();
+            }
         }
     }
 }

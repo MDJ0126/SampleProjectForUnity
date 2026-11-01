@@ -14,10 +14,10 @@
 | Visual Scripting | 1.9.12 |
 | MCP for Unity | v10.0.0 |
 
-근거: [ProjectVersion](../../ProjectSettings/ProjectVersion.txt), [manifest](../../Packages/manifest.json), [lock](../../Packages/packages-lock.json). 실행·로드 상태는 미확인입니다.
+근거: [ProjectVersion](../../ProjectSettings/ProjectVersion.txt), [manifest](../../Packages/manifest.json), [lock](../../Packages/packages-lock.json). 현재 작업에서 Unity6000.0.83f1 및 Behavior1.0.16의 실제 컴파일·Play와 패키지 소스를 확인했습니다.
 
-- 자체 씬: Playground.unity. 빌드 설정의 SampleScene.unity 경로는 현재 파일 없음.
-- 입력: RobotKyle 액션 맵. 카메라·에디터 단축키는 기존 Input API도 사용.
+- 자체 씬: Splash, Playground, CharacterStage. 플레이어 시작은 Splash입니다.
+- 입력: RobotKyle 액션 맵. 카메라는 기존 입력을 유지하며 F8은 Input System을 사용합니다.
 - Ground 레이어: 3. 코드도 같은 이름·값 사용.
 
 ## 외부 에셋

@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Prefabs
   m_GUID: d419840c176a17d468331bce82e58371
   m_SerializeEntries:
+  - m_GUID: 1312fe27e93d3dc428d92f7a02b61fae
+    m_Address: Assets/AddressablesResources/Datas/PlayerLoadout.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4d1ea456a7aa8674097418264d9434cd
     m_Address: Assets/AddressablesResources/Prefabs/Character/RobotKyle.prefab
     m_ReadOnly: 0

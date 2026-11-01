@@ -8,8 +8,8 @@ namespace Game
     {
         #region Inspector
 
-        public Socket leftHandleSocket;
-        public Socket rightHandleSocket;
+        public Transform leftHandleSocket;
+        public Transform rightHandleSocket;
         public RigBuilder gunRigBuilder;
         public TwoBoneIKConstraint rightArmIK;
         public TwoBoneIKConstraint leftArmIK;
@@ -19,10 +19,11 @@ namespace Game
 
         #endregion
 
-        public override string Name => nameof(RobotKyle);
+
 
         public RobotKyleAnimationController RobotKyleAnimationController { get; private set; }
         private Gun _rigGun;
+
 
         protected override void Awake()
         {
@@ -79,18 +80,10 @@ namespace Game
         protected override void OnEquippedWeaponChanged()
         {
             base.OnEquippedWeaponChanged();
-            Gun gun = EquippedWeapon as Gun;
-            if (_rigGun != null && _rigGun != gun)
+            Gun gun = IsWeaponDrawn ? EquippedWeapon as Gun : null;
+            if (!IsDead && gunRigBuilder != null)
             {
-                _rigGun.gameObject.SetActive(false);
-            }
-            _rigGun = gun;
-            if (gun != null && rightHandleSocket != null)
-            {
-                gun.transform.SetParent(rightHandleSocket.transform, false);
-                gun.transform.localPosition = Vector3.zero;
-                gun.transform.localRotation = Quaternion.identity;
-                gun.gameObject.SetActive(true);
+                gunRigBuilder.enabled = true;
             }
             if (leftArmIK != null)
             {
@@ -112,28 +105,16 @@ namespace Game
                 RobotKyleAnimationController.SetWeaponAnimation(isMelee: EquippedWeapon is MeleeWeapon);
             }
             // Transform 핸들은 그래프 생성 시 바인딩되므로 교체 시에만 다시 구성한다.
-            if (Application.isPlaying && gunRigBuilder != null && gunRigBuilder.isActiveAndEnabled)
+            if (Application.isPlaying && gun != _rigGun && gunRigBuilder != null && gunRigBuilder.isActiveAndEnabled)
             {
                 gunRigBuilder.Build();
             }
+            _rigGun = gun;
         }
 
         protected override void Initalize()
         {
-            Status status = StatusTable.Instance.GetData(0);
-            StatusInfo.baseStatus += status;
-            StatusInfo.Initialize();
-
-            if (EquippedWeapon != null)
-            {
-                RobotKyleAnimationController.SetWeaponAnimation(isMelee: EquippedWeapon is MeleeWeapon);
-            }
-        }
-
-        protected override void DamagerProcess(Pawn attacker, DamageInfo damageInfo)
-        {
-            this.StatusInfo.Damaged(damageInfo.damage);
-            RobotKyleAnimationController.OnHitted();
+            StatusInfo.baseStatus = StatusTable.Instance.GetData(0);
         }
     }
 }

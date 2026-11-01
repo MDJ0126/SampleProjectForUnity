@@ -1,0 +1,13 @@
+{
+  "assemblies": [
+    "Game.Runtime",
+    "Game.Editor"
+  ],
+  "method": "Physical source copy excludes samples, optional AI integration and QA; Editor references newly compiled Runtime; rsp contains no sample/QA/integration references",
+  "compiler": "Unity6000.0.83f1 bundled Roslyn using final Unity-generated rsp",
+  "samplesAbsent": true,
+  "at": "2026-11-02T03:35:18.2474955+09:00",
+  "qaAbsent": true,
+  "integrationAbsent": true,
+  "passed": true
+}

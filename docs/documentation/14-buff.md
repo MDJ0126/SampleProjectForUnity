@@ -16,4 +16,4 @@ public class ExampleBuff : Buff
 }
 ```
 
-현재 부모는 duration >= time으로 종료합니다. foreach 중 제거와 부모 처리 후 효과 실행도 확인해야 합니다. 뼈대에는 효과가 없고 실제 실행은 미확인입니다.
+부모는 누적 time이 duration에 도달하면 종료를 한 번 알립니다. BuffManager는 역순으로 갱신하여 종료 콜백의 목록 제거를 허용합니다. HealBuff는 남은 시간만 초당10을 회복합니다. 실제 소스 실행으로 작은/큰 deltaTime과 종료 중 제거를 검증했습니다.

@@ -37,6 +37,8 @@ flowchart TB
         Core --- Motion
         Core --- Gameplay
         Core --- Targets
+        Core -->|공통 공격·교체·수납 요청| Combat["Weapon / MeleeWeapon / Gun<br/>무기 목록 · 소켓 · 피격 판정 · 탄약"]
+        Combat -->|팀·방어력·사망 검사| Status
 
         subgraph Motion["이동 · 애니메이션"]
             direction TB

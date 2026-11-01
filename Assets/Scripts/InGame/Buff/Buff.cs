@@ -1,48 +1,39 @@
+using System;
+
 namespace Game
 {
+    /// <summary>
+    /// 유효한 경과 시간을 누적하고 종료를 한 번만 알린다.
+    /// </summary>
     public abstract class Buff
     {
-        public delegate void OnChangedState(Buff buff);
-        private event OnChangedState _onEndBuff;
-        public event OnChangedState OnEndBuff
-        {
-            add
-            {
-                _onEndBuff -= value;
-                _onEndBuff += value;
-            }
-            remove
-            {
-                _onEndBuff -= value;
-            }
-        }
-
-        protected Pawn owner = null;
-        protected float time = 0f;
-        protected float duration = 0f;
+        public event Action<Buff> OnEndBuff;
+        protected Pawn owner;
+        protected float time;
+        protected float duration;
+        public float RemainingSeconds => Math.Max(0f, duration - time);
+        public bool IsExpired => time >= duration;
 
         /// <summary>
-        /// 버프 효과를 적용할 소유 Pawn 설정
+        /// 지속 효과를 적용할 Pawn을 연결한다.
         /// </summary>
-        public void SetOwner(Pawn owner)
+        public void SetOwner(Pawn pawn)
         {
-            this.owner = owner;
+            owner = pawn;
         }
 
         /// <summary>
-        /// duration과 누적 time을 비교하고 버프 종료 이벤트 호출
+        /// 지속 시간이 끝나면 목록 제거 이벤트를 한 번만 호출한다.
         /// </summary>
         public virtual void UpdateTick(float deltaTime)
         {
-            // 현재 구현은 duration이 누적 time 이상이면 종료를 알리고 구독자를 비운다.
-            if (duration >= time)
+            time = Math.Min(duration, time + Math.Max(0f, deltaTime));
+            if (IsExpired)
             {
-                duration = time;
-                _onEndBuff?.Invoke(this);
-                _onEndBuff = null;
-                return;
+                Action<Buff> ended = OnEndBuff;
+                OnEndBuff = null;
+                ended?.Invoke(this);
             }
-            duration += deltaTime;
         }
     }
 }

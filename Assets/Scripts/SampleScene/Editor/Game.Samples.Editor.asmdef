@@ -1,0 +1,15 @@
+{
+  "references": [
+    "Game.Runtime",
+    "Game.Samples.Runtime",
+    "Unity.Addressables",
+    "Unity.ResourceManager",
+    "Unity.Addressables.Editor"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "name": "Game.Samples.Editor",
+  "rootNamespace": "Game",
+  "autoReferenced": true
+}

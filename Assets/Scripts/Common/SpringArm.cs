@@ -55,7 +55,7 @@ public class SpringArm : MonoBehaviour
         {
             if (_playerCameraController)
             {
-                if (_playerCameraController.SpringArm.Equals(this))
+                if (_playerCameraController.SpringArm == this)
                 {
                     _playerCameraController.Bind(this);
                 }
@@ -64,17 +64,24 @@ public class SpringArm : MonoBehaviour
         else
         {
             // 편집 중에는 지연 코루틴으로 직렬화된 값이 반영된 다음 미리보기를 갱신한다.
-            if (this.gameObject.activeInHierarchy)
+            if (gameObject.activeInHierarchy)
+            {
                 StartCoroutine(DelayUpdate());
+            }
         }
 
         IEnumerator DelayUpdate()
         {
             yield return null;
+            if (this == null || Application.isPlaying || !gameObject.activeInHierarchy)
+            {
+                yield break;
+            }
 
             // 기본 Pawn의 SpringArm일 때만 메인 카메라 미리보기를 이동한다.
             var parentPawn = GetComponentInParent<Game.Pawn>();
-            if (parentPawn && GameMode.Instance.defaultPawn && GameMode.Instance.defaultPawn.Equals(parentPawn))
+            GameMode mode = GameMode.Instance;
+            if (parentPawn != null && mode != null && mode.defaultPawn == parentPawn)
             {
                 Camera mainCamera = Camera.main;
                 if (mainCamera)

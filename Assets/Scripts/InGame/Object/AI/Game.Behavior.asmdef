@@ -1,0 +1,12 @@
+{
+  "name": "Game.Behavior",
+  "overrideReferences": false,
+  "autoReferenced": true,
+  "includePlatforms": [],
+  "rootNamespace": "Game",
+  "noEngineReferences": false,
+  "references": [
+    "Game.Runtime",
+    "Unity.Behavior"
+  ]
+}

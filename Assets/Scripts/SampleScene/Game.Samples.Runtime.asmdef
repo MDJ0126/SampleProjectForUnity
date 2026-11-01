@@ -1,0 +1,14 @@
+{
+  "name": "Game.Samples.Runtime",
+  "overrideReferences": false,
+  "autoReferenced": true,
+  "includePlatforms": [],
+  "rootNamespace": "Game",
+  "noEngineReferences": false,
+  "references": [
+    "Game.Runtime",
+    "Game.Behavior",
+    "Unity.InputSystem",
+    "UnityEngine.UI"
+  ]
+}

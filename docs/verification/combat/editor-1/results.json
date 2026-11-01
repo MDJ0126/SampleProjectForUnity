@@ -1,0 +1,17 @@
+{
+    "startedAt": "2026-11-02T02:26:55.0334115+09:00",
+    "completedAt": "2026-11-02T02:26:59.4613889+09:00",
+    "passed": false,
+    "checks": [
+        "Menu pauses both fighters",
+        "Two authored weapons per fighter",
+        "Native Behavior runtime graph and baked NavMesh loaded",
+        "AI does not replace player camera/input ownership",
+        "Menu blocks attacks",
+        "Select owned sword"
+    ],
+    "errors": [
+        "System.InvalidOperationException: Sheath moves sword to authored back socket and blocks attack\r\n  at Game.CombatVerification.Require (System.Boolean condition, System.String message) [0x0001b] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:227 \r\n  at Game.CombatVerification.Run () [0x003c1] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:99 \r\n  at Game.CombatVerification.Start () [0x00061] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:53 ",
+        "[Combat QA] System.InvalidOperationException: Sheath moves sword to authored back socket and blocks attack\r\n  at Game.CombatVerification.Require (System.Boolean condition, System.String message) [0x0001b] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:227 \r\n  at Game.CombatVerification.Run () [0x003c1] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:99 \r\n  at Game.CombatVerification.Start () [0x00061] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:53 "
+    ]
+}

@@ -3,139 +3,154 @@ using UnityEngine.InputSystem;
 
 namespace Game
 {
+    /// <summary>
+    /// 카메라 기준 이동과 조준 입력을 공통 Pawn 전투에 연결한다.
+    /// </summary>
     public class RobotKylePlayerController : PlayerController
     {
-        private RobotKyle _owner = null;
-        private float horizontal;
-        private float vertical;
+        private Character _owner;
+        private Vector2 _move;
 
-        public override void Possess(Pawn pawn = null)
+        protected override void Update()
         {
-            base.Possess(pawn);
-            _owner = possessTarget as RobotKyle;
-            _owner.isGunAimDebugEnabled = true;
+            base.Update();
+            if (_owner == null || !_owner.IsCombatEnabled || _owner.IsDead)
+            {
+                return;
+            }
+            Camera camera = Camera.main;
+            if (camera != null)
+            {
+                Vector3 forward = Vector3.ProjectOnPlane(camera.transform.forward, Vector3.up).normalized;
+                _owner.Movement.MoveInput = forward * _move.y + Vector3.Cross(Vector3.up, forward) * _move.x;
+                _owner.Movement.FacingDirection = forward;
+            }
+            Keyboard keyboard = Keyboard.current;
+            if (keyboard != null)
+            {
+                if (keyboard.digit1Key.wasPressedThisFrame)
+                {
+                    _owner.SelectWeapon(0);
+                }
+                if (keyboard.digit2Key.wasPressedThisFrame)
+                {
+                    _owner.SelectWeapon(1);
+                }
+                if (keyboard.qKey.wasPressedThisFrame)
+                {
+                    _owner.SelectNextWeapon();
+                }
+                if (keyboard.fKey.wasPressedThisFrame)
+                {
+                    _owner.SetWeaponDrawn(!_owner.IsWeaponDrawn, true);
+                }
+                if (keyboard.rKey.wasPressedThisFrame && _owner.EquippedWeapon is Gun gun)
+                {
+                    gun.Reload();
+                }
+            }
+            InputAction attack = _input != null ? _input.currentActionMap?.FindAction("NormalAttack") : null;
+            if (attack != null && attack.IsPressed() && _owner.EquippedWeapon is Gun automatic && automatic.isAutomatic)
+            {
+                Attack();
+            }
         }
 
-        public override void Unpossess()
+        private void LateUpdate()
         {
-            base.Unpossess();
-            _owner.isGunAimDebugEnabled = false;
+            Camera camera = Camera.main;
+            if (_owner == null || aimTarget == null || aimTarget.target == null || camera == null)
+            {
+                return;
+            }
+            Ray ray = camera.ViewportPointToRay(new Vector3(0.5f, 0.5f));
+            aimTarget.target.position = GameUtils.TryRaycast(ray, aimDistance, aimMask, _owner, out RaycastHit hit) ? hit.point : ray.GetPoint(aimDistance);
+        }
+
+        private void OnDisable()
+        {
+            _move = Vector2.zero;
+            _owner?.Movement?.StopMove();
         }
 
         /// <summary>
-        /// 가로 이동 입력 이벤트
+        /// 빙의 변경 후 입력의 대상을 갱신한다.
         /// </summary>
-        /// <param name="value"></param>
+        protected override void OnPossessionChanged()
+        {
+            _owner = possessTarget as Character;
+            _move = Vector2.zero;
+            base.OnPossessionChanged();
+        }
+
+        /// <summary>
+        /// Input Actions의 가로 입력을 보관한다.
+        /// </summary>
         private void OnHorizontal(InputValue value)
         {
-            horizontal = value.Get<float>();
+            _move.x = value.Get<float>();
         }
 
         /// <summary>
-        /// 세로 이동 입력 이벤트
+        /// Input Actions의 세로 입력을 보관한다.
         /// </summary>
-        /// <param name="value"></param>
         private void OnVertical(InputValue value)
         {
-            vertical = value.Get<float>();
+            _move.y = value.Get<float>();
         }
 
         /// <summary>
-        /// 이동 업데이트
+        /// 달리기 입력을 이동 컴포넌트에 전달한다.
         /// </summary>
-        private void UpdateMoveInput()
-        {
-            if (!_owner) return;
-
-            Vector2 input = Vector2.ClampMagnitude(new Vector2(horizontal, vertical), 1f);
-
-            Transform cameraTransform = Camera.main.transform;
-
-            Vector3 cameraForward = Vector3.ProjectOnPlane(cameraTransform.forward, Vector3.up).normalized;
-
-            Vector3 cameraRight = Vector3.Cross(Vector3.up, cameraForward).normalized;
-
-            _owner.Movement.MoveInput = cameraForward * input.y + cameraRight * input.x;
-        }
-
-        /// <summary>
-        /// 전력 질주 입력 이벤트
-        /// </summary>
-        /// <param name="value"></param>
         private void OnSprint(InputValue value)
         {
-            if (!_owner) return;
-
-            _owner.Movement.IsSprint = value.isPressed;
+            if (_owner != null)
+            {
+                _owner.Movement.IsSprint = value.isPressed;
+            }
         }
 
         /// <summary>
-        /// 점프 입력 이벤트
+        /// 누른 프레임에만 점프한다.
         /// </summary>
-        /// <param name="value"></param>
         private void OnJump(InputValue value)
         {
-            if (!_owner) return;
-
-            _owner.Movement.Jump();
+            if (_owner != null && value.isPressed)
+            {
+                _owner.Movement.Jump();
+            }
         }
 
         /// <summary>
-        /// 기본 공격 입력 이벤트
+        /// 단발 입력과 자동 사격의 유지 상태를 분리한다.
         /// </summary>
         private void OnNormalAttack(InputValue value)
         {
-            if (!_owner) return;
-
-            _owner.RobotKyleAnimationController.StartAttack();
+            if (value.isPressed)
+            {
+                Attack();
+            }
         }
 
         /// <summary>
-        /// 스킬1 입력 이벤트
+        /// 기존 스킬 입력을 유지한다.
         /// </summary>
-        /// <param name="value"></param>
         private void OnSkill1(InputValue value)
         {
-            if (!_owner) return;
-
-            _owner.SkillManager.UseSkill(0);
-        }
-
-        private void Update()
-        {
-            UpdateMoveInput();
-        }
-
-        /// <summary>
-        /// 카메라 이동 후 화면 중앙을 기준으로 에임 타겟 갱신
-        /// </summary>
-        private void LateUpdate()
-        {
-            UpdateAimTarget();
-        }
-
-        /// <summary>
-        /// 에임 타겟 업데이트
-        /// </summary>
-        private void UpdateAimTarget()
-        {
-            if (possessTarget == null || aimTarget == null) return;
-
-            // 캐릭터 전방과 에임 방향의 내적을 0~1로 변환해 Aim Rig 가중치로 사용한다.
-            //Vector3 direction = (aimTarget.target.position - possessTarget.Transform.position).normalized;
-            //float dot = Vector3.Dot(possessTarget.Transform.forward, direction);
-            //float value01 = Mathf.InverseLerp(-1f, 1f, dot);
-            //aimTarget.AimRig.weight = value01;
-
-            // 화면 중앙 Ray가 맞은 지점을 사용하고, 없으면 최대 조준 거리를 사용한다.
-            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f));
-            if (Physics.Raycast(ray, out var hit, aimDistance, aimMask))
+            if (_owner != null && _owner.IsCombatEnabled && !_owner.IsDead && value.isPressed)
             {
-                aimTarget.target.position = hit.point;
+                _owner.SkillManager.UseSkill(0);
             }
-            else
+        }
+
+        /// <summary>
+        /// 조준점과 공통 공격 조건을 사용한다.
+        /// </summary>
+        private void Attack()
+        {
+            if (_owner != null && aimTarget != null && aimTarget.target != null)
             {
-                aimTarget.target.position = ray.GetPoint(aimDistance);
+                _owner.TryAttack(aimTarget.target.position);
             }
         }
     }

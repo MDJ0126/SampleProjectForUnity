@@ -47,12 +47,12 @@ flowchart TB
     PlayerController -->|상속| RobotKylePlayerController
     PawnController -.->|빙의 대상 참조 · 빙의 / 해제| Pawn
     Actor["<b>Actor</b><hr/>공통 액터 기반"]
-    Pawn["<b>Pawn</b><hr/>빙의 가능한 대상 · 스킬 / 버프 / 능력치"]
+    Pawn["<b>Pawn</b><hr/>빙의 · 장비 · 공통 공격 · 팀 · 체력 · 사망"]
     Character["<b>Character</b><hr/>조준 대상 · 캐릭터 애니메이션 참조"]
     RobotKyle["<b>RobotKyle</b><hr/>샘플 캐릭터 구현"]
-    PawnController["<b>PawnController</b><hr/>빙의 관리 · 입력 활성화 · 카메라 연결"]
-    PlayerController["<b>PlayerController</b><hr/>플레이어 컨트롤러 기반"]
-    AIController["<b>AIController</b><hr/>AI 컨트롤러 기반"]
+    PawnController["<b>PawnController</b><hr/>카메라와 독립적인 빙의 소유권"]
+    PlayerController["<b>PlayerController</b><hr/>플레이어 입력 · 커서 · 카메라"]
+    AIController["<b>AIController</b><hr/>Unity Behavior · NavMesh 이동 · 공통 공격"]
     RobotKylePlayerController["<b>RobotKylePlayerController</b><hr/>샘플 캐릭터 입력 처리"]
 ```
 
@@ -80,6 +80,8 @@ flowchart TB
 ## 4. 개발된 기능 상세보기
 
 - **Addressables 씬 전환·UI 관리:** `SceneControlManager`의 전환·복구와 `UIManager`의 UI 수명 관리를 제공합니다. Splash → Playground ↔ CharacterStage 흐름과 각 씬 직접 Play를 지원합니다. 기본 UI는 씬에 배치된 편집 가능한 프리팹이며, 로딩·팝업 사용법은 [사용 문서](docs/documentation/26-developed-scene-ui.md)를 참고합니다.
+
+- **공통 전투·Unity Behavior AI:** 검/총 교체·뽑기·수납, 탄약·장전·피해·사망·재시작과 CharacterStage 장비 선택을 제공합니다. [사용 문서](docs/documentation/27-developed-combat.md)를 참고합니다.
 
 ### 캐릭터 · 플레이어 제어
 
@@ -114,7 +116,7 @@ flowchart TB
 - **읽기 전용 · 표시 이름**: 인스펙터 속성 표시 보조\
   [ReadOnlyAttribute.cs](Assets/Scripts/Etc/ReadOnlyAttribute.cs), [DisplayNameAttribute.cs](Assets/Scripts/Etc/DisplayNameAttribute.cs)
 - **카메라 핸들 · 빙의 단축키**: 씬 뷰 카메라 편집, 캐릭터 제어 테스트\
-  [SpringArmEditor.cs](Assets/Scripts/Common/Editor/SpringArmEditor.cs), [EditorPossessInput.cs](Assets/Scripts/Common/EditorPossessInput.cs)
+  [SpringArmEditor.cs](Assets/Scripts/Editor/SpringArmEditor.cs), [PlayerController.cs](Assets/Scripts/InGame/Object/PlayerController.cs)
 
 ## 5. 프로젝트 환경
 

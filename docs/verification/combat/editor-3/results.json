@@ -1,0 +1,37 @@
+{
+    "startedAt": "2026-11-02T02:29:35.9107453+09:00",
+    "completedAt": "2026-11-02T02:30:02.3121586+09:00",
+    "passed": false,
+    "checks": [
+        "Menu pauses both fighters",
+        "Two authored weapons per fighter",
+        "Native Behavior runtime graph and baked NavMesh loaded",
+        "AI does not replace player camera/input ownership",
+        "Menu blocks attacks",
+        "Select owned sword",
+        "Sheath moves sword to authored back socket and blocks attack",
+        "Draw restores hand socket",
+        "Thirty swaps preserve inventory without duplicates",
+        "Invalid selection and foreign ownership rejected",
+        "Select owned rifle",
+        "Rifle attack accepted",
+        "Actual muzzle ray damages enemy and spends exactly one round",
+        "Cooldown rejects duplicate attack",
+        "Reload accepts once",
+        "Timed reload conserves ammunition",
+        "Solid obstacle blocks real rifle damage",
+        "Friendly body blocks shot without friendly damage",
+        "Reload after blocked shots",
+        "Swapping cancels reload",
+        "Health clamps overheal",
+        "Negative damage does not heal",
+        "Death releases possession and blocks attack",
+        "Dead target rejects repeat damage",
+        "Restart restores health and player possession",
+        "Restart restores physics and movement"
+    ],
+    "errors": [
+        "System.TimeoutException: Behavior find/approach/melee damage\r\n  at Game.CombatVerification.Wait (System.Func`1[TResult] condition, System.String name, System.Single seconds) [0x0002b] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:206 \r\n  at Game.CombatVerification.Run () [0x00e88] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:164 \r\n  at Game.CombatVerification.Start () [0x00061] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:53 ",
+        "[Combat QA] System.TimeoutException: Behavior find/approach/melee damage\r\n  at Game.CombatVerification.Wait (System.Func`1[TResult] condition, System.String name, System.Single seconds) [0x0002b] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:206 \r\n  at Game.CombatVerification.Run () [0x00e88] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:164 \r\n  at Game.CombatVerification.Start () [0x00061] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\CombatVerification.cs:53 "
+    ]
+}

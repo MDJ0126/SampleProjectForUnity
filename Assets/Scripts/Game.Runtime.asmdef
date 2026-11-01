@@ -1,0 +1,19 @@
+{
+  "name": "Game.Runtime",
+  "overrideReferences": false,
+  "autoReferenced": true,
+  "includePlatforms": [],
+  "rootNamespace": "Game",
+  "noEngineReferences": false,
+  "references": [
+    "Unity.Addressables",
+    "Unity.ResourceManager",
+    "Unity.InputSystem",
+    "Unity.Animation.Rigging",
+    "UnityEngine.UI",
+    "Unity.TextMeshPro",
+    "Unity.RenderPipelines.Core.Runtime",
+    "Unity.RenderPipelines.Universal.Runtime",
+    "RandomDistribution"
+  ]
+}

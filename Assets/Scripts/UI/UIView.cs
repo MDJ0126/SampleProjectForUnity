@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 namespace Game
 {
@@ -43,6 +45,23 @@ namespace Game
         /// </summary>
         public virtual void OnClosed()
         {
+        }
+
+        /// <summary>
+        /// 이전 번들의 해제가 끝난 다음 프레임에 배치 UI의 렌더 데이터를 갱신한다.
+        /// </summary>
+        public void RefreshLayout()
+        {
+            StartCoroutine(Refresh());
+            IEnumerator Refresh()
+            {
+                yield return null;
+                foreach (Graphic graphic in GetComponentsInChildren<Graphic>(true))
+                {
+                    graphic.SetAllDirty();
+                }
+                Canvas.ForceUpdateCanvases();
+            }
         }
 
         /// <summary>

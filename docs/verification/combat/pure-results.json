@@ -1,0 +1,15 @@
+{
+  "method": "Actual source compiled and executed with minimal Pawn stub",
+  "at": "2026-11-02T02:29:35.6023874+09:00",
+  "checks": [
+    "Overflow-safe overheal",
+    "Negative damage ignored",
+    "Negative health clamped",
+    "Duplicate buff rejected",
+    "Five second heal restores exactly fifty health",
+    "Expiry during iteration removes once without exception",
+    "Large tick consumes only remaining lifetime",
+    "Zero max health ratio is finite"
+  ],
+  "passed": true
+}

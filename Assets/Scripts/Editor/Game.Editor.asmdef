@@ -1,0 +1,15 @@
+{
+  "name": "Game.Editor",
+  "overrideReferences": false,
+  "autoReferenced": true,
+  "includePlatforms": [
+    "Editor"
+  ],
+  "rootNamespace": "Game",
+  "noEngineReferences": false,
+  "references": [
+    "Game.Runtime",
+    "UnityEngine.UI",
+    "UnityEditor.UI"
+  ]
+}

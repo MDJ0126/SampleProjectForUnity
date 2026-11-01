@@ -481,7 +481,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1002}
-        m_TargetAssemblyTypeName: Game.SceneFlowView, Assembly-CSharp
+        m_TargetAssemblyTypeName: Game.SceneFlowView, Game.Samples.Runtime
         m_MethodName: Navigate
         m_Mode: 1
         m_Arguments:

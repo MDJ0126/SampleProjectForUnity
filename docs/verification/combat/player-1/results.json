@@ -1,0 +1,50 @@
+{
+    "startedAt": "2026-11-02T02:54:56.6876677+09:00",
+    "completedAt": "2026-11-02T02:55:11.3974135+09:00",
+    "passed": false,
+    "checks": [
+        "Menu pauses both fighters",
+        "Two authored weapons per fighter",
+        "Native Behavior runtime graph and baked NavMesh loaded",
+        "AI does not replace player camera/input ownership",
+        "Menu blocks attacks",
+        "Select owned sword",
+        "Sheath moves sword to authored back socket and blocks attack",
+        "Draw restores hand socket",
+        "Thirty swaps preserve inventory without duplicates",
+        "Invalid selection and foreign ownership rejected",
+        "Select owned rifle",
+        "Rifle attack accepted",
+        "Actual muzzle ray damages enemy and spends exactly one round",
+        "Cooldown rejects duplicate attack",
+        "Reload accepts once",
+        "Timed reload conserves ammunition",
+        "Solid obstacle blocks real rifle damage",
+        "Friendly body blocks shot without friendly damage",
+        "Reload after blocked shots",
+        "Swapping cancels reload",
+        "Health clamps overheal",
+        "Negative damage does not heal",
+        "Death releases possession and blocks attack",
+        "Dead target rejects repeat damage",
+        "Restart restores health and player possession",
+        "Restart restores physics and movement",
+        "Actual Behavior graph navigates and inflicts melee damage",
+        "Actual AI victory pauses duel and opens restart menu",
+        "Actual Behavior graph also fires the shared rifle",
+        "Two agents own isolated graph instances and Target blackboards",
+        "Second AI leaves player singleton unchanged",
+        "Menu stops active AI combat",
+        "Rifle selection is an authored Inspector event",
+        "Stage button equips actual preview and shared selection"
+    ],
+    "trace": [
+        "t=5.919929 enemy=(0.00, 0.00, 7.00) target=(0.00, 0.00, 0.00) poss=True combat=True attack=False hit=False input=(0.00, 0.00, 0.00) nav=True/False/PathComplete find=True damage=True hp=100/100 teams=0/1 active=True pc=True registry=3",
+        "t=6.920921 enemy=(0.00, 0.00, 4.26) target=(0.00, 0.00, 0.00) poss=True combat=True attack=False hit=False input=(0.00, 0.00, -1.00) nav=True/True/PathComplete find=True damage=True hp=100/100 teams=0/1 active=True pc=True registry=3",
+        "t=7.92195 enemy=(0.00, 0.00, 1.68) target=(0.00, 0.00, 0.00) poss=True combat=True attack=True hit=False input=(0.00, 0.00, 0.00) nav=True/False/PathComplete find=True damage=True hp=100/100 teams=0/1 active=True pc=True registry=3"
+    ],
+    "errors": [
+        "System.InvalidOperationException: Stage rifle selection reaches actual Playground equipment\r\n  at Game.CombatVerification.Require (System.Boolean condition, System.String message) [0x00023] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\Verification\\CombatVerification.cs:260 \r\n  at Game.CombatVerification.Run () [0x01a46] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\Verification\\CombatVerification.cs:214 \r\n  at Game.CombatVerification.Start () [0x0007a] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\Verification\\CombatVerification.cs:54 ",
+        "[Combat QA] System.InvalidOperationException: Stage rifle selection reaches actual Playground equipment\r\n  at Game.CombatVerification.Require (System.Boolean condition, System.String message) [0x00023] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\Verification\\CombatVerification.cs:260 \r\n  at Game.CombatVerification.Run () [0x01a46] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\Verification\\CombatVerification.cs:214 \r\n  at Game.CombatVerification.Start () [0x0007a] in C:\\Projects\\SampleProjectForUnity\\.utmp\\CombatValidation\\Assets\\Scripts\\SampleScene\\Verification\\CombatVerification.cs:54 "
+    ]
+}

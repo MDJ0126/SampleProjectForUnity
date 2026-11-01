@@ -9,6 +9,6 @@
 - **읽기 전용 · 표시 이름**: 인스펙터 속성 표시 보조\
   [ReadOnlyAttribute.cs](../../Assets/Scripts/Etc/ReadOnlyAttribute.cs), [DisplayNameAttribute.cs](../../Assets/Scripts/Etc/DisplayNameAttribute.cs)
 - **카메라 핸들 · 빙의 단축키**: 씬 뷰 카메라 편집, 캐릭터 제어 테스트\
-  [SpringArmEditor.cs](../../Assets/Scripts/Common/Editor/SpringArmEditor.cs), [EditorPossessInput.cs](../../Assets/Scripts/Common/EditorPossessInput.cs)
+  [SpringArmEditor.cs](../../Assets/Scripts/Editor/SpringArmEditor.cs), [PlayerController.cs](../../Assets/Scripts/InGame/Object/PlayerController.cs)
 
 README의 개발된 기능 목록을 옮긴 문서입니다. 실제 실행은 미확인입니다.

@@ -11,4 +11,4 @@
 - **스킬 · 버프 · 능력치**: 스킬·지속 효과 관리, 캐릭터 상태 데이터\
   [SkillManager.cs](../../Assets/Scripts/InGame/Skill/SkillManager.cs), [BuffManager.cs](../../Assets/Scripts/InGame/Buff/BuffManager.cs), [StatusInfo.cs](../../Assets/Scripts/InGame/Status/StatusInfo.cs)
 
-README의 개발된 기능 목록을 옮긴 문서입니다. 실제 실행은 미확인입니다.
+공통 공격·장비·사망과 Behavior 교전은 [공통 전투](27-developed-combat.md), 실행 범위와 결과는 docs/verification/combat에서 확인합니다.

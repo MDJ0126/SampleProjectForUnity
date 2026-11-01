@@ -25,6 +25,10 @@ namespace Game
         /// </summary>
         private void Update()
         {
+            if (_character.IsDead)
+            {
+                return;
+            }
             boneAnimator.SetFloat(AnimHash.Speed, _character.Movement.NormalizedHorizontalVelocity);
             boneAnimator.SetBool(AnimHash.IsSprint, _character.Movement.IsSprint);
             boneAnimator.SetBool(AnimHash.IsJumping, _movement.IsJumping);

@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-01T18:35:11.777Z",
+  "baseline": {
+    "scripts": 95,
+    "runtime": 87,
+    "lines": 8117
+  },
+  "current": {
+    "scripts": 93,
+    "runtime": 84,
+    "lines": 9370
+  },
+  "sourceMatchesVerifiedClone": true,
+  "differences": [],
+  "removedEmptyOrRedundantTypes": [
+    "EditorPossessInput",
+    "Socket",
+    "EquipmentInfo",
+    "Armor",
+    "TestSword",
+    "TestAK74"
+  ],
+  "newTypes": [
+    "EquipmentLoadout",
+    "CombatAction",
+    "CombatVerification",
+    "PropertyDrawers"
+  ],
+  "newManagers": 0
+}

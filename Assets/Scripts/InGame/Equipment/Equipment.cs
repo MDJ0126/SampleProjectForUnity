@@ -1,27 +1,22 @@
-using System;
 using UnityEngine;
 
 namespace Game
 {
-    public abstract class Equipment : MonoBehaviour
+    /// <summary>
+    /// 소유자와 표시 이름만 공통으로 보관한다.
+    /// </summary>
+    public class Equipment : MonoBehaviour
     {
+        public string displayName;
         public Pawn Owner { get; private set; }
-        public EquipmentInfo equipmentInfo;
+        public string DisplayName => string.IsNullOrEmpty(displayName) ? gameObject.name : displayName;
 
         /// <summary>
-        /// 소유자 세팅
+        /// 장비 목록을 관리하는 Pawn이 소유권을 연결한다.
         /// </summary>
-        /// <param name="owner"></param>
-        public void SetOwner(Pawn owner)
+        public virtual void SetOwner(Pawn owner)
         {
             Owner = owner;
         }
-
-        protected virtual void Awake() { }
-        protected virtual void Start() { }
-        protected virtual void OnEnable() { }
-        protected virtual void OnDisable() { }
-        protected virtual void Update() { }
-        protected virtual void LateUpdate() { }
     }
 }

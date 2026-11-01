@@ -43,9 +43,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1318904549476743261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f5cf024a09414e4f96c522e25698dce, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b618697d6f53e34393929d8c34ac8a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayName: Sword
+  damage: 20
+  attackInterval: 0.9
+  attackDuration: 0.85
+  range: 1.7
+  equippedPosition: {x: 0, y: 0, z: 0}
+  equippedEuler: {x: 0, y: 0, z: 0}
+  sheathedPosition: {x: 0, y: 0, z: -0.12}
+  sheathedEuler: {x: 0, y: 0, z: 140}
   hitBox: {fileID: 193415196582228634}
   weaponRibbon: {fileID: 772200001}
 --- !u!114 &772200001
@@ -58,8 +67,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75e92897286245cb8cd49397deaf1de9, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   bladeSource: {fileID: 3897566101801513363}
   bladeStart: {fileID: 0}
   bladeEnd: {fileID: 0}

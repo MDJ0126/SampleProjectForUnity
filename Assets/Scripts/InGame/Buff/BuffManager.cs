@@ -21,9 +21,9 @@ namespace Game
         /// </summary>
         public void UpdateTick(float deltaTime)
         {
-            foreach (Buff buff in Buffs)
+            for (int i = Buffs.Count - 1; i >= 0; i--)
             {
-                buff.UpdateTick(deltaTime);
+                Buffs[i].UpdateTick(deltaTime);
             }
         }
 
@@ -32,6 +32,10 @@ namespace Game
         /// </summary>
         public void AddBuff(Buff buff)
         {
+            if (buff == null || Buffs.Contains(buff))
+            {
+                return;
+            }
             buff.SetOwner(_owner);
             buff.OnEndBuff += RemoveBuff;
             Buffs.Add(buff);
