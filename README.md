@@ -122,6 +122,10 @@ flowchart TB
 
 - **Unity Editor:** 6000.0.83f1
 
+### 로컬 음성 입력용 WAV 변환
+
+16kHz AudioClip의 유효 프레임을 PCM16 모노 WAV로 변환하는 독립 Game.Audio 모듈을 제공합니다. 게임·녹음·통신·UI와 분리했습니다. [입력 계약과 검증 범위](docs/documentation/29-wave-encoding.md)를 확인하세요.
+
 ### AI 모델 연결 모듈
 
 게임별 행동 해석과 분리한 호환 모델 통신·설정별 동시 호출 제한을 제공합니다. [로컬·원격 연결과 정리 계약](docs/documentation/28-agent-models.md)을 확인하세요.

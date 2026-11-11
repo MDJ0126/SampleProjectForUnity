@@ -75,3 +75,9 @@
 - SHA: 85eba5315c7a17d0346d4a774de5df3241e96537
 - 내용: 승인된 Fantasya 환류: 게임별 행동 해석을 분리한 AgentModelSettings·AgentModelClient와 독립 어셈블리, 연결·정리 계약 문서 추가. 이번 추가 파일만 검토했으며 이전 기준 이후 기존 게임 기능 전체 검토는 범위 밖.
 - 검증: 빌드·페이지·링크 통과. 미확인: 모체 전체 Unity 씬과 원격 API 실행은 미확인. 새 공용 모듈은 Unity 6000.0.83f1 참조 컴파일, 동일 통신 구현의 Fantasya 실제 로컬 모델 실행으로 대조.
+
+## 2026-11-11 20:00:01 KST · 증분 갱신
+
+- SHA: b80b771455d579ba8c03783ee31b9283ee526e2b
+- 내용: Fantasya에서 실제 한국어 음성 인식 경로를 검증한 독립 Game.Audio WAV 인코더 공용화
+- 검증: 빌드·페이지·링크 통과. 미확인: 물리 마이크 녹음, SampleProjectForUnity 전체 게임 씬 실행, 공개 Mermaid 브라우저 렌더링
