@@ -121,3 +121,8 @@ flowchart TB
 ## 5. 프로젝트 환경
 
 - **Unity Editor:** 6000.0.83f1
+
+### AI 모델 연결 모듈
+
+게임별 행동 해석과 분리한 호환 모델 통신·설정별 동시 호출 제한을 제공합니다. [로컬·원격 연결과 정리 계약](docs/documentation/28-agent-models.md)을 확인하세요.
+

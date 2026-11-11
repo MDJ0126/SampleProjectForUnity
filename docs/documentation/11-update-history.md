@@ -69,3 +69,9 @@
 - SHA: a526d924a4918b07799e3011b470e48e4b6abb82
 - 내용: 공통 전투·무기 교체·검 뽑기/수납·Unity Behavior AI·장비 선택·명시적 어셈블리 분리. 실제 그래픽52개·씬 UI114개·Editor327개와 전체 로그·단독 컴파일·순수 소스8개 검증. 관련 버그 및 임시 도구 정리.
 - 검증: 빌드·페이지·링크 통과. 미확인: Windows64 Development/Mono 외 플랫폼과 IL2CPP; Affinity 파일 PERMISSION_DENIED로 캡처 재인코딩 미실행
+
+## 2026-11-11 18:11:36 KST · 증분 갱신
+
+- SHA: 85eba5315c7a17d0346d4a774de5df3241e96537
+- 내용: 승인된 Fantasya 환류: 게임별 행동 해석을 분리한 AgentModelSettings·AgentModelClient와 독립 어셈블리, 연결·정리 계약 문서 추가. 이번 추가 파일만 검토했으며 이전 기준 이후 기존 게임 기능 전체 검토는 범위 밖.
+- 검증: 빌드·페이지·링크 통과. 미확인: 모체 전체 Unity 씬과 원격 API 실행은 미확인. 새 공용 모듈은 Unity 6000.0.83f1 참조 컴파일, 동일 통신 구현의 Fantasya 실제 로컬 모델 실행으로 대조.
