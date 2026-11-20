@@ -11,7 +11,7 @@ const markdown = entries.filter(file => file.endsWith('.md')).sort();
 const sources = [];
 for (const file of markdown) sources.push([file, createHash('sha256').update(await readFile(resolve(root, file), 'utf8')).digest('hex')]);
 const scripts = await collectScripts(root);
-const expectedHash = createHash('sha256').update(JSON.stringify(sources)).update(JSON.stringify(scripts.map(s => [s.path, s.hash]))).update(await readFile(resolve(root, 'build.mjs'))).update(await readFile(resolve(root, 'maintenance/csharp-highlight.mjs'))).update(await readFile(resolve(root, 'document-map.mjs'))).digest('hex');
+const expectedHash = createHash('sha256').update(JSON.stringify(sources)).update(JSON.stringify(scripts.map(s => [s.path, s.hash]))).update(await readFile(resolve(root, 'build.mjs'))).update(await readFile(resolve(root, 'maintenance/csharp-highlight.mjs'))).update(await readFile(resolve(root, 'document-map.mjs'))).update(await readFile(resolve(root, '../../AGENTS.md'), 'utf8')).digest('hex');
 let checkedLinks = 0;
 let buildTimestamp;
 for (const file of markdown) {

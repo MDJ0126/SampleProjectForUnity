@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { collectScripts } from './maintenance/script-index.mjs';
 import { highlightCSharp } from './maintenance/csharp-highlight.mjs';
-import { documentMapFile, splitDocumentMap, renderDocumentMap, documentMapDialog, documentMapStyles } from './document-map.mjs';
+import { documentMapFile, splitDocumentMap, renderDocumentMap, documentMapDialog, documentMapStyles, instructionsFile, instructionsId } from './document-map.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const builtAt = new Date();
@@ -91,6 +91,12 @@ function render(source, id) {
   }
   return html.join('\n');
 }
+const instructionsSource = await readFile(resolve(root, instructionsFile), 'utf8');
+const instructionsPreview = {
+  title: 'AGENTS.md',
+  page: 'https://github.com/MDJ0126/SampleProjectForUnity/blob/main/AGENTS.md',
+  content: render(instructionsSource.replaceAll('](docs/documentation/', ']('), instructionsId),
+};
 const chapters = [];
 for (const file of files) {
   const source = await readFile(resolve(root, file), 'utf8');
@@ -103,7 +109,7 @@ for (const file of files) {
 if (!chapters.length) throw new Error('No Markdown documents found');
 const scripts = await collectScripts(root);
 scripts.forEach(script => { script.highlighted = highlightCSharp(script.source); });
-const buildHash = createHash('sha256').update(JSON.stringify(chapters.map(c => [c.file, c.sourceHash]))).update(JSON.stringify(scripts.map(s => [s.path, s.hash]))).update(await readFile(fileURLToPath(import.meta.url))).update(await readFile(resolve(root, 'maintenance/csharp-highlight.mjs'))).update(await readFile(resolve(root, 'document-map.mjs'))).digest('hex');
+const buildHash = createHash('sha256').update(JSON.stringify(chapters.map(c => [c.file, c.sourceHash]))).update(JSON.stringify(scripts.map(s => [s.path, s.hash]))).update(await readFile(fileURLToPath(import.meta.url))).update(await readFile(resolve(root, 'maintenance/csharp-highlight.mjs'))).update(await readFile(resolve(root, 'document-map.mjs'))).update(instructionsSource).digest('hex');
 const groups = [
   ['프로젝트 구조', ['00', '30', '01', '09']],
   ['다이어그램', ['21', '07', '22', '20']],
@@ -259,12 +265,16 @@ document.addEventListener('click', event => {
   if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
   const preview = event.target.closest('button[data-document-preview]');
   if (preview?.dataset?.documentPreview) {
-    const view = views.find(item => item.id === preview.dataset.documentPreview);
+    const view = preview.dataset.documentPreview === ${JSON.stringify(instructionsId)}
+      ? ${JSON.stringify(instructionsPreview).replaceAll('<', '\\u003c')}
+      : views.find(item => item.id === preview.dataset.documentPreview);
     if (!view) return;
     const dialog = document.getElementById('doc-map-preview');
     const content = dialog.querySelector('.doc-map-preview-content');
     dialog.querySelector('#doc-map-title').textContent = view.title;
-    dialog.querySelector('.doc-map-page').href = view.page;
+    const pageLink = dialog.querySelector('.doc-map-page');
+    pageLink.href = view.page;
+    pageLink.textContent = view.title === 'AGENTS.md' ? 'AGENTS.md 원문 열기' : '본문 페이지 열기';
     content.innerHTML = view.content;
     // Chapter headings have IDs in the main view, so give the preview its own IDs.
     const headings = new Map([...content.querySelectorAll('[id]')].map(element => [element.id, 'preview-' + element.id]));

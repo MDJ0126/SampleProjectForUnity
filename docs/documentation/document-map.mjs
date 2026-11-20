@@ -2,6 +2,8 @@ const escape = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;')
   .replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 
 export const documentMapFile = '30-document-map.md';
+export const instructionsFile = '../../AGENTS.md';
+export const instructionsId = 'agents-preview';
 const marker = '\n## 문서 연결\n';
 
 export function splitDocumentMap(source, files) {
@@ -12,12 +14,12 @@ export function splitDocumentMap(source, files) {
   const seen = new Set();
   const nodes = [];
   for (const line of normalized.slice(end + marker.length).split('\n').filter(line => line.trim())) {
-    const match = /^( *)(?:- )\[([^\]]+)\]\(([\w-]+\.md)\) — (.+)$/.exec(line);
+    const match = /^( *)(?:- )\[([^\]]+)\]\(([\w-]+\.md|\.\.\/\.\.\/AGENTS\.md)\) — (.+)$/.exec(line);
     if (!match || match[1].length % 2) throw new Error('문서 관계도 형식: ' + line);
     const [, spaces, label, file, description] = match;
     const depth = spaces.length / 2;
-    if ((nodes.length === 0 ? depth !== 0 : depth === 0 || depth > ancestors.length) ||
-        !files.includes(file) || file === documentMapFile || seen.has(file)) {
+    if ((nodes.length === 0 ? depth !== 0 || file !== instructionsFile : depth === 0 || depth > ancestors.length) ||
+        (!files.includes(file) && file !== instructionsFile) || file === documentMapFile || seen.has(file)) {
       throw new Error('문서 관계도 연결 중복 또는 누락: ' + file);
     }
     nodes.push({ file, label, description, depth, parent: ancestors[depth - 1] });
@@ -50,7 +52,7 @@ export function renderDocumentMap(nodes, ids) {
   }).join('');
   const buttons = nodes.map(node => {
     const { x, y } = positions.get(node.file);
-    return `<button type="button" class="doc-map-node ${node.depth < 2 ? 'doc-map-primary' : ''}" data-document-preview="${ids.get(node.file)}" style="left:${x - cardWidth / 2}px;top:${y}px" title="${escape(node.file)}"><strong>${escape(node.label)}.md</strong><small>${escape(node.description)}</small></button>`;
+    return `<button type="button" class="doc-map-node ${node.depth < 2 ? 'doc-map-primary' : ''}" data-document-preview="${node.file === instructionsFile ? instructionsId : ids.get(node.file)}" style="left:${x - cardWidth / 2}px;top:${y}px" title="${escape(node.file)}"><strong>${escape(node.label)}.md</strong><small>${escape(node.description)}</small></button>`;
   }).join('');
   return `<section class="doc-map" aria-label="Markdown 문서 관계도"><div class="doc-map-legend"><span>주제</span><span>관련 문서</span><span>${nodes.length}개 문서</span></div><div class="doc-map-scroll" tabindex="0" aria-label="문서 관계도, 가로 스크롤 가능"><div class="doc-map-board" style="width:${width}px;height:${height}px"><svg aria-hidden="true" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}">${paths}</svg>${buttons}</div></div></section>`;
 }
