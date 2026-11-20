@@ -28,4 +28,4 @@ Follow the user's instructions and preserve existing changes. Use this file to s
 - Keep the README's introduction, documentation links, framework structure, and implemented features. Put detailed environments and licensing in the documentation.
 - Keep table-of-contents, previous-page, and next-page navigation in place without a page reload, and preserve browser Back. Keep pages to three to five main rules and short examples where practical. Store detailed update history separately.
 - Put one item and its version on each environment or version row. Preserve detailed third-party asset lists, versions, and license distinctions in the environment and licensing chapters. Keep Mermaid role descriptions, edge labels, and feature divisions when summarizing diagrams.
-- For a request limited to refreshing documentation, preserve game source and refrain from automatically committing it. Report the results and unverified items.
+- For a request limited to refreshing documentation, avoid unsolicited game-code changes and do not create an automatic commit. Report the results and unverified items.
