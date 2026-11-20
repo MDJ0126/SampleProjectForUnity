@@ -1,22 +1,31 @@
-# 프로젝트 작업 지침
+# SampleProjectForUnity Instructions
 
-- 사용자 지시를 우선하고 기존 변경을 보존한다. 관련 [문서](docs/documentation/00-start.md)만 읽는다.
-- 이 프로젝트의 커밋 메시지는 가능한 한 한글로 작성한다. 코드 식별자·제품명 등 필요한 고유 명칭은 원문을 유지한다.
-- 기본 작성: Class(12), Struct(13), Enum(18), Function(03), 네이밍(02), 주석(17). 기능 작성: Buff(14), Skill(15), HUD(16). 파일은 docs/documentation에 있다.
-- 이벤트(19)는 해당 기능 수정 전에 참고한다.
-- Unity 기본 라이프사이클 함수(Awake, OnEnable, Start, Update, LateUpdate, OnDisable, OnDestroy 등)를 함수 영역의 위쪽에 배치하고, OnEquippedWeaponChanged 같은 사용자 정의 함수와 콜백은 그 아래에 작성한다.
-- 작업 중 일시적으로 만든 생성·설정·검증 스크립트와 도구는 사용 및 검증이 끝나면 삭제한다. Unity 에셋의 .meta와 임시로 만든 빈 폴더도 함께 정리하되, 기존 파일과 유지가 필요한 결과물은 보존한다.
-- 보통 길이의 호출은 한 줄. summary는 3줄. 주석은 '~한다.' 톤으로 계약과 이유를 설명한다.
-- if·else는 여러 줄 블록으로 작성하며 항상 중괄호를 사용한다. 한 줄로 작성하는 경우에도 중괄호를 생략하지 않는다.
-- switch문은 한 줄 작성을 금지하며 각 case·default 본문에도 반드시 중괄호를 사용한다. 중괄호는 다음 줄에 두고 레이블, 본문, break·return을 각각 별도 줄로 작성한다.
-- 소스·설정·실행으로 확인한다. 미검증은 '미확인'으로 표시하고 추측하지 않는다.
-- 최신화는 [갱신 절차](docs/documentation/10-updating.md)에 따라 마지막 SHA·스냅샷 이후 변경과 영향만 확인한다. 기준이 없거나 끊기면 전체 확인한다.
-- 검토·빌드·검증 후 record로 기준을 기록하고 재빌드한다. 원본은 Markdown이며 HTML을 직접 수정하지 않는다.
-- 문서는 프로젝트 구조 → 다이어그램 → 개발된 기능 → 작성 요령 순서, 소분류별 독립 페이지로 유지한다.
-- README에는 소개·문서 안내·프레임워크 구조·개발된 기능을 유지한다. 상세 환경·라이선스는 다큐먼트에서 관리한다.
-- 목차·이전·다음 문서는 새로고침 없이 화면 안에서 전환하고 뒤로 가기를 지원한다.
-- 문서는 핵심 규칙 3~5개와 짧은 예제 위주로 요약한다. 중복 설명을 늘리지 않고 상세 갱신 기록은 별도 데이터 파일에 보관한다.
-- 환경·버전 표는 한 행에 항목 하나와 해당 버전 하나만 적는다. 요약을 위해 서로 다른 패키지를 같은 행에 묶지 않는다.
-- Mermaid는 역할 설명·연결 라벨·기능별 구분을 유지한다. 문장을 요약하더라도 다이어그램을 이름만 있는 박스로 단순화하지 않는다.
-- 환경과 라이선스의 외부 에셋 목록·버전·라이선스 구분은 상세하게 유지한다. 전체 문서 요약 대상에 포함해 생략하지 않는다.
-- 문서 최신화만 요청받으면 게임 코드 임의 수정·자동 커밋을 하지 않는다. 결과와 미확인을 보고한다.
+## Start Here
+
+Follow the user's instructions and preserve existing changes. Use this file to select the source documents relevant to the task.
+
+| When to read | Sources |
+| --- | --- |
+| Finding how features and documents fit together | [Project introduction](docs/documentation/00-start.md) and [document map](docs/documentation/30-document-map.md) |
+| Writing or changing C# | [Naming](docs/documentation/02-naming.md), [functions](docs/documentation/03-functions.md), [classes](docs/documentation/12-class.md), [structs](docs/documentation/13-struct.md), [enums](docs/documentation/18-enum.md), and [comments and formatting](docs/documentation/17-comments-format.md) as applicable |
+| Changing events | Read [events](docs/documentation/19-events.md) before editing the feature |
+| Implementing a buff, a skill, or HUD behavior | [Buffs](docs/documentation/14-buff.md), [skills](docs/documentation/15-skill.md), or [HUD](docs/documentation/16-hud.md) |
+| Planning or checking Unity work | [Unity work rules](docs/documentation/04-unity.md) and [work and verification](docs/documentation/06-workflow.md) |
+| Updating the documentation | [Refresh procedure](docs/documentation/10-updating.md) and [last recorded revision](docs/documentation/11-update-history.md) |
+
+## Code and Verification
+
+- Prefer Korean commit messages. Preserve code identifiers, product names, and other proper names in their original form.
+- Place Unity lifecycle methods such as `Awake`, `OnEnable`, `Start`, `Update`, `LateUpdate`, `OnDisable`, and `OnDestroy` at the top of the methods section. Place custom methods and callbacks such as `OnEquippedWeaponChanged` below them.
+- Keep ordinary-length calls on one line. Write an XML `summary` in three lines. Use Korean declarative comments in the “~한다.” style to describe the contract and reasoning.
+- Write `if` and `else` as multiline blocks. Always use braces, including for a one-line body. Write `switch` across multiple lines and use braces for every `case` and `default` body. Put braces on their own lines, and write the label, body, and `break` or `return` on separate lines.
+- Verify claims using source, configuration, and execution. Mark unverified items as `미확인`. Remove temporary generation, configuration, and verification scripts and tools when finished, including their Unity `.meta` files and empty temporary folders. Preserve existing files and results that must be kept.
+
+## Documentation
+
+- Compare the changes and their impact since the last recorded SHA and snapshot. If the baseline is absent or invalid, review the full scope. Follow the refresh procedure to review, build, validate, record the new baseline, and rebuild.
+- Markdown is the source. Generate HTML from it. Keep standalone pages for subtopics in this order: project structure, diagrams, implemented features, and writing guidance.
+- Keep the README's introduction, documentation links, framework structure, and implemented features. Put detailed environments and licensing in the documentation.
+- Keep table-of-contents, previous-page, and next-page navigation in place without a page reload, and preserve browser Back. Keep pages to three to five main rules and short examples where practical. Store detailed update history separately.
+- Put one item and its version on each environment or version row. Preserve detailed third-party asset lists, versions, and license distinctions in the environment and licensing chapters. Keep Mermaid role descriptions, edge labels, and feature divisions when summarizing diagrams.
+- For a request limited to refreshing documentation, preserve game source and refrain from automatically committing it. Report the results and unverified items.
