@@ -1,21 +1,18 @@
 {
   "scopeVersion": 1,
-  "revision": "e4b9ff9037b8b309da6cfe4216f98b341a481517",
-  "updatedAt": "2026-11-20T19:10:55.728Z",
+  "revision": "9d6a681a98dfa9a1a272e99622dc9b88d81cc21c",
+  "updatedAt": "2026-11-20T19:20:33.429Z",
   "timeZone": "Asia/Seoul",
   "mode": "incremental",
-  "note": "AGENTS.md 문서 트리를 관계도와 팝업에 공유하고 팝업 외부 클릭을 처리했습니다.",
-  "unverified": "Unity 실행 및 원격 Pages 배포",
+  "note": "다큐먼트 메뉴, 문서 소개와 README의 관계도 이름을 AGENTS.md 관계도로 통일했습니다.",
+  "unverified": "Unity 실행과 원격 Pages 배포",
   "uncommittedFiles": [
-    "AGENTS.md",
-    "docs/documentation/10-updating.md",
+    "README.md",
+    "docs/documentation/00-start.md",
     "docs/documentation/30-document-map.md",
-    "docs/documentation/build.mjs",
-    "docs/documentation/document-map.mjs",
-    "docs/documentation/maintenance/verify-refresh.mjs"
+    "docs/documentation/document-map.mjs"
   ],
   "outsideScopeChanges": [
-    ".github/workflows/documentation-pages.yml",
     "docs/verification/combat/screens/affinity-stage-result.json"
   ],
   "files": {
@@ -410,8 +407,8 @@
     "ProjectSettings/VFXManager.asset": "f066c6483919961332415ee64204f74fe52f38c02e82892eb02b7a5b2e381f0e",
     "ProjectSettings/VersionControlSettings.asset": "e7bda45bf7a394745fee1316e6c71fa676004d591ad1f3aa247fd3e4ceb86071",
     "ProjectSettings/XRSettings.asset": "edd2beb4a2e388312b4b7da241aa51070434005d82c59363f1237dd2e567585f",
-    "README.md": "ac00ef4732fe1769d761670a448a9bcf9808632e0f5cc8a2cbd9e26098614ed9",
-    "docs/documentation/00-start.md": "e6b8c3983f164d283f29bf7a2692ce617a68108922fcc29d86b246fdeafb63f0",
+    "README.md": "8e4b33ede50ea7f76381250796006dd61ff8382f493d94e833b1ee60456b25e9",
+    "docs/documentation/00-start.md": "cd85462fd90b0ba2a2d1c9b0616e4b2b629cceceacf69115faf5daf4be295fa3",
     "docs/documentation/01-project.md": "86bec547bbddd32a735c61997bf131f01dd9dab15c3cab65133cacb842e2f435",
     "docs/documentation/02-naming.md": "6304bbfe92a83411263722547a314417a0b4027d54ae7316e09475656b803889",
     "docs/documentation/03-functions.md": "894e9346a8783c96ae05b6b9512d7f80ab7be17399f75ad57351c552307b5803",
@@ -440,9 +437,9 @@
     "docs/documentation/27-developed-combat.md": "f2a37de44169ac0a9febff09c4cc100e2cefce1eeae0230eb632ed98fcd0628b",
     "docs/documentation/28-agent-models.md": "268055b28154c9b9584531f4dfec703fadcdb5ae559e28512ea29e9bca5362cb",
     "docs/documentation/29-wave-encoding.md": "6de63b030af1636d8b759f08427de928291d680eb08eaf6b244e5577a637dc15",
-    "docs/documentation/30-document-map.md": "4c35f08c7cdab6ba2896a874fd0dc483597ba3cd465a1194324de6ac76e141e3",
+    "docs/documentation/30-document-map.md": "c6030f88e5bf4514f395563cab79fbd44541d4dc15f0e1fa429a8d20fc9e20a0",
     "docs/documentation/build.mjs": "ddf50423b0f9923f4db273c75fe20e889145845eded41c231f32bc95941c55a1",
-    "docs/documentation/document-map.mjs": "846f73d165a33b1d9cb6152e58bf2bacb29f402da016dc84f32c73c3580e19ec",
+    "docs/documentation/document-map.mjs": "f37cc94af1d7d3d136c5d35f2ffad1d5eb39dcf39cc9df0859c2dcdc6f9e4ace",
     "docs/documentation/maintenance/csharp-highlight.mjs": "ff665a103be068f5d2ca3d26b1597add49d7c3fdac5e800b3a4534d5bdf4d3ec",
     "docs/documentation/maintenance/package-pages.mjs": "672696952562d1e43f1c239034b57402779a2e3464630b68a0d96793d98744fb",
     "docs/documentation/maintenance/refresh.mjs": "92a48d73007dd8c122e2f2dfdf5d5187d76fc909d4fd19fac4ce78737fc15886",

@@ -18,13 +18,13 @@ export function readDocumentTree(source, files) {
   const nodes = [];
   for (const line of normalized.slice(treeStart, treeEnd).split('\n').filter(line => line.trim())) {
     const match = /^( *)(?:- )\[([^\]]+)\]\((AGENTS\.md|docs\/documentation\/[\w-]+\.md)\) — (.+)$/.exec(line);
-    if (!match || match[1].length % 2) throw new Error('문서 관계도 형식: ' + line);
+    if (!match || match[1].length % 2) throw new Error('AGENTS.md 관계도 형식: ' + line);
     const [, spaces, label, target, description] = match;
     const file = target === 'AGENTS.md' ? instructionsFile : target.slice('docs/documentation/'.length);
     const depth = spaces.length / 2;
     if ((nodes.length === 0 ? depth !== 0 || file !== instructionsFile : depth === 0 || depth > ancestors.length) ||
         (!files.includes(file) && file !== instructionsFile) || file === documentMapFile || seen.has(file)) {
-      throw new Error('문서 관계도 연결 중복 또는 누락: ' + file);
+      throw new Error('AGENTS.md 관계도 연결 중복 또는 누락: ' + file);
     }
     nodes.push({ file, label, description, depth, parent: ancestors[depth - 1] });
     seen.add(file);
@@ -32,7 +32,7 @@ export function readDocumentTree(source, files) {
     ancestors.push(file);
   }
   const missing = files.filter(file => file !== documentMapFile && !seen.has(file));
-  if (missing.length) throw new Error('문서 관계도에 연결되지 않은 문서: ' + missing.join(', '));
+  if (missing.length) throw new Error('AGENTS.md 관계도에 연결되지 않은 문서: ' + missing.join(', '));
   return { before: normalized.slice(0, end), after: normalized.slice(treeEnd), nodes };
 }
 
@@ -76,7 +76,7 @@ export function renderDocumentMap(nodes, ids) {
     const { x, y } = positions.get(node.file);
     return `<button type="button" class="doc-map-node ${node.depth < 2 ? 'doc-map-primary' : ''}" data-document-preview="${node.file === instructionsFile ? instructionsId : ids.get(node.file)}" style="left:${x - cardWidth / 2}px;top:${y}px" title="${escape(node.file)}"><strong>${escape(node.label)}.md</strong><small>${escape(node.description)}</small></button>`;
   }).join('');
-  return `<section class="doc-map" aria-label="Markdown 문서 관계도"><div class="doc-map-legend"><span>주제</span><span>관련 문서</span><span>${nodes.length}개 문서</span></div><div class="doc-map-scroll" tabindex="0" aria-label="문서 관계도, 가로 스크롤 가능"><div class="doc-map-board" style="width:${width}px;height:${height}px"><svg aria-hidden="true" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}">${paths}</svg>${buttons}</div></div></section>`;
+  return `<section class="doc-map" aria-label="AGENTS.md 관계도"><div class="doc-map-legend"><span>주제</span><span>관련 문서</span><span>${nodes.length}개 문서</span></div><div class="doc-map-scroll" tabindex="0" aria-label="AGENTS.md 관계도, 가로 스크롤 가능"><div class="doc-map-board" style="width:${width}px;height:${height}px"><svg aria-hidden="true" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}">${paths}</svg>${buttons}</div></div></section>`;
 }
 
 export const documentMapDialog = '<dialog id="doc-map-preview" aria-labelledby="doc-map-title"><header><strong id="doc-map-title"></strong><a class="doc-map-page">본문 페이지 열기</a><form method="dialog"><button>닫기</button></form></header><div class="doc-map-preview-content"></div></dialog>';
