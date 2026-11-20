@@ -1,16 +1,17 @@
 {
   "scopeVersion": 1,
-  "revision": "da7a4da400caf6d3025015d095d2e55380a8da55",
-  "updatedAt": "2026-11-20T19:02:48.295Z",
+  "revision": "e4b9ff9037b8b309da6cfe4216f98b341a481517",
+  "updatedAt": "2026-11-20T19:10:55.728Z",
   "timeZone": "Asia/Seoul",
   "mode": "incremental",
-  "note": "실제 영어 AGENTS.md를 관계도 루트와 미리보기 원본으로 연결했습니다.",
+  "note": "AGENTS.md 문서 트리를 관계도와 팝업에 공유하고 팝업 외부 클릭을 처리했습니다.",
   "unverified": "Unity 실행 및 원격 Pages 배포",
   "uncommittedFiles": [
+    "AGENTS.md",
+    "docs/documentation/10-updating.md",
     "docs/documentation/30-document-map.md",
     "docs/documentation/build.mjs",
     "docs/documentation/document-map.mjs",
-    "docs/documentation/maintenance/validate.mjs",
     "docs/documentation/maintenance/verify-refresh.mjs"
   ],
   "outsideScopeChanges": [
@@ -19,7 +20,7 @@
   ],
   "files": {
     ".gitignore": "38007db2b0d67cb1a52987f3d4274944be801da01176e57c35e1680110083757",
-    "AGENTS.md": "f4d13a111ec285575155a57a808708e1b6102dd2d0a0a4c76f804e39852bd948",
+    "AGENTS.md": "bf580a4636d51681c872e8d86977223140e7dfc38419290fc5300f82c1231baa",
     "Assets/AddressableAssetsData.meta": "a3c52f6356d6851cf73095d4843df3311247862a597da826921a72e2972458ef",
     "Assets/AddressableAssetsData/AddressableAssetGroupSortSettings.asset": "404a961c1b4faba3212d2cb106c32e4a6c92954bfc50aa9786db1c1ec3ac9b4e",
     "Assets/AddressableAssetsData/AddressableAssetGroupSortSettings.asset.meta": "d181d417c6a08a8781198297b2d90095af40ef59559d711ec876b038e5a5a9c8",
@@ -420,7 +421,7 @@
     "docs/documentation/07-diagrams.md": "672976368eba8175d9af790ffc8dc635902e23bd521366eae1fdc8954dccffbb",
     "docs/documentation/08-features.md": "ff9aa01e2dd4283423fc6fd9aa3604f83c740cef60932603e02e79231ac9063e",
     "docs/documentation/09-environment.md": "966f49ebfc66d929c9716e04aef08fc9dc8ce1e1d372f28aae9489f8c28e1a17",
-    "docs/documentation/10-updating.md": "3f2bfe4fa9e95ee06ab32297d229a60558bcafe7ae03df423409aaa0aa8d436d",
+    "docs/documentation/10-updating.md": "b92c4c4d7a9078f8850a7cd425686957556733039181a9cc46b1e9a1205a4546",
     "docs/documentation/12-class.md": "2fbc17466f08e53eb6bdb7446808485dff90c68d67d5aa2cf8c3066a00e43f7f",
     "docs/documentation/13-struct.md": "416e659c8f91050ba181087c73a69efd2f4a9e73c8d932bf314bfb70f4dde77c",
     "docs/documentation/14-buff.md": "dd455c566ae514105c9f890b894611203a5f63252e8d186cd2490e4eac625bec",
@@ -439,9 +440,9 @@
     "docs/documentation/27-developed-combat.md": "f2a37de44169ac0a9febff09c4cc100e2cefce1eeae0230eb632ed98fcd0628b",
     "docs/documentation/28-agent-models.md": "268055b28154c9b9584531f4dfec703fadcdb5ae559e28512ea29e9bca5362cb",
     "docs/documentation/29-wave-encoding.md": "6de63b030af1636d8b759f08427de928291d680eb08eaf6b244e5577a637dc15",
-    "docs/documentation/30-document-map.md": "0bc80f67b54b3e695dd2ead2de4545e52a638c26349022b97bead298b830e2ec",
-    "docs/documentation/build.mjs": "ab4f2d53f9fa0c92f52f0743ad256a9a21b2fed79e304c4fbaf89f1f767300f6",
-    "docs/documentation/document-map.mjs": "a6917b89fa95547cd1e033c8c3bcd0797dbaf98e148532586eafb789201174e6",
+    "docs/documentation/30-document-map.md": "4c35f08c7cdab6ba2896a874fd0dc483597ba3cd465a1194324de6ac76e141e3",
+    "docs/documentation/build.mjs": "ddf50423b0f9923f4db273c75fe20e889145845eded41c231f32bc95941c55a1",
+    "docs/documentation/document-map.mjs": "846f73d165a33b1d9cb6152e58bf2bacb29f402da016dc84f32c73c3580e19ec",
     "docs/documentation/maintenance/csharp-highlight.mjs": "ff665a103be068f5d2ca3d26b1597add49d7c3fdac5e800b3a4534d5bdf4d3ec",
     "docs/documentation/maintenance/package-pages.mjs": "672696952562d1e43f1c239034b57402779a2e3464630b68a0d96793d98744fb",
     "docs/documentation/maintenance/refresh.mjs": "92a48d73007dd8c122e2f2dfdf5d5187d76fc909d4fd19fac4ce78737fc15886",
@@ -449,6 +450,6 @@
     "docs/documentation/maintenance/validate.mjs": "cf5699796d741bb436c16fbfa0b9e303cef8cb81df862467b8bc35c870242c13",
     "docs/documentation/maintenance/verify-highlight.mjs": "9cd1b43b95f58e830a5ac2b0e53e8ad14fc274de9f0bfe59f65545728167133a",
     "docs/documentation/maintenance/verify-navigation.mjs": "bfb5d939bfbedca9641c296fe84bbbe693de32108d568984718115aa700935b0",
-    "docs/documentation/maintenance/verify-refresh.mjs": "ece0a2bdb48cc420aafd992f96983d7003ff121dbc2e71b79acf45cd1d8d1164"
+    "docs/documentation/maintenance/verify-refresh.mjs": "f3bafbedd69b0ba8d066e0881ec08548e5c25415496541053c14bbae113b6833"
   }
 }

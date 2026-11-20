@@ -21,7 +21,7 @@ node docs/documentation/maintenance/refresh.mjs status
 - 확인 범위: 자체 소스·텍스트 에셋·설정·문서. 외부 에셋은 변경 영향만 확인.
 - 미커밋 변경은 파일 해시로 비교. 상세 상태는 maintenance/update-state.json.
 - 원본 수정 후 재빌드하지 않으면 검증 실패. 빌드만으로 SHA를 앞당기지 않음.
-- Markdown이 원본이며 빌드 명령으로 HTML·스크립트 검색 내용을 갱신한다. 새 문서는 build.mjs의 목차와 [문서 관계도 원본](30-document-map.md)에 등록한다.
+- Markdown이 원본이며 빌드 명령으로 HTML·스크립트 검색 내용을 갱신한다. 새 문서는 build.mjs의 목차와 [AGENTS.md](../../AGENTS.md)의 Document Tree에 등록한다.
 - 소스 확인과 실행 검증을 구분하고, 테스트하지 않은 동작은 '미확인'으로 표시한다.
 - 도구 변경 시 maintenance/verify-refresh.mjs도 실행.
 - 게임 코드 임의 수정·자동 커밋 금지. 이력 상세는 maintenance/history-details.jsonl에 누적.

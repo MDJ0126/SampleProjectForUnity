@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { collectScripts } from './maintenance/script-index.mjs';
 import { highlightCSharp } from './maintenance/csharp-highlight.mjs';
-import { documentMapFile, splitDocumentMap, renderDocumentMap, documentMapDialog, documentMapStyles, instructionsFile, instructionsId } from './document-map.mjs';
+import { documentMapFile, readDocumentTree, renderDocumentTree, renderDocumentMap, documentMapDialog, documentMapStyles, instructionsFile, instructionsId } from './document-map.mjs';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const builtAt = new Date();
@@ -92,18 +92,22 @@ function render(source, id) {
   return html.join('\n');
 }
 const instructionsSource = await readFile(resolve(root, instructionsFile), 'utf8');
+const instructionsTree = readDocumentTree(instructionsSource, files);
+const localizeLinks = text => text.replaceAll('](docs/documentation/', '](');
 const instructionsPreview = {
   title: 'AGENTS.md',
   page: 'https://github.com/MDJ0126/SampleProjectForUnity/blob/main/AGENTS.md',
-  content: render(instructionsSource.replaceAll('](docs/documentation/', ']('), instructionsId),
+  content: render(localizeLinks(instructionsTree.before), instructionsId)
+    + renderDocumentTree(instructionsTree.nodes, pageFor)
+    + render(localizeLinks(instructionsTree.after), instructionsId + '-rules'),
 };
 const chapters = [];
 for (const file of files) {
   const source = await readFile(resolve(root, file), 'utf8');
   await checkLinks(source, file);
   const title = /^# (.+)$/m.exec(source)?.[1] || file;
-  const map = file === documentMapFile ? splitDocumentMap(source, files) : null;
-  const html = render(map?.prose ?? source, ids.get(file)) + (map ? renderDocumentMap(map.nodes, ids) : '');
+  const html = render(source, ids.get(file))
+    + (file === documentMapFile ? renderDocumentMap(instructionsTree.nodes, ids) : '');
   chapters.push({ file, title, id: ids.get(file), sourceHash: createHash('sha256').update(source).digest('hex'), html });
 }
 if (!chapters.length) throw new Error('No Markdown documents found');
@@ -263,6 +267,12 @@ function showChapter(id) {
 }
 document.addEventListener('click', event => {
   if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  const outsideDialog = document.getElementById('doc-map-preview');
+  if (outsideDialog?.open && event.target === outsideDialog) {
+    const bounds = outsideDialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX >= bounds.right || event.clientY < bounds.top || event.clientY >= bounds.bottom) outsideDialog.close();
+    return;
+  }
   const preview = event.target.closest('button[data-document-preview]');
   if (preview?.dataset?.documentPreview) {
     const view = preview.dataset.documentPreview === ${JSON.stringify(instructionsId)}

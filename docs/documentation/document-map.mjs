@@ -4,19 +4,23 @@ const escape = text => text.replaceAll('&', '&amp;').replaceAll('<', '&lt;')
 export const documentMapFile = '30-document-map.md';
 export const instructionsFile = '../../AGENTS.md';
 export const instructionsId = 'agents-preview';
-const marker = '\n## 문서 연결\n';
+const marker = '\n## Document Tree\n';
 
-export function splitDocumentMap(source, files) {
+export function readDocumentTree(source, files) {
   const normalized = source.replaceAll('\r\n', '\n');
   const end = normalized.indexOf(marker);
-  if (end < 0) throw new Error('문서 관계도에 문서 연결 절이 필요합니다.');
+  if (end < 0) throw new Error('AGENTS.md requires a Document Tree section.');
+  const treeStart = end + marker.length;
+  const nextHeading = normalized.indexOf('\n## ', treeStart);
+  const treeEnd = nextHeading < 0 ? normalized.length : nextHeading;
   const ancestors = [];
   const seen = new Set();
   const nodes = [];
-  for (const line of normalized.slice(end + marker.length).split('\n').filter(line => line.trim())) {
-    const match = /^( *)(?:- )\[([^\]]+)\]\(([\w-]+\.md|\.\.\/\.\.\/AGENTS\.md)\) — (.+)$/.exec(line);
+  for (const line of normalized.slice(treeStart, treeEnd).split('\n').filter(line => line.trim())) {
+    const match = /^( *)(?:- )\[([^\]]+)\]\((AGENTS\.md|docs\/documentation\/[\w-]+\.md)\) — (.+)$/.exec(line);
     if (!match || match[1].length % 2) throw new Error('문서 관계도 형식: ' + line);
-    const [, spaces, label, file, description] = match;
+    const [, spaces, label, target, description] = match;
+    const file = target === 'AGENTS.md' ? instructionsFile : target.slice('docs/documentation/'.length);
     const depth = spaces.length / 2;
     if ((nodes.length === 0 ? depth !== 0 || file !== instructionsFile : depth === 0 || depth > ancestors.length) ||
         (!files.includes(file) && file !== instructionsFile) || file === documentMapFile || seen.has(file)) {
@@ -29,7 +33,25 @@ export function splitDocumentMap(source, files) {
   }
   const missing = files.filter(file => file !== documentMapFile && !seen.has(file));
   if (missing.length) throw new Error('문서 관계도에 연결되지 않은 문서: ' + missing.join(', '));
-  return { prose: normalized.slice(0, end), nodes };
+  return { before: normalized.slice(0, end), after: normalized.slice(treeEnd), nodes };
+}
+
+export function renderDocumentTree(nodes, pageFor) {
+  const children = new Map();
+  for (const node of nodes) {
+    if (!children.has(node.parent)) children.set(node.parent, []);
+    children.get(node.parent).push(node);
+  }
+  function list(parent) {
+    const items = children.get(parent);
+    if (!items) return '';
+    return '<ul>' + items.map(node => {
+      const label = escape(node.label) + '.md';
+      const title = node.file === instructionsFile ? '<strong>' + label + '</strong>' : '<a href="' + escape(pageFor(node.file)) + '">' + label + '</a>';
+      return '<li>' + title + ' <small>— ' + escape(node.description) + '</small>' + list(node.file) + '</li>';
+    }).join('') + '</ul>';
+  }
+  return '<section class="doc-map-text-tree" aria-label="Document Tree"><h2>Document Tree</h2>' + list() + '</section>';
 }
 
 export function renderDocumentMap(nodes, ids) {

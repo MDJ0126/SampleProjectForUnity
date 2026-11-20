@@ -19,13 +19,13 @@ for (const [file, content] of Object.entries({
   '07-diagrams.md': '# Fixture diagrams\n\n```mermaid\nflowchart LR\n A --> B\n```\n',
   '20-outgame-diagrams.md': '# 아웃게임 다이어그램 · 예정\n',
   '22-character-diagrams.md': '# Fixture character\n\n```mermaid\nflowchart LR\n A --> B\n```\n',
-  '30-document-map.md': '# Fixture relationship map\n\n## 문서 연결\n\n- [AGENTS](../../AGENTS.md) — Project instructions\n  - [소개](00-start.md) — 시작\n  - [구조](01-project.md) — 구조\n  - [인게임](07-diagrams.md) — 흐름\n    - [아웃게임](20-outgame-diagrams.md) — 예정\n    - [캐릭터](22-character-diagrams.md) — 구성\n  - [이력](11-update-history.md) — 검토\n',
+  '30-document-map.md': '# Fixture relationship map\n',
   '11-update-history.md': '# Fixture history\n',
   'vendor/mermaid.min.js': '// Rendering is outside the scope of this integration test.\n',
 })) await writeFile(resolve(fixture, docs, file), content);
 await writeFile(resolve(fixture, 'Assets/Scripts/Example.cs'), 'class Example {}\n');
 await writeFile(resolve(fixture, 'README.md'), '# Fixture\n');
-await writeFile(resolve(fixture, 'AGENTS.md'), '# Fixture instructions\n');
+await writeFile(resolve(fixture, 'AGENTS.md'), '# Fixture instructions\n\n## Document Tree\n\n- [AGENTS](AGENTS.md) — Project instructions\n  - [소개](docs/documentation/00-start.md) — 시작\n  - [구조](docs/documentation/01-project.md) — 구조\n  - [인게임](docs/documentation/07-diagrams.md) — 흐름\n    - [아웃게임](docs/documentation/20-outgame-diagrams.md) — 예정\n    - [캐릭터](docs/documentation/22-character-diagrams.md) — 구성\n  - [이력](docs/documentation/11-update-history.md) — 검토\n');
 function run(executable, args, succeeds = true) {
   const result = spawnSync(executable, args, { cwd: fixture, encoding: 'utf8' });
   if (result.error) throw result.error;
