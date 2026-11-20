@@ -1,16 +1,24 @@
 {
   "scopeVersion": 1,
-  "revision": "49a064920169dd42eca145adfa6d3b43edab0e97",
-  "updatedAt": "2026-11-11T11:01:03.984Z",
+  "revision": "c7b40e5cff3f8310d6f58fa51e54d77dc507bd31",
+  "updatedAt": "2026-11-20T18:44:36.814Z",
   "timeZone": "Asia/Seoul",
   "mode": "incremental",
-  "note": "공용 WAV 인코더의 메타 공백을 정리하고 실제 Unity 인식 검증 범위를 기록",
-  "unverified": "물리 마이크 녹음, 모체 전체 게임 씬, 공개 Mermaid 브라우저 렌더링",
+  "note": "Markdown 문서 관계도와 팝업, README 및 문서 홈 진입 경로를 추가했습니다.",
+  "unverified": "Unity 실행과 원격 Pages 배포",
   "uncommittedFiles": [
-    "Assets/Scripts/Common/Audio/AudioWaveEncoder.cs.meta",
-    "Assets/Scripts/Common/Audio/Game.Audio.asmdef.meta"
+    "README.md",
+    "docs/documentation/00-start.md",
+    "docs/documentation/10-updating.md",
+    "docs/documentation/30-document-map.md",
+    "docs/documentation/build.mjs",
+    "docs/documentation/document-map.mjs",
+    "docs/documentation/maintenance/validate.mjs",
+    "docs/documentation/maintenance/verify-refresh.mjs"
   ],
-  "outsideScopeChanges": [],
+  "outsideScopeChanges": [
+    "docs/verification/combat/screens/affinity-stage-result.json"
+  ],
   "files": {
     ".gitignore": "38007db2b0d67cb1a52987f3d4274944be801da01176e57c35e1680110083757",
     "AGENTS.md": "7e77c82809173e0ef92a37ea822d47d871046cd78722ca7b1157908dd48dad95",
@@ -403,8 +411,8 @@
     "ProjectSettings/VFXManager.asset": "f066c6483919961332415ee64204f74fe52f38c02e82892eb02b7a5b2e381f0e",
     "ProjectSettings/VersionControlSettings.asset": "e7bda45bf7a394745fee1316e6c71fa676004d591ad1f3aa247fd3e4ceb86071",
     "ProjectSettings/XRSettings.asset": "edd2beb4a2e388312b4b7da241aa51070434005d82c59363f1237dd2e567585f",
-    "README.md": "c10e9b405e560e0532943d69abdd7dfa35cee18a92c4b1eb528f86240bf63153",
-    "docs/documentation/00-start.md": "c5e7d0310637cba1eeb8cecd6ca03a8b2184c05b5d6ca03198adc3c0502c0bdd",
+    "README.md": "ac00ef4732fe1769d761670a448a9bcf9808632e0f5cc8a2cbd9e26098614ed9",
+    "docs/documentation/00-start.md": "e6b8c3983f164d283f29bf7a2692ce617a68108922fcc29d86b246fdeafb63f0",
     "docs/documentation/01-project.md": "86bec547bbddd32a735c61997bf131f01dd9dab15c3cab65133cacb842e2f435",
     "docs/documentation/02-naming.md": "6304bbfe92a83411263722547a314417a0b4027d54ae7316e09475656b803889",
     "docs/documentation/03-functions.md": "894e9346a8783c96ae05b6b9512d7f80ab7be17399f75ad57351c552307b5803",
@@ -414,7 +422,7 @@
     "docs/documentation/07-diagrams.md": "672976368eba8175d9af790ffc8dc635902e23bd521366eae1fdc8954dccffbb",
     "docs/documentation/08-features.md": "ff9aa01e2dd4283423fc6fd9aa3604f83c740cef60932603e02e79231ac9063e",
     "docs/documentation/09-environment.md": "966f49ebfc66d929c9716e04aef08fc9dc8ce1e1d372f28aae9489f8c28e1a17",
-    "docs/documentation/10-updating.md": "bd615e682c2382a16ef40b6963da18aa90dbdfdadfda41e1b10242f339ed60a2",
+    "docs/documentation/10-updating.md": "3f2bfe4fa9e95ee06ab32297d229a60558bcafe7ae03df423409aaa0aa8d436d",
     "docs/documentation/12-class.md": "2fbc17466f08e53eb6bdb7446808485dff90c68d67d5aa2cf8c3066a00e43f7f",
     "docs/documentation/13-struct.md": "416e659c8f91050ba181087c73a69efd2f4a9e73c8d932bf314bfb70f4dde77c",
     "docs/documentation/14-buff.md": "dd455c566ae514105c9f890b894611203a5f63252e8d186cd2490e4eac625bec",
@@ -433,14 +441,16 @@
     "docs/documentation/27-developed-combat.md": "f2a37de44169ac0a9febff09c4cc100e2cefce1eeae0230eb632ed98fcd0628b",
     "docs/documentation/28-agent-models.md": "268055b28154c9b9584531f4dfec703fadcdb5ae559e28512ea29e9bca5362cb",
     "docs/documentation/29-wave-encoding.md": "6de63b030af1636d8b759f08427de928291d680eb08eaf6b244e5577a637dc15",
-    "docs/documentation/build.mjs": "f59d9a36ad98833c93e74060bb6005d29a4d168552d01968fe854c5762121de1",
+    "docs/documentation/30-document-map.md": "355c9cb87e86c4beb44408607894b5a745928a2c42078c22c372e60efb8e596a",
+    "docs/documentation/build.mjs": "53e7d494e50ec874cb459318560971c929f6b7e5f213f1c31fe85c7de54efa9e",
+    "docs/documentation/document-map.mjs": "af4399e7e169d2f5173071b68266caa4b902cde060b57b0611cc5df6972080f5",
     "docs/documentation/maintenance/csharp-highlight.mjs": "ff665a103be068f5d2ca3d26b1597add49d7c3fdac5e800b3a4534d5bdf4d3ec",
     "docs/documentation/maintenance/package-pages.mjs": "672696952562d1e43f1c239034b57402779a2e3464630b68a0d96793d98744fb",
     "docs/documentation/maintenance/refresh.mjs": "92a48d73007dd8c122e2f2dfdf5d5187d76fc909d4fd19fac4ce78737fc15886",
     "docs/documentation/maintenance/script-index.mjs": "8e7cac6d8dfe69139034b93efe95bfc33da7d61edc19817212e562c1fcbaeb81",
-    "docs/documentation/maintenance/validate.mjs": "2d5dc53e7c59107f2f2b2957418af4cc10aaddd1dd87e53090c1ec1bf93a7046",
+    "docs/documentation/maintenance/validate.mjs": "c2e396421a77e7c330ed93cd1106fd005019bb8c3321124c0b2378879c0499d2",
     "docs/documentation/maintenance/verify-highlight.mjs": "9cd1b43b95f58e830a5ac2b0e53e8ad14fc274de9f0bfe59f65545728167133a",
     "docs/documentation/maintenance/verify-navigation.mjs": "bfb5d939bfbedca9641c296fe84bbbe693de32108d568984718115aa700935b0",
-    "docs/documentation/maintenance/verify-refresh.mjs": "36fd616058ffd6558e6f2f984b8a44ef4d42d1902a57cbf56bdfb21de10ebe26"
+    "docs/documentation/maintenance/verify-refresh.mjs": "e4527dc75dc03b11c6c2fd82b05e78a9daa56f26cee1d61807143b2313463764"
   }
 }

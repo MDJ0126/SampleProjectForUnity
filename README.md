@@ -13,9 +13,9 @@
 
 ## 1. 프로젝트 문서
 
-프로젝트 구조, 다이어그램, 개발된 기능과 작성 요령은 아래 다큐먼트에서 확인하실 수 있습니다.
+프로젝트 구조, 시스템 흐름, 구현 기능과 코드 작성 기준을 주제별 Markdown으로 관리합니다. [문서 관계도](https://mdj0126.github.io/SampleProjectForUnity/docs/documentation/30-document-map.html)에서 각 주제와 관련 문서를 살펴보고, 노드를 눌러 본문을 바로 읽을 수 있습니다. 기존 문서를 수정하거나 새 장을 추가할 때 Markdown 원본에서 관계도를 함께 관리합니다.
 
-[프로젝트 다큐먼트 보기](https://mdj0126.github.io/SampleProjectForUnity/docs/documentation/index.html)
+[프로젝트 다큐먼트 보기](https://mdj0126.github.io/SampleProjectForUnity/docs/documentation/index.html) · [관계도 원본](docs/documentation/30-document-map.md)
 
 ## 2. 이 프로젝트에서는 무엇을 확인할 수 있나요?
 

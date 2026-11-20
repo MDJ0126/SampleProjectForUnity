@@ -12,11 +12,14 @@ const docs = 'docs/documentation';
 await mkdir(resolve(fixture, `${docs}/maintenance`), { recursive: true });
 await mkdir(resolve(fixture, `${docs}/vendor`), { recursive: true });
 await mkdir(resolve(fixture, 'Assets/Scripts'), { recursive: true });
-for (const file of ['build.mjs', 'maintenance/refresh.mjs', 'maintenance/validate.mjs']) await copyFile(resolve(source, file), resolve(fixture, docs, file));
+for (const file of ['build.mjs', 'document-map.mjs', 'favicon.svg', 'maintenance/refresh.mjs', 'maintenance/validate.mjs', 'maintenance/script-index.mjs', 'maintenance/csharp-highlight.mjs']) await copyFile(resolve(source, file), resolve(fixture, docs, file));
 for (const [file, content] of Object.entries({
   '00-start.md': '# Fixture introduction\n',
   '01-project.md': '# Fixture structure\n',
-  '07-diagrams.md': '# Fixture diagrams\n\n```mermaid\nflowchart LR\n A --> B\n```\n\n```mermaid\nflowchart TB\n C --> D\n```\n',
+  '07-diagrams.md': '# Fixture diagrams\n\n```mermaid\nflowchart LR\n A --> B\n```\n',
+  '20-outgame-diagrams.md': '# 아웃게임 다이어그램 · 예정\n',
+  '22-character-diagrams.md': '# Fixture character\n\n```mermaid\nflowchart LR\n A --> B\n```\n',
+  '30-document-map.md': '# Fixture relationship map\n\n## 문서 연결\n\n- [소개](00-start.md) — 시작\n  - [구조](01-project.md) — 구조\n  - [인게임](07-diagrams.md) — 흐름\n    - [아웃게임](20-outgame-diagrams.md) — 예정\n    - [캐릭터](22-character-diagrams.md) — 구성\n  - [이력](11-update-history.md) — 검토\n',
   '11-update-history.md': '# Fixture history\n',
   'vendor/mermaid.min.js': '// Rendering is outside the scope of this integration test.\n',
 })) await writeFile(resolve(fixture, docs, file), content);
